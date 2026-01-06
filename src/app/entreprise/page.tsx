@@ -1,4 +1,5 @@
 import Link from "next/link";
+import Image from "next/image";
 import type { Metadata } from "next";
 
 export const metadata: Metadata = {
@@ -7,12 +8,14 @@ export const metadata: Metadata = {
 };
 
 const certifications = [
-  { name: "CISSP", description: "Certified Information Systems Security Professional" },
-  { name: "CISM", description: "Certified Information Security Manager" },
-  { name: "ISO 27001 LA", description: "Lead Auditor" },
-  { name: "ISO 27001 LI", description: "Lead Implementer" },
-  { name: "CEH", description: "Certified Ethical Hacker" },
-  { name: "OSCP", description: "Offensive Security Certified Professional" },
+  { name: "CREST", description: "Council of Registered Ethical Security Testers", logo: "/images/certifications/crest.svg" },
+  { name: "CREST+", description: "CREST Certified Simulated Attack Manager", logo: "/images/certifications/crest.svg" },
+  { name: "CISSP", description: "Certified Information Systems Security Professional", logo: "/images/certifications/cissp.svg" },
+  { name: "CISM", description: "Certified Information Security Manager", logo: "/images/certifications/cism.svg" },
+  { name: "CEH", description: "Certified Ethical Hacker", logo: "/images/certifications/ceh.svg" },
+  { name: "OSCP", description: "Offensive Security Certified Professional", logo: "/images/certifications/oscp.svg" },
+  { name: "ISO 27001 LA", description: "Lead Auditor", logo: "/images/certifications/iso27001.svg" },
+  { name: "ISO 27001 LI", description: "Lead Implementer", logo: "/images/certifications/iso27001.svg" },
 ];
 
 const values = [
@@ -58,7 +61,7 @@ export default function Entreprise() {
       </section>
 
       {/* Mission */}
-      <section className="py-20 bg-white">
+      <section id="mission" className="py-20 bg-white scroll-mt-24">
         <div className="max-w-7xl mx-auto px-6 lg:px-8">
           <div className="grid grid-cols-1 lg:grid-cols-2 gap-12 items-center">
             <div>
@@ -97,7 +100,7 @@ export default function Entreprise() {
       </section>
 
       {/* Valeurs */}
-      <section className="py-20 bg-gray-50">
+      <section id="valeurs" className="py-20 bg-gray-50 scroll-mt-24">
         <div className="max-w-7xl mx-auto px-6 lg:px-8">
           <div className="text-center mb-16">
             <h2 className="text-3xl md:text-4xl font-bold text-[#0e0c19] mb-4">
@@ -119,7 +122,7 @@ export default function Entreprise() {
       </section>
 
       {/* Certifications */}
-      <section className="py-20 bg-white">
+      <section id="certifications" className="py-20 bg-white scroll-mt-24">
         <div className="max-w-7xl mx-auto px-6 lg:px-8">
           <div className="text-center mb-16">
             <h2 className="text-3xl md:text-4xl font-bold text-[#0e0c19] mb-4">
@@ -131,13 +134,22 @@ export default function Entreprise() {
             </p>
           </div>
 
-          <div className="grid grid-cols-2 md:grid-cols-3 lg:grid-cols-6 gap-6">
+          <div className="grid grid-cols-2 md:grid-cols-4 gap-6">
             {certifications.map((cert, index) => (
               <div
                 key={index}
-                className="bg-gray-50 p-4 rounded-xl text-center hover:bg-[#7d53de]/10 transition-colors"
+                className="bg-gray-50 p-6 rounded-xl text-center hover:bg-[#7d53de]/10 transition-colors hover:shadow-lg"
               >
-                <div className="text-2xl font-bold text-[#7d53de] mb-1">{cert.name}</div>
+                <div className="h-16 flex items-center justify-center mb-4">
+                  <Image
+                    src={cert.logo}
+                    alt={cert.name}
+                    width={80}
+                    height={64}
+                    className="object-contain max-h-16"
+                  />
+                </div>
+                <div className="text-lg font-bold text-[#7d53de] mb-1">{cert.name}</div>
                 <div className="text-xs text-[#3c3a47]">{cert.description}</div>
               </div>
             ))}

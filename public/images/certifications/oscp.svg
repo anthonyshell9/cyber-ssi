@@ -1,0 +1,5 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 120 80">
+  <rect width="120" height="80" rx="8" fill="#742a2a"/>
+  <text x="60" y="30" text-anchor="middle" font-family="Arial, sans-serif" font-size="10" fill="#fc8181">Offensive Security</text>
+  <text x="60" y="52" text-anchor="middle" font-family="Arial, sans-serif" font-size="20" font-weight="bold" fill="#ffffff">OSCP</text>
+</svg>

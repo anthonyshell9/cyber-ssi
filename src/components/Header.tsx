@@ -27,10 +27,10 @@ const navigation: NavItem[] = [
     name: "Vos Besoins",
     href: "/vos-besoins",
     submenu: [
-      { name: "PME & ETI", href: "/vos-besoins#pme" },
-      { name: "Grandes Entreprises", href: "/vos-besoins#grandes-entreprises" },
-      { name: "Administrations", href: "/vos-besoins#administrations" },
-      { name: "Startups", href: "/vos-besoins#startups" },
+      { name: "Mise en conformité réglementaire", href: "/nos-services/gouvernance-risque-conformite" },
+      { name: "Évaluer votre posture de sécurité", href: "/nos-services/conseils-audits" },
+      { name: "Améliorer la maturité cyber", href: "/nos-services" },
+      { name: "Tester la résistance de votre système", href: "/nos-services/services-operationnels" },
     ],
   },
   {
@@ -74,10 +74,9 @@ const navigation: NavItem[] = [
     name: "Entreprise",
     href: "/entreprise",
     submenu: [
-      { name: "Qui sommes-nous", href: "/entreprise#qui-sommes-nous" },
-      { name: "Notre équipe", href: "/entreprise#equipe" },
+      { name: "Notre mission", href: "/entreprise#mission" },
       { name: "Nos valeurs", href: "/entreprise#valeurs" },
-      { name: "Certifications", href: "/entreprise#certifications" },
+      { name: "Nos certifications", href: "/entreprise#certifications" },
     ],
   },
   { name: "Contact", href: "/#contact" },
