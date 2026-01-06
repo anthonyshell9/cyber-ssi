@@ -93,7 +93,7 @@ resource "azurerm_storage_account" "main" {
 # Storage container for contact form submissions (as backup)
 resource "azurerm_storage_container" "submissions" {
   name                  = "contact-submissions"
-  storage_account_id    = azurerm_storage_account.main.id
+  storage_account_name  = azurerm_storage_account.main.name
   container_access_type = "private"
 }
 
