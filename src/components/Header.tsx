@@ -6,14 +6,69 @@ import { useState } from "react";
 
 const navigation = [
   { name: "Accueil", href: "/" },
-  { name: "Vos Besoins", href: "/vos-besoins" },
-  { name: "Nos Services", href: "/nos-services" },
-  { name: "Entreprise", href: "/entreprise" },
+  {
+    name: "Vos Besoins",
+    href: "/vos-besoins",
+    submenu: [
+      { name: "PME & ETI", href: "/vos-besoins#pme" },
+      { name: "Grandes Entreprises", href: "/vos-besoins#grandes-entreprises" },
+      { name: "Administrations", href: "/vos-besoins#administrations" },
+      { name: "Startups", href: "/vos-besoins#startups" },
+    ],
+  },
+  {
+    name: "Nos Services",
+    href: "/nos-services",
+    submenu: [
+      {
+        name: "Gouvernance & Conformité",
+        href: "/nos-services/gouvernance-risque-conformite",
+        items: [
+          { name: "NIS2", href: "/nos-services/gouvernance-risque-conformite/nis2" },
+          { name: "DORA", href: "/nos-services/gouvernance-risque-conformite/dora" },
+          { name: "ISO 27001", href: "/nos-services/gouvernance-risque-conformite/iso-27001" },
+          { name: "AI Act", href: "/nos-services/gouvernance-risque-conformite/ai-act" },
+          { name: "VARA", href: "/nos-services/gouvernance-risque-conformite/vara" },
+        ],
+      },
+      {
+        name: "Conseils & Audits",
+        href: "/nos-services/conseils-audits",
+        items: [
+          { name: "Maturité Cyber", href: "/nos-services/conseils-audits/maturite-cyber" },
+          { name: "Évaluer votre posture", href: "/nos-services/conseils-audits/evaluer-posture" },
+          { name: "Due Diligence", href: "/nos-services/conseils-audits/due-diligence" },
+          { name: "RSSI externalisé", href: "/nos-services/conseils-audits/rssi-temps-partage" },
+        ],
+      },
+      {
+        name: "Services Opérationnels",
+        href: "/nos-services/services-operationnels",
+        items: [
+          { name: "Tests d'intrusion", href: "/nos-services/services-operationnels/test-intrusion" },
+          { name: "Red Team", href: "/nos-services/services-operationnels/red-team" },
+          { name: "Audit de code", href: "/nos-services/services-operationnels/audit-code" },
+          { name: "SOC 24/7", href: "/nos-services/services-operationnels/soc" },
+        ],
+      },
+    ],
+  },
+  {
+    name: "Entreprise",
+    href: "/entreprise",
+    submenu: [
+      { name: "Qui sommes-nous", href: "/entreprise#qui-sommes-nous" },
+      { name: "Notre équipe", href: "/entreprise#equipe" },
+      { name: "Nos valeurs", href: "/entreprise#valeurs" },
+      { name: "Certifications", href: "/entreprise#certifications" },
+    ],
+  },
   { name: "Contact", href: "/#contact" },
 ];
 
 export default function Header() {
   const [mobileMenuOpen, setMobileMenuOpen] = useState(false);
+  const [activeDropdown, setActiveDropdown] = useState<string | null>(null);
 
   return (
     <header className="fixed top-0 left-0 right-0 z-50 bg-[#0e0c19]/95 backdrop-blur-sm shadow-lg">
@@ -57,15 +112,73 @@ export default function Header() {
         </div>
 
         {/* Desktop navigation */}
-        <div className="hidden lg:flex lg:gap-x-12">
+        <div className="hidden lg:flex lg:gap-x-8">
           {navigation.map((item) => (
-            <Link
+            <div
               key={item.name}
-              href={item.href}
-              className="text-sm font-semibold leading-6 text-white/90 hover:text-[#7d53de] transition-colors"
+              className="relative"
+              onMouseEnter={() => item.submenu && setActiveDropdown(item.name)}
+              onMouseLeave={() => setActiveDropdown(null)}
             >
-              {item.name}
-            </Link>
+              <Link
+                href={item.href}
+                className="flex items-center gap-1 text-sm font-semibold leading-6 text-white/90 hover:text-[#7d53de] transition-colors py-2"
+              >
+                {item.name}
+                {item.submenu && (
+                  <svg className="w-4 h-4" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                    <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M19 9l-7 7-7-7" />
+                  </svg>
+                )}
+              </Link>
+
+              {/* Dropdown menu */}
+              {item.submenu && activeDropdown === item.name && (
+                <div className="absolute top-full left-0 mt-0 pt-2">
+                  <div className="bg-white rounded-xl shadow-2xl border border-gray-100 overflow-hidden min-w-[280px]">
+                    {/* Check if submenu has nested items (like Nos Services) */}
+                    {item.submenu[0] && 'items' in item.submenu[0] ? (
+                      <div className="grid grid-cols-1 divide-y divide-gray-100">
+                        {item.submenu.map((category: any) => (
+                          <div key={category.name} className="p-4">
+                            <Link
+                              href={category.href}
+                              className="text-sm font-bold text-[#0e0c19] hover:text-[#7d53de] transition-colors"
+                            >
+                              {category.name}
+                            </Link>
+                            <ul className="mt-2 space-y-1">
+                              {category.items.map((subItem: any) => (
+                                <li key={subItem.name}>
+                                  <Link
+                                    href={subItem.href}
+                                    className="block text-sm text-[#3c3a47] hover:text-[#7d53de] hover:translate-x-1 transition-all py-1"
+                                  >
+                                    {subItem.name}
+                                  </Link>
+                                </li>
+                              ))}
+                            </ul>
+                          </div>
+                        ))}
+                      </div>
+                    ) : (
+                      <div className="py-2">
+                        {item.submenu.map((subItem: any) => (
+                          <Link
+                            key={subItem.name}
+                            href={subItem.href}
+                            className="block px-4 py-2 text-sm text-[#3c3a47] hover:bg-[#7d53de]/10 hover:text-[#7d53de] transition-all"
+                          >
+                            {subItem.name}
+                          </Link>
+                        ))}
+                      </div>
+                    )}
+                  </div>
+                </div>
+              )}
+            </div>
           ))}
         </div>
 
@@ -82,17 +195,56 @@ export default function Header() {
 
       {/* Mobile menu */}
       {mobileMenuOpen && (
-        <div className="lg:hidden bg-[#0e0c19]">
+        <div className="lg:hidden bg-[#0e0c19] max-h-[80vh] overflow-y-auto">
           <div className="space-y-1 px-4 pb-4">
             {navigation.map((item) => (
-              <Link
-                key={item.name}
-                href={item.href}
-                className="block rounded-lg px-3 py-2 text-base font-semibold leading-7 text-white/90 hover:bg-[#161131] hover:text-[#7d53de]"
-                onClick={() => setMobileMenuOpen(false)}
-              >
-                {item.name}
-              </Link>
+              <div key={item.name}>
+                <Link
+                  href={item.href}
+                  className="block rounded-lg px-3 py-2 text-base font-semibold leading-7 text-white/90 hover:bg-[#161131] hover:text-[#7d53de]"
+                  onClick={() => !item.submenu && setMobileMenuOpen(false)}
+                >
+                  {item.name}
+                </Link>
+                {item.submenu && (
+                  <div className="pl-4 space-y-1">
+                    {item.submenu[0] && 'items' in item.submenu[0] ? (
+                      item.submenu.map((category: any) => (
+                        <div key={category.name} className="py-2">
+                          <Link
+                            href={category.href}
+                            className="block text-sm font-semibold text-[#7d53de] py-1"
+                            onClick={() => setMobileMenuOpen(false)}
+                          >
+                            {category.name}
+                          </Link>
+                          {category.items.map((subItem: any) => (
+                            <Link
+                              key={subItem.name}
+                              href={subItem.href}
+                              className="block text-sm text-white/70 hover:text-[#7d53de] py-1 pl-2"
+                              onClick={() => setMobileMenuOpen(false)}
+                            >
+                              {subItem.name}
+                            </Link>
+                          ))}
+                        </div>
+                      ))
+                    ) : (
+                      item.submenu.map((subItem: any) => (
+                        <Link
+                          key={subItem.name}
+                          href={subItem.href}
+                          className="block text-sm text-white/70 hover:text-[#7d53de] py-1"
+                          onClick={() => setMobileMenuOpen(false)}
+                        >
+                          {subItem.name}
+                        </Link>
+                      ))
+                    )}
+                  </div>
+                )}
+              </div>
             ))}
             <Link
               href="/#contact"
