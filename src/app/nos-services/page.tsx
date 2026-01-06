@@ -11,10 +11,11 @@ const serviceCategories = [
     title: "Gouvernance, Risque & Conformité",
     description: "Structurez votre démarche cybersécurité et assurez votre conformité réglementaire.",
     services: [
-      { name: "Mise en conformité NIS2", href: "/nos-services/nis2" },
-      { name: "Conformité DORA", href: "/nos-services/dora" },
-      { name: "Conformité RGPD", href: "/nos-services/rgpd" },
-      { name: "Certifications ISO 27001", href: "/nos-services/iso-27001" },
+      { name: "Mise en conformité NIS2", href: "/nos-services/gouvernance-risque-conformite/nis2" },
+      { name: "Conformité DORA", href: "/nos-services/gouvernance-risque-conformite/dora" },
+      { name: "Certifications ISO 27001", href: "/nos-services/gouvernance-risque-conformite/iso-27001" },
+      { name: "AI Act", href: "/nos-services/gouvernance-risque-conformite/ai-act" },
+      { name: "VARA (Crypto)", href: "/nos-services/gouvernance-risque-conformite/vara" },
     ],
     href: "/nos-services/gouvernance-risque-conformite",
     icon: (
@@ -27,29 +28,15 @@ const serviceCategories = [
     title: "Conseils & Audits",
     description: "Évaluez votre posture de sécurité et identifiez vos axes d'amélioration.",
     services: [
-      { name: "Audit de maturité cyber", href: "/nos-services/audit-maturite" },
-      { name: "Analyse de risques", href: "/nos-services/analyse-risques" },
-      { name: "Schéma directeur SSI", href: "/nos-services/schema-directeur" },
+      { name: "Amélioration maturité cyber", href: "/nos-services/conseils-audits/maturite-cyber" },
+      { name: "Évaluer votre posture", href: "/nos-services/conseils-audits/evaluer-posture" },
+      { name: "Due Diligence Cyber", href: "/nos-services/conseils-audits/due-diligence" },
+      { name: "RSSI à temps partagé", href: "/nos-services/conseils-audits/rssi-temps-partage" },
     ],
-    href: "/nos-services/conseils-et-audits",
+    href: "/nos-services/conseils-audits",
     icon: (
       <svg className="w-12 h-12" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="1.5">
         <path strokeLinecap="round" strokeLinejoin="round" d="M9 12h3.75M9 15h3.75M9 18h3.75m3 .75H18a2.25 2.25 0 002.25-2.25V6.108c0-1.135-.845-2.098-1.976-2.192a48.424 48.424 0 00-1.123-.08m-5.801 0c-.065.21-.1.433-.1.664 0 .414.336.75.75.75h4.5a.75.75 0 00.75-.75 2.25 2.25 0 00-.1-.664m-5.8 0A2.251 2.251 0 0113.5 2.25H15c1.012 0 1.867.668 2.15 1.586m-5.8 0c-.376.023-.75.05-1.124.08C9.095 4.01 8.25 4.973 8.25 6.108V8.25m0 0H4.875c-.621 0-1.125.504-1.125 1.125v11.25c0 .621.504 1.125 1.125 1.125h9.75c.621 0 1.125-.504 1.125-1.125V9.375c0-.621-.504-1.125-1.125-1.125H8.25zM6.75 12h.008v.008H6.75V12zm0 3h.008v.008H6.75V15zm0 3h.008v.008H6.75V18z" />
-      </svg>
-    ),
-  },
-  {
-    title: "RSSI à Temps Partagé",
-    description: "Bénéficiez d'un expert cybersécurité dédié sans les coûts d'un poste à temps plein.",
-    services: [
-      { name: "Pilotage de la sécurité", href: "/nos-services/rssi-temps-partage" },
-      { name: "Définition de la stratégie SSI", href: "/nos-services/rssi-temps-partage" },
-      { name: "Sensibilisation des équipes", href: "/nos-services/rssi-temps-partage" },
-    ],
-    href: "/nos-services/rssi-temps-partage",
-    icon: (
-      <svg className="w-12 h-12" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="1.5">
-        <path strokeLinecap="round" strokeLinejoin="round" d="M15.75 6a3.75 3.75 0 11-7.5 0 3.75 3.75 0 017.5 0zM4.501 20.118a7.5 7.5 0 0114.998 0A17.933 17.933 0 0112 21.75c-2.676 0-5.216-.584-7.499-1.632z" />
       </svg>
     ),
   },
@@ -61,11 +48,28 @@ const serviceCategories = [
       { name: "Red Team", href: "/nos-services/services-operationnels/red-team" },
       { name: "Audit de configuration", href: "/nos-services/services-operationnels/audit-configuration" },
       { name: "Audit de code", href: "/nos-services/services-operationnels/audit-code" },
+      { name: "SOC 24/7", href: "/nos-services/services-operationnels/soc" },
     ],
     href: "/nos-services/services-operationnels",
     icon: (
       <svg className="w-12 h-12" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="1.5">
         <path strokeLinecap="round" strokeLinejoin="round" d="M6.75 7.5l3 2.25-3 2.25m4.5 0h3m-9 8.25h13.5A2.25 2.25 0 0021 18V6a2.25 2.25 0 00-2.25-2.25H5.25A2.25 2.25 0 003 6v12a2.25 2.25 0 002.25 2.25z" />
+      </svg>
+    ),
+  },
+  {
+    title: "Sécurité Spécialisée",
+    description: "Expertise sécurité pour vos environnements spécifiques.",
+    services: [
+      { name: "Sécurité Azure & M365", href: "/nos-services/services-operationnels/securite-azure" },
+      { name: "Sécurité Active Directory", href: "/nos-services/services-operationnels/securite-annuaire" },
+      { name: "Sécurité IoT", href: "/nos-services/services-operationnels/securite-iot" },
+      { name: "Sécurité Robotique", href: "/nos-services/services-operationnels/securite-robotique" },
+    ],
+    href: "/nos-services/services-operationnels",
+    icon: (
+      <svg className="w-12 h-12" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="1.5">
+        <path strokeLinecap="round" strokeLinejoin="round" d="M5.25 14.25h13.5m-13.5 0a3 3 0 01-3-3m3 3a3 3 0 100 6h13.5a3 3 0 100-6m-16.5-3a3 3 0 013-3h13.5a3 3 0 013 3m-19.5 0a4.5 4.5 0 01.9-2.7L5.737 5.1a3.375 3.375 0 012.7-1.35h7.126c1.062 0 2.062.5 2.7 1.35l2.587 3.45a4.5 4.5 0 01.9 2.7m0 0a3 3 0 01-3 3m0 3h.008v.008h-.008v-.008zm0-6h.008v.008h-.008v-.008zm-3 6h.008v.008h-.008v-.008zm0-6h.008v.008h-.008v-.008z" />
       </svg>
     ),
   },

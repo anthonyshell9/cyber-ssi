@@ -1,0 +1,206 @@
+{
+  "accueil": {
+    "slug": "accueil",
+    "title": "Accueil",
+    "raw_length": 0,
+    "extracted_texts": []
+  },
+  "vos-besoins": {
+    "slug": "vos-besoins",
+    "title": "Vos Besoins",
+    "raw_length": 0,
+    "extracted_texts": []
+  },
+  "nos-services": {
+    "slug": "nos-services",
+    "title": "Nos Services",
+    "raw_length": 0,
+    "extracted_texts": []
+  },
+  "entreprise": {
+    "slug": "entreprise",
+    "title": "Entreprise",
+    "raw_length": 0,
+    "extracted_texts": []
+  },
+  "contact": {
+    "slug": "contact",
+    "title": "Contact",
+    "raw_length": 0,
+    "extracted_texts": []
+  },
+  "faq": {
+    "slug": "faq",
+    "title": "Faq",
+    "raw_length": 0,
+    "extracted_texts": []
+  },
+  "nos-realisations": {
+    "slug": "nos-realisations",
+    "title": "Nos Realisations",
+    "raw_length": 0,
+    "extracted_texts": []
+  },
+  "gouvernance-risque-conformite": {
+    "slug": "gouvernance-risque-conformite",
+    "title": "Gouvernance Risque Conformite",
+    "raw_length": 0,
+    "extracted_texts": []
+  },
+  "mise-en-conformite-reglementaire": {
+    "slug": "mise-en-conformite-reglementaire",
+    "title": "Mise En Conformite Reglementaire",
+    "raw_length": 0,
+    "extracted_texts": []
+  },
+  "nis2": {
+    "slug": "nis2",
+    "title": "Nis2",
+    "raw_length": 0,
+    "extracted_texts": []
+  },
+  "mise-en-conformite-dora": {
+    "slug": "mise-en-conformite-dora",
+    "title": "Mise En Conformite Dora",
+    "raw_length": 0,
+    "extracted_texts": []
+  },
+  "iso-27001": {
+    "slug": "iso-27001",
+    "title": "Iso 27001",
+    "raw_length": 0,
+    "extracted_texts": []
+  },
+  "iso-iec-42001": {
+    "slug": "iso-iec-42001",
+    "title": "Iso Iec 42001",
+    "raw_length": 0,
+    "extracted_texts": []
+  },
+  "ai-act": {
+    "slug": "ai-act",
+    "title": "Ai Act",
+    "raw_length": 0,
+    "extracted_texts": []
+  },
+  "vara": {
+    "slug": "vara",
+    "title": "Vara",
+    "raw_length": 0,
+    "extracted_texts": []
+  },
+  "conseils-et-audits": {
+    "slug": "conseils-et-audits",
+    "title": "Conseils Et Audits",
+    "raw_length": 0,
+    "extracted_texts": []
+  },
+  "amelioration-de-la-maturite-cyber": {
+    "slug": "amelioration-de-la-maturite-cyber",
+    "title": "Amelioration De La Maturite Cyber",
+    "raw_length": 0,
+    "extracted_texts": []
+  },
+  "evaluer-votre-posture-de-securite": {
+    "slug": "evaluer-votre-posture-de-securite",
+    "title": "Evaluer Votre Posture De Securite",
+    "raw_length": 0,
+    "extracted_texts": []
+  },
+  "due-diligence": {
+    "slug": "due-diligence",
+    "title": "Due Diligence",
+    "raw_length": 0,
+    "extracted_texts": []
+  },
+  "rssi-a-temps-partage": {
+    "slug": "rssi-a-temps-partage",
+    "title": "Rssi A Temps Partage",
+    "raw_length": 0,
+    "extracted_texts": []
+  },
+  "services-operationnels": {
+    "slug": "services-operationnels",
+    "title": "Services Operationnels",
+    "raw_length": 0,
+    "extracted_texts": []
+  },
+  "test-dintrusion": {
+    "slug": "test-dintrusion",
+    "title": "Test Dintrusion",
+    "raw_length": 0,
+    "extracted_texts": []
+  },
+  "red-team": {
+    "slug": "red-team",
+    "title": "Red Team",
+    "raw_length": 0,
+    "extracted_texts": []
+  },
+  "audit-de-code": {
+    "slug": "audit-de-code",
+    "title": "Audit De Code",
+    "raw_length": 0,
+    "extracted_texts": []
+  },
+  "audit-de-configuration": {
+    "slug": "audit-de-configuration",
+    "title": "Audit De Configuration",
+    "raw_length": 0,
+    "extracted_texts": []
+  },
+  "securite-des-infrastructures-azure-office-365-et-intune": {
+    "slug": "securite-des-infrastructures-azure-office-365-et-intune",
+    "title": "Securite Des Infrastructures Azure Office 365 Et Intune",
+    "raw_length": 0,
+    "extracted_texts": []
+  },
+  "securite-des-services-dannuaire": {
+    "slug": "securite-des-services-dannuaire",
+    "title": "Securite Des Services Dannuaire",
+    "raw_length": 0,
+    "extracted_texts": []
+  },
+  "securite-iot": {
+    "slug": "securite-iot",
+    "title": "Securite Iot",
+    "raw_length": 0,
+    "extracted_texts": []
+  },
+  "securite-robotique": {
+    "slug": "securite-robotique",
+    "title": "Securite Robotique",
+    "raw_length": 0,
+    "extracted_texts": []
+  },
+  "gestion-des-vulnerabilites": {
+    "slug": "gestion-des-vulnerabilites",
+    "title": "Gestion Des Vulnerabilites",
+    "raw_length": 0,
+    "extracted_texts": []
+  },
+  "support-a-la-remediation-dincidents": {
+    "slug": "support-a-la-remediation-dincidents",
+    "title": "Support A La Remediation Dincidents",
+    "raw_length": 0,
+    "extracted_texts": []
+  },
+  "soc-essential": {
+    "slug": "soc-essential",
+    "title": "Soc Essential",
+    "raw_length": 0,
+    "extracted_texts": []
+  },
+  "english": {
+    "slug": "english",
+    "title": "French",
+    "raw_length": 151,
+    "extracted_texts": []
+  },
+  "lentreprise": {
+    "slug": "lentreprise",
+    "title": "2025-09-30 05:51:48",
+    "raw_length": 119,
+    "extracted_texts": []
+  }
+}
