@@ -14,7 +14,7 @@ export default function Hero() {
       {/* Content */}
       <div className="relative z-10 text-center px-4 max-w-5xl mx-auto pt-20">
         {/* Logo */}
-        <div className="mb-8">
+        <div className="mb-8" data-animation="fadeInDown">
           <Image
             src="/images/2025/04/Logo-noir-icone-300x300.png"
             alt="Cyber-SSI"
@@ -26,23 +26,25 @@ export default function Hero() {
         </div>
 
         {/* Subtitle */}
-        <p className="text-[#7d53de] font-semibold tracking-widest uppercase mb-4">
+        <p className="text-[#7d53de] font-semibold tracking-widest uppercase mb-4" data-animation="fadeInUp" data-delay="0.1">
           CYBER-SSI
         </p>
 
         {/* Title */}
-        <h1 className="text-4xl md:text-5xl lg:text-6xl font-bold text-white leading-tight mb-8">
+        <h1 className="text-4xl md:text-5xl lg:text-6xl font-bold text-white leading-tight mb-8" data-animation="fadeInUp" data-delay="0.2">
           L&apos;entreprise de cybersécurité pour{" "}
           <span className="text-[#7d53de]">PME</span>, administrations et institutions
         </h1>
 
         {/* CTA Button */}
-        <Link
-          href="#contact"
-          className="inline-block rounded-full bg-[#7d53de] px-8 py-4 text-lg font-semibold text-white shadow-lg hover:bg-white hover:text-[#0e0c19] transition-all duration-300 hover:scale-105"
-        >
-          Contactez-nous
-        </Link>
+        <div data-animation="fadeInUp" data-delay="0.4">
+          <Link
+            href="#contact"
+            className="inline-block rounded-full bg-[#7d53de] px-8 py-4 text-lg font-semibold text-white shadow-lg hover:bg-white hover:text-[#0e0c19] transition-all duration-300 hover:scale-105"
+          >
+            Contactez-nous
+          </Link>
+        </div>
       </div>
 
       {/* Scroll indicator */}

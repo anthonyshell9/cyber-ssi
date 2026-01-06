@@ -3,6 +3,7 @@ import { Sora, Montserrat } from "next/font/google";
 import "./globals.css";
 import Header from "@/components/Header";
 import Footer from "@/components/Footer";
+import ScrollAnimationInit from "@/components/ScrollAnimationInit";
 
 const sora = Sora({
   variable: "--font-sora",
@@ -44,6 +45,7 @@ export default function RootLayout({
   return (
     <html lang="fr">
       <body className={`${sora.variable} ${montserrat.variable} antialiased`}>
+        <ScrollAnimationInit />
         <Header />
         <main>{children}</main>
         <Footer />

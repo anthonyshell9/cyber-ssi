@@ -4,7 +4,7 @@ export default function About() {
       <div className="mx-auto max-w-7xl px-6 lg:px-8">
         <div className="grid grid-cols-1 lg:grid-cols-2 gap-12 items-center">
           {/* Left Column */}
-          <div>
+          <div data-animation="fadeInLeft">
             <span className="text-[#7d53de] font-semibold uppercase tracking-wider text-sm">
               Qu&apos;est-ce qu&apos;une entreprise de cybersécurité ?
             </span>
@@ -14,7 +14,7 @@ export default function About() {
           </div>
 
           {/* Right Column */}
-          <div>
+          <div data-animation="fadeInRight" data-delay="0.2">
             <p className="text-[#3c3a47] text-lg leading-relaxed">
               Une entreprise de cybersécurité, comme Cyber-SSI, joue un rôle essentiel dans la protection
               des données et des systèmes informatiques contre les menaces numériques. Dans un monde où
@@ -30,7 +30,7 @@ export default function About() {
         {/* Second Block */}
         <div className="grid grid-cols-1 lg:grid-cols-2 gap-12 items-center mt-24">
           {/* Left Column */}
-          <div>
+          <div data-animation="fadeInLeft">
             <span className="text-[#7d53de] font-semibold uppercase tracking-wider text-sm">
               Pourquoi faire appel à une entreprise de cybersécurité ?
             </span>
@@ -40,7 +40,7 @@ export default function About() {
           </div>
 
           {/* Right Column */}
-          <div>
+          <div data-animation="fadeInRight" data-delay="0.2">
             <p className="text-[#3c3a47] text-lg leading-relaxed">
               Faire appel à une entreprise de cybersécurité est crucial pour toute organisation souhaitant
               protéger ses actifs numériques. Cyber-SSI offre une expertise inégalée pour identifier les
@@ -52,14 +52,14 @@ export default function About() {
         </div>
 
         {/* Stats */}
-        <div className="grid grid-cols-2 md:grid-cols-4 gap-8 mt-24">
+        <div className="grid grid-cols-2 md:grid-cols-4 gap-8 mt-24 stagger-children">
           {[
             { value: "100%", label: "Clients satisfaits" },
             { value: "NIS2", label: "Conformité garantie" },
             { value: "24/7", label: "Support disponible" },
             { value: "ISO", label: "Certifications" },
           ].map((stat, index) => (
-            <div key={index} className="text-center">
+            <div key={index} className="text-center" data-animation="fadeInUp" data-delay={String(index * 0.1)}>
               <div className="text-4xl md:text-5xl font-bold text-[#7d53de] mb-2">
                 {stat.value}
               </div>

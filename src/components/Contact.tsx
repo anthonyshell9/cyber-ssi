@@ -38,18 +38,18 @@ export default function Contact() {
       <div className="mx-auto max-w-7xl px-6 lg:px-8">
         {/* Header */}
         <div className="text-center mb-12">
-          <h2 className="text-3xl md:text-4xl lg:text-5xl font-bold text-[#0e0c19] mb-4">
+          <h2 className="text-3xl md:text-4xl lg:text-5xl font-bold text-[#0e0c19] mb-4" data-animation="fadeInDown">
             Contactez-nous
           </h2>
-          <div className="w-24 h-1 bg-[#7d53de] mx-auto rounded-full mb-6"></div>
-          <p className="text-[#3c3a47] text-lg max-w-2xl mx-auto">
+          <div className="w-24 h-1 bg-[#7d53de] mx-auto rounded-full mb-6" data-animation="scaleIn" data-delay="0.2"></div>
+          <p className="text-[#3c3a47] text-lg max-w-2xl mx-auto" data-animation="fadeInUp" data-delay="0.3">
             Vous avez un projet de cybersécurité ? Vous souhaitez évaluer votre posture de sécurité
             ou vous mettre en conformité ? Parlons-en ensemble.
           </p>
         </div>
 
         {/* Tabs */}
-        <div className="flex justify-center mb-8">
+        <div className="flex justify-center mb-8" data-animation="fadeInUp" data-delay="0.4">
           <div className="inline-flex rounded-full bg-white p-1 shadow-lg">
             <button
               onClick={() => setActiveTab("form")}

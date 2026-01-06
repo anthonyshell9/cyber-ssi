@@ -53,19 +53,21 @@ export default function Services() {
       <div className="mx-auto max-w-7xl px-6 lg:px-8">
         {/* Section Title */}
         <div className="text-center mb-16">
-          <h2 className="text-3xl md:text-4xl lg:text-5xl font-bold text-[#0e0c19] mb-4">
+          <h2 className="text-3xl md:text-4xl lg:text-5xl font-bold text-[#0e0c19] mb-4" data-animation="fadeInDown">
             Votre besoin
           </h2>
-          <div className="w-24 h-1 bg-[#7d53de] mx-auto rounded-full"></div>
+          <div className="w-24 h-1 bg-[#7d53de] mx-auto rounded-full" data-animation="scaleIn" data-delay="0.2"></div>
         </div>
 
         {/* Services Grid */}
-        <div className="grid grid-cols-1 md:grid-cols-2 gap-6 max-w-5xl mx-auto">
+        <div className="grid grid-cols-1 md:grid-cols-2 gap-6 max-w-5xl mx-auto stagger-children">
           {services.map((service, index) => (
             <Link
               key={index}
               href={service.href}
               className="service-card group bg-white p-8 rounded-lg shadow-[0_4px_60px_-30px_rgba(125,83,222,0.7)] hover:shadow-[0_8px_80px_-20px_rgba(125,83,222,0.8)] border border-gray-100"
+              data-animation="fadeInUp"
+              data-delay={String(index * 0.1)}
             >
               {/* Icon */}
               <div className="text-[#7d53de] mb-4 group-hover:scale-110 transition-transform">
@@ -86,7 +88,7 @@ export default function Services() {
         </div>
 
         {/* CTA */}
-        <div className="text-center mt-12">
+        <div className="text-center mt-12" data-animation="fadeInUp" data-delay="0.5">
           <Link
             href="#contact"
             className="inline-block rounded-full bg-[#7d53de] px-8 py-4 text-lg font-semibold text-white shadow-lg hover:bg-[#161131] transition-all duration-300"
