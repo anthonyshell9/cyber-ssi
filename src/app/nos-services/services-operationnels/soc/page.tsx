@@ -204,29 +204,6 @@ export default function SOC() {
         </div>
       </section>
 
-      {/* Pricing */}
-      <section className="py-16 bg-white">
-        <div className="max-w-4xl mx-auto px-6">
-          <div className="text-center mb-12">
-            <h2 className="text-3xl font-bold text-[#0e0c19] mb-4">
-              Tarification simple
-            </h2>
-            <div className="w-24 h-1 bg-[#7d53de] mx-auto rounded-full"></div>
-          </div>
-
-          <div className="bg-gray-50 p-8 rounded-2xl text-center">
-            <p className="text-[#3c3a47] text-lg mb-6">
-              Notre offre SOC Essential est proposée en abonnement mensuel,
-              avec une tarification basée sur le volume de données à surveiller
-              et le nombre de sources de logs.
-            </p>
-            <p className="text-[#0e0c19] font-semibold">
-              Pas de coût caché, pas d&apos;engagement longue durée.
-            </p>
-          </div>
-        </div>
-      </section>
-
       {/* CTA */}
       <section className="py-16 bg-[#7d53de]">
         <div className="max-w-4xl mx-auto px-6 text-center">
