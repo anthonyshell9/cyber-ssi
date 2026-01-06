@@ -21,6 +21,11 @@ export const metadata: Metadata = {
   description: "Cyber-SSI accompagne les PME, administrations et institutions dans leur cybersécurité : conformité NIS2, RGPD, DORA, certifications ISO 27001, RSSI externalisé.",
   keywords: ["cybersécurité", "PME", "ISO 27001", "NIS2", "RGPD", "DORA", "RSSI", "conformité", "audit sécurité"],
   authors: [{ name: "Cyber-SSI" }],
+  icons: {
+    icon: "/favicon.svg",
+    shortcut: "/favicon.svg",
+    apple: "/favicon.svg",
+  },
   openGraph: {
     title: "Cyber-SSI | Cybersécurité pour PME",
     description: "L'entreprise de cybersécurité pour PME, administrations et institutions",
