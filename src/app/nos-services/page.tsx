@@ -85,10 +85,10 @@ export default function NosServices() {
           <div className="absolute bottom-1/4 right-1/4 w-80 h-80 bg-[#7d53de]/30 rounded-full blur-3xl" />
         </div>
         <div className="relative z-10 text-center px-4 max-w-4xl mx-auto pt-20">
-          <h1 className="text-4xl md:text-5xl lg:text-6xl font-bold text-white leading-tight">
+          <h1 className="text-4xl md:text-5xl lg:text-6xl font-bold text-white leading-tight" data-animation="fadeInDown">
             Nos <span className="text-[#7d53de]">Services</span> de Cybersécurité
           </h1>
-          <p className="text-white/80 text-xl mt-6 max-w-2xl mx-auto">
+          <p className="text-white/80 text-xl mt-6 max-w-2xl mx-auto" data-animation="fadeInUp" data-delay="0.2">
             Des solutions adaptées pour protéger votre entreprise face aux menaces cyber
           </p>
         </div>
@@ -102,6 +102,8 @@ export default function NosServices() {
               <div
                 key={index}
                 className="bg-white border border-gray-100 rounded-2xl p-8 shadow-lg hover:shadow-xl transition-shadow"
+                data-animation="fadeInUp"
+                data-delay={String(index * 0.15)}
               >
                 <div className="text-[#7d53de] mb-4">{category.icon}</div>
                 <h2 className="text-2xl font-bold text-[#0e0c19] mb-3">
@@ -139,10 +141,10 @@ export default function NosServices() {
       <section className="py-20 bg-gray-50">
         <div className="max-w-7xl mx-auto px-6 lg:px-8">
           <div className="text-center mb-16">
-            <h2 className="text-3xl md:text-4xl font-bold text-[#0e0c19] mb-4">
+            <h2 className="text-3xl md:text-4xl font-bold text-[#0e0c19] mb-4" data-animation="fadeInDown">
               Pourquoi choisir Cyber-SSI ?
             </h2>
-            <div className="w-24 h-1 bg-[#7d53de] mx-auto rounded-full"></div>
+            <div className="w-24 h-1 bg-[#7d53de] mx-auto rounded-full" data-animation="scaleIn" data-delay="0.2"></div>
           </div>
 
           <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
@@ -160,7 +162,7 @@ export default function NosServices() {
                 description: "De l'audit initial au déploiement, nous vous accompagnons à chaque étape.",
               },
             ].map((item, index) => (
-              <div key={index} className="text-center">
+              <div key={index} className="text-center" data-animation="fadeInUp" data-delay={String(index * 0.15)}>
                 <div className="w-16 h-16 bg-[#7d53de]/10 rounded-full flex items-center justify-center mx-auto mb-4">
                   <span className="text-[#7d53de] text-2xl font-bold">{index + 1}</span>
                 </div>
@@ -175,18 +177,20 @@ export default function NosServices() {
       {/* CTA */}
       <section className="py-16 bg-[#7d53de]">
         <div className="max-w-4xl mx-auto px-6 text-center">
-          <h2 className="text-3xl md:text-4xl font-bold text-white mb-6">
+          <h2 className="text-3xl md:text-4xl font-bold text-white mb-6" data-animation="fadeInDown">
             Besoin d&apos;un accompagnement personnalisé ?
           </h2>
-          <p className="text-white/90 text-lg mb-8">
+          <p className="text-white/90 text-lg mb-8" data-animation="fadeInUp" data-delay="0.1">
             Discutons de vos enjeux cybersécurité et trouvons ensemble la solution adaptée.
           </p>
-          <Link
-            href="/#contact"
-            className="inline-block rounded-full bg-white text-[#7d53de] px-8 py-4 text-lg font-semibold hover:bg-[#0e0c19] hover:text-white transition-colors"
-          >
-            Contactez-nous
-          </Link>
+          <div data-animation="fadeInUp" data-delay="0.2">
+            <Link
+              href="/#contact"
+              className="inline-block rounded-full bg-white text-[#7d53de] px-8 py-4 text-lg font-semibold hover:bg-[#0e0c19] hover:text-white transition-colors"
+            >
+              Contactez-nous
+            </Link>
+          </div>
         </div>
       </section>
     </>

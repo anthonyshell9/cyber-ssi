@@ -39,7 +39,7 @@ export default function VosBesoins() {
           <div className="absolute bottom-1/4 right-1/4 w-80 h-80 bg-[#7d53de]/30 rounded-full blur-3xl" />
         </div>
         <div className="relative z-10 text-center px-4 max-w-4xl mx-auto pt-20">
-          <h1 className="text-4xl md:text-5xl lg:text-6xl font-bold text-white leading-tight">
+          <h1 className="text-4xl md:text-5xl lg:text-6xl font-bold text-white leading-tight" data-animation="fadeInDown">
             Quels sont vos besoins en{" "}
             <span className="text-[#7d53de]">sécurité informatique</span> ?
           </h1>
@@ -50,7 +50,7 @@ export default function VosBesoins() {
       <section className="py-20 bg-white">
         <div className="max-w-7xl mx-auto px-6 lg:px-8">
           <div className="grid grid-cols-1 lg:grid-cols-2 gap-12 items-center">
-            <div className="order-2 lg:order-1">
+            <div className="order-2 lg:order-1" data-animation="fadeInLeft">
               <p className="text-[#3c3a47] text-lg leading-relaxed mb-6">
                 Vous n&apos;avez pas encore structuré votre <strong>stratégie de sécurité informatique</strong> ?
                 Vous ignorez si vous êtes conforme aux dernières réglementations qui s&apos;imposent à votre entreprise ?
@@ -85,7 +85,7 @@ export default function VosBesoins() {
                 Prendre rendez-vous
               </Link>
             </div>
-            <div className="order-1 lg:order-2">
+            <div className="order-1 lg:order-2" data-animation="fadeInRight" data-delay="0.2">
               <div className="relative">
                 <div className="absolute inset-0 bg-[#7d53de]/10 rounded-2xl transform rotate-3"></div>
                 <img
@@ -103,10 +103,10 @@ export default function VosBesoins() {
       <section className="py-20 bg-gradient-to-br from-[#0e0c19] to-[#161131]">
         <div className="max-w-7xl mx-auto px-6 lg:px-8">
           <div className="text-center mb-16">
-            <h2 className="text-3xl md:text-4xl font-bold text-white mb-4">
+            <h2 className="text-3xl md:text-4xl font-bold text-white mb-4" data-animation="fadeInDown">
               Quels sont vos besoins ?
             </h2>
-            <div className="w-24 h-1 bg-[#7d53de] mx-auto rounded-full"></div>
+            <div className="w-24 h-1 bg-[#7d53de] mx-auto rounded-full" data-animation="scaleIn" data-delay="0.2"></div>
           </div>
 
           <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
@@ -115,6 +115,8 @@ export default function VosBesoins() {
                 key={index}
                 href={besoin.href}
                 className="group bg-white/5 border-2 border-[#7d53de]/20 p-8 rounded-xl hover:bg-[#7d53de]/20 hover:border-[#7d53de]/50 transition-all duration-300 hover:scale-[1.02]"
+                data-animation="fadeInUp"
+                data-delay={String(index * 0.1)}
               >
                 <h3 className="text-xl md:text-2xl font-bold text-white mb-3 group-hover:text-[#7d53de] transition-colors">
                   {besoin.title}
@@ -132,12 +134,12 @@ export default function VosBesoins() {
       <section className="py-20 bg-white">
         <div className="max-w-7xl mx-auto px-6 lg:px-8">
           <div className="grid grid-cols-1 lg:grid-cols-2 gap-12 items-center">
-            <div>
+            <div data-animation="fadeInLeft">
               <h2 className="text-3xl md:text-4xl font-bold text-[#0e0c19] mb-6">
                 Ma sécurité informatique est-elle une priorité ?
               </h2>
             </div>
-            <div>
+            <div data-animation="fadeInRight" data-delay="0.2">
               <div className="w-full h-1 bg-[#7d53de] mb-6 rounded-full"></div>
               <p className="text-[#3c3a47] text-lg leading-relaxed mb-4">
                 En tant que PME ou institution, négliger votre <strong>sécurité informatique</strong> met
@@ -158,18 +160,20 @@ export default function VosBesoins() {
       {/* CTA */}
       <section className="py-16 bg-[#7d53de]">
         <div className="max-w-4xl mx-auto px-6 text-center">
-          <h2 className="text-3xl md:text-4xl font-bold text-white mb-6">
+          <h2 className="text-3xl md:text-4xl font-bold text-white mb-6" data-animation="fadeInDown">
             Prêt à sécuriser votre entreprise ?
           </h2>
-          <p className="text-white/90 text-lg mb-8">
+          <p className="text-white/90 text-lg mb-8" data-animation="fadeInUp" data-delay="0.1">
             Contactez-nous pour un diagnostic personnalisé de vos besoins en cybersécurité.
           </p>
-          <Link
-            href="#contact"
-            className="inline-block rounded-full bg-white text-[#7d53de] px-8 py-4 text-lg font-semibold hover:bg-[#0e0c19] hover:text-white transition-colors"
-          >
-            Contactez-nous
-          </Link>
+          <div data-animation="fadeInUp" data-delay="0.2">
+            <Link
+              href="#contact"
+              className="inline-block rounded-full bg-white text-[#7d53de] px-8 py-4 text-lg font-semibold hover:bg-[#0e0c19] hover:text-white transition-colors"
+            >
+              Contactez-nous
+            </Link>
+          </div>
         </div>
       </section>
     </>
