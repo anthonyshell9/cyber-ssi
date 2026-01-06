@@ -3,6 +3,8 @@ import { Sora, Montserrat } from "next/font/google";
 import "./globals.css";
 import Header from "@/components/Header";
 import Footer from "@/components/Footer";
+import { Suspense } from "react";
+import NavigationProgress from "@/components/NavigationProgress";
 
 const sora = Sora({
   variable: "--font-sora",
@@ -44,6 +46,9 @@ export default function RootLayout({
   return (
     <html lang="fr">
       <body className={`${sora.variable} ${montserrat.variable} antialiased`}>
+        <Suspense fallback={null}>
+          <NavigationProgress />
+        </Suspense>
         <Header />
         <main>{children}</main>
         <Footer />
