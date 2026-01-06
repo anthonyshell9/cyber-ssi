@@ -4,7 +4,24 @@ import Image from "next/image";
 import Link from "next/link";
 import { useState } from "react";
 
-const navigation = [
+interface SubItem {
+  name: string;
+  href: string;
+}
+
+interface CategoryWithItems {
+  name: string;
+  href: string;
+  items: SubItem[];
+}
+
+interface NavItem {
+  name: string;
+  href: string;
+  submenu?: (SubItem | CategoryWithItems)[];
+}
+
+const navigation: NavItem[] = [
   { name: "Accueil", href: "/" },
   {
     name: "Vos Besoins",
@@ -139,7 +156,7 @@ export default function Header() {
                     {/* Check if submenu has nested items (like Nos Services) */}
                     {item.submenu[0] && 'items' in item.submenu[0] ? (
                       <div className="grid grid-cols-1 divide-y divide-gray-100">
-                        {item.submenu.map((category: any) => (
+                        {item.submenu.map((category) => (
                           <div key={category.name} className="p-4">
                             <Link
                               href={category.href}
@@ -147,24 +164,26 @@ export default function Header() {
                             >
                               {category.name}
                             </Link>
-                            <ul className="mt-2 space-y-1">
-                              {category.items.map((subItem: any) => (
-                                <li key={subItem.name}>
-                                  <Link
-                                    href={subItem.href}
-                                    className="block text-sm text-[#3c3a47] hover:text-[#7d53de] hover:translate-x-1 transition-all py-1"
-                                  >
-                                    {subItem.name}
-                                  </Link>
-                                </li>
-                              ))}
-                            </ul>
+                            {'items' in category && (
+                              <ul className="mt-2 space-y-1">
+                                {category.items.map((subItem) => (
+                                  <li key={subItem.name}>
+                                    <Link
+                                      href={subItem.href}
+                                      className="block text-sm text-[#3c3a47] hover:text-[#7d53de] hover:translate-x-1 transition-all py-1"
+                                    >
+                                      {subItem.name}
+                                    </Link>
+                                  </li>
+                                ))}
+                              </ul>
+                            )}
                           </div>
                         ))}
                       </div>
                     ) : (
                       <div className="py-2">
-                        {item.submenu.map((subItem: any) => (
+                        {item.submenu.map((subItem) => (
                           <Link
                             key={subItem.name}
                             href={subItem.href}
@@ -209,7 +228,7 @@ export default function Header() {
                 {item.submenu && (
                   <div className="pl-4 space-y-1">
                     {item.submenu[0] && 'items' in item.submenu[0] ? (
-                      item.submenu.map((category: any) => (
+                      item.submenu.map((category) => (
                         <div key={category.name} className="py-2">
                           <Link
                             href={category.href}
@@ -218,7 +237,7 @@ export default function Header() {
                           >
                             {category.name}
                           </Link>
-                          {category.items.map((subItem: any) => (
+                          {'items' in category && category.items.map((subItem) => (
                             <Link
                               key={subItem.name}
                               href={subItem.href}
@@ -231,7 +250,7 @@ export default function Header() {
                         </div>
                       ))
                     ) : (
-                      item.submenu.map((subItem: any) => (
+                      item.submenu.map((subItem) => (
                         <Link
                           key={subItem.name}
                           href={subItem.href}
