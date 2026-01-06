@@ -1,25 +1,30 @@
 "use client";
 
-import { useEffect, useState } from "react";
+import { useEffect, useRef, useCallback } from "react";
 import { usePathname, useSearchParams } from "next/navigation";
 
 export default function NavigationProgress() {
   const pathname = usePathname();
   const searchParams = useSearchParams();
-  const [isNavigating, setIsNavigating] = useState(false);
-  const [progress, setProgress] = useState(0);
+  const barRef = useRef<HTMLDivElement>(null);
+  const containerRef = useRef<HTMLDivElement>(null);
+
+  const setProgress = useCallback((value: number) => {
+    if (barRef.current) {
+      barRef.current.style.width = `${value}%`;
+      barRef.current.style.opacity = value === 100 ? "0" : "1";
+    }
+    if (containerRef.current) {
+      containerRef.current.style.display = value === 0 ? "none" : "block";
+    }
+  }, []);
 
   useEffect(() => {
     // Reset on route change complete
-    setIsNavigating(false);
     setProgress(100);
-
-    const timer = setTimeout(() => {
-      setProgress(0);
-    }, 200);
-
+    const timer = setTimeout(() => setProgress(0), 200);
     return () => clearTimeout(timer);
-  }, [pathname, searchParams]);
+  }, [pathname, searchParams, setProgress]);
 
   useEffect(() => {
     const handleClick = (e: MouseEvent) => {
@@ -29,10 +34,7 @@ export default function NavigationProgress() {
       if (link && link.href && link.href.startsWith(window.location.origin)) {
         const url = new URL(link.href);
         if (url.pathname !== pathname) {
-          setIsNavigating(true);
           setProgress(30);
-
-          // Simulate progress
           setTimeout(() => setProgress(60), 100);
           setTimeout(() => setProgress(80), 200);
         }
@@ -41,18 +43,14 @@ export default function NavigationProgress() {
 
     document.addEventListener("click", handleClick);
     return () => document.removeEventListener("click", handleClick);
-  }, [pathname]);
-
-  if (!isNavigating && progress === 0) return null;
+  }, [pathname, setProgress]);
 
   return (
-    <div className="fixed top-0 left-0 right-0 z-[100] h-1">
+    <div ref={containerRef} className="fixed top-0 left-0 right-0 z-[100] h-1" style={{ display: "none" }}>
       <div
+        ref={barRef}
         className="h-full bg-[#7d53de] transition-all duration-200 ease-out"
-        style={{
-          width: `${progress}%`,
-          opacity: progress === 100 ? 0 : 1,
-        }}
+        style={{ width: "0%", opacity: 0 }}
       />
     </div>
   );
