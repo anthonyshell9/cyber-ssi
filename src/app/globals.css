@@ -157,11 +157,17 @@ button, [role="button"] {
 }
 
 /* Animation classes */
+/* Hide elements with data-animation before JS loads */
+[data-animation] {
+  opacity: 0;
+}
+
 .animate-on-scroll {
   opacity: 0;
 }
 
 .animate-on-scroll.is-visible {
+  opacity: 1;
   animation-duration: 0.8s;
   animation-timing-function: cubic-bezier(0.22, 1, 0.36, 1);
   animation-fill-mode: both;
