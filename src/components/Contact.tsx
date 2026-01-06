@@ -74,9 +74,8 @@ export default function Contact() {
           </div>
         </div>
 
-        {/* Content */}
-        {activeTab === "form" ? (
-          <div className="grid grid-cols-1 lg:grid-cols-2 gap-12">
+        {/* Content - Form */}
+        <div className={`grid grid-cols-1 lg:grid-cols-2 gap-12 ${activeTab === "form" ? "block" : "hidden"}`}>
             {/* Left Column - Info */}
             <div>
               <div className="space-y-6">
@@ -215,22 +214,22 @@ export default function Contact() {
                 )}
               </form>
             </div>
+        </div>
+
+        {/* Calendly Widget - Always rendered but hidden when not active for preloading */}
+        <div className={`max-w-4xl mx-auto ${activeTab === "calendly" ? "block" : "hidden"}`}>
+          <div className="bg-white rounded-2xl shadow-lg overflow-hidden">
+            <iframe
+              src="https://calendly.com/ahassen-2/cyber-ssi-introduction?hide_gdpr_banner=1&primary_color=7d53de"
+              width="100%"
+              height="700"
+              frameBorder="0"
+              title="Planifier un rendez-vous"
+              className="w-full"
+              loading="eager"
+            />
           </div>
-        ) : (
-          /* Calendly Widget */
-          <div className="max-w-4xl mx-auto">
-            <div className="bg-white rounded-2xl shadow-lg overflow-hidden">
-              <iframe
-                src="https://calendly.com/ahassen-2/cyber-ssi-introduction?hide_gdpr_banner=1&primary_color=7d53de"
-                width="100%"
-                height="700"
-                frameBorder="0"
-                title="Planifier un rendez-vous"
-                className="w-full"
-              />
-            </div>
-          </div>
-        )}
+        </div>
       </div>
     </section>
   );
