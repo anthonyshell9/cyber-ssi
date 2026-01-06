@@ -16,7 +16,7 @@ export default function Header() {
   const [mobileMenuOpen, setMobileMenuOpen] = useState(false);
 
   return (
-    <header className="fixed top-0 left-0 right-0 z-50 bg-white/95 backdrop-blur-sm shadow-sm">
+    <header className="fixed top-0 left-0 right-0 z-50 bg-[#0e0c19]/95 backdrop-blur-sm shadow-lg">
       <nav className="mx-auto flex max-w-7xl items-center justify-between p-4 lg:px-8">
         {/* Logo */}
         <div className="flex lg:flex-1">
@@ -26,7 +26,7 @@ export default function Header() {
               alt="Cyber-SSI"
               width={150}
               height={44}
-              className="h-10 w-auto"
+              className="h-10 w-auto brightness-0 invert"
               priority
             />
           </Link>
@@ -36,7 +36,7 @@ export default function Header() {
         <div className="flex lg:hidden">
           <button
             type="button"
-            className="-m-2.5 inline-flex items-center justify-center rounded-md p-2.5 text-gray-700"
+            className="-m-2.5 inline-flex items-center justify-center rounded-md p-2.5 text-white"
             onClick={() => setMobileMenuOpen(!mobileMenuOpen)}
           >
             <span className="sr-only">Ouvrir le menu</span>
@@ -62,7 +62,7 @@ export default function Header() {
             <Link
               key={item.name}
               href={item.href}
-              className="text-sm font-semibold leading-6 text-[#0e0c19] hover:text-[#7d53de] transition-colors"
+              className="text-sm font-semibold leading-6 text-white/90 hover:text-[#7d53de] transition-colors"
             >
               {item.name}
             </Link>
@@ -72,8 +72,8 @@ export default function Header() {
         {/* CTA Button */}
         <div className="hidden lg:flex lg:flex-1 lg:justify-end">
           <Link
-            href="#contact"
-            className="rounded-full bg-[#7d53de] px-6 py-2.5 text-sm font-semibold text-white shadow-sm hover:bg-[#161131] transition-colors"
+            href="/#contact"
+            className="rounded-full bg-[#7d53de] px-6 py-2.5 text-sm font-semibold text-white shadow-sm hover:bg-white hover:text-[#0e0c19] transition-colors"
           >
             Contactez-nous
           </Link>
@@ -82,21 +82,21 @@ export default function Header() {
 
       {/* Mobile menu */}
       {mobileMenuOpen && (
-        <div className="lg:hidden">
+        <div className="lg:hidden bg-[#0e0c19]">
           <div className="space-y-1 px-4 pb-4">
             {navigation.map((item) => (
               <Link
                 key={item.name}
                 href={item.href}
-                className="block rounded-lg px-3 py-2 text-base font-semibold leading-7 text-[#0e0c19] hover:bg-gray-50"
+                className="block rounded-lg px-3 py-2 text-base font-semibold leading-7 text-white/90 hover:bg-[#161131] hover:text-[#7d53de]"
                 onClick={() => setMobileMenuOpen(false)}
               >
                 {item.name}
               </Link>
             ))}
             <Link
-              href="#contact"
-              className="block rounded-full bg-[#7d53de] px-6 py-2.5 text-center text-sm font-semibold text-white mt-4"
+              href="/#contact"
+              className="block rounded-full bg-[#7d53de] px-6 py-2.5 text-center text-sm font-semibold text-white mt-4 hover:bg-white hover:text-[#0e0c19]"
               onClick={() => setMobileMenuOpen(false)}
             >
               Contactez-nous
