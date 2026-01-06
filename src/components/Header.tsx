@@ -6,9 +6,10 @@ import { useState } from "react";
 
 const navigation = [
   { name: "Accueil", href: "/" },
-  { name: "Services", href: "#services" },
-  { name: "Réalisations", href: "#realisations" },
-  { name: "Contact", href: "#contact" },
+  { name: "Vos Besoins", href: "/vos-besoins" },
+  { name: "Nos Services", href: "/nos-services" },
+  { name: "Entreprise", href: "/entreprise" },
+  { name: "Contact", href: "/#contact" },
 ];
 
 export default function Header() {
