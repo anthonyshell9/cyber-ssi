@@ -1,7 +1,6 @@
 "use client";
 
-import { useState, FormEvent, useEffect } from "react";
-import Script from "next/script";
+import { useState, FormEvent } from "react";
 
 export default function Contact() {
   const [status, setStatus] = useState<"idle" | "loading" | "success" | "error">("idle");
@@ -36,11 +35,6 @@ export default function Contact() {
 
   return (
     <section id="contact" className="py-24 bg-gray-50">
-      <Script
-        src="https://assets.calendly.com/assets/external/widget.js"
-        strategy="lazyOnload"
-      />
-
       <div className="mx-auto max-w-7xl px-6 lg:px-8">
         {/* Header */}
         <div className="text-center mb-12">
@@ -226,10 +220,13 @@ export default function Contact() {
           /* Calendly Widget */
           <div className="max-w-4xl mx-auto">
             <div className="bg-white rounded-2xl shadow-lg overflow-hidden">
-              <div
-                className="calendly-inline-widget"
-                data-url="https://calendly.com/ahassen-2/cyber-ssi-introduction?hide_gdpr_banner=1&primary_color=7d53de"
-                style={{ minWidth: "320px", height: "700px" }}
+              <iframe
+                src="https://calendly.com/ahassen-2/cyber-ssi-introduction?hide_gdpr_banner=1&primary_color=7d53de"
+                width="100%"
+                height="700"
+                frameBorder="0"
+                title="Planifier un rendez-vous"
+                className="w-full"
               />
             </div>
           </div>
