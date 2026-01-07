@@ -1,61 +1,16 @@
-import Link from "next/link";
-import type { Metadata } from "next";
+"use client";
 
-export const metadata: Metadata = {
-  title: "Conformité VARA | Cyber-SSI",
-  description: "Accompagnement VARA pour les VASP à Dubaï : gouvernance des crypto-actifs, sécurité des clés, conformité globale.",
-};
+import { useTranslations } from "next-intl";
+import { Link } from "@/i18n/navigation";
 
-const requirements = [
-  {
-    title: "Gouvernance et organisation",
-    items: [
-      "Structure organisationnelle adaptée aux activités crypto",
-      "Séparation des fonctions clés",
-      "Comité de direction qualifié",
-      "Responsable conformité dédié",
-    ],
-  },
-  {
-    title: "Gestion des risques",
-    items: [
-      "Cadre de gestion des risques opérationnels",
-      "Évaluation des risques crypto-spécifiques",
-      "Plans de continuité d'activité",
-      "Gestion des risques de garde",
-    ],
-  },
-  {
-    title: "Sécurité des actifs",
-    items: [
-      "Ségrégation des actifs clients",
-      "Solutions de custody sécurisées",
-      "Gestion des clés cryptographiques",
-      "Protocoles de récupération",
-    ],
-  },
-  {
-    title: "Conformité réglementaire",
-    items: [
-      "KYC/AML renforcés",
-      "Travel Rule compliance",
-      "Reporting aux autorités",
-      "Audit et certification",
-    ],
-  },
-];
-
-const services = [
-  "Exchange de crypto-actifs",
-  "Broker-dealer",
-  "Custody services",
-  "Lending platforms",
-  "Advisory services",
-  "Management & Investment",
-  "Transfer & Settlement",
-];
+const requirementKeys = ["governance", "riskManagement", "assetSecurity", "compliance"] as const;
 
 export default function VARA() {
+  const t = useTranslations("grc.vara");
+
+  const services = t.raw("services.list") as string[];
+  const tags = t.raw("expertise.tags") as string[];
+
   return (
     <>
       {/* Hero Section */}
@@ -66,13 +21,13 @@ export default function VARA() {
         </div>
         <div className="relative z-10 text-center px-4 max-w-4xl mx-auto pt-20">
           <p className="text-[#7d53de] font-semibold uppercase tracking-wider mb-4">
-            Gouvernance, Risque et Conformité
+            {t("hero.label")}
           </p>
           <h1 className="text-4xl md:text-5xl lg:text-6xl font-bold text-white leading-tight">
-            Conformité <span className="text-[#7d53de]">VARA</span>
+            {t("hero.title")} <span className="text-[#7d53de]">{t("hero.titleHighlight")}</span>
           </h1>
           <p className="text-white/80 text-xl mt-6 max-w-2xl mx-auto">
-            Virtual Assets Regulatory Authority - Dubai
+            {t("hero.subtitle")}
           </p>
         </div>
       </section>
@@ -82,28 +37,21 @@ export default function VARA() {
         <div className="max-w-4xl mx-auto px-6">
           <div className="text-center mb-12">
             <h2 className="text-3xl font-bold text-[#0e0c19] mb-4">
-              Qu&apos;est-ce que VARA ?
+              {t("intro.title")}
             </h2>
             <div className="w-24 h-1 bg-[#7d53de] mx-auto rounded-full"></div>
           </div>
 
           <div className="prose prose-lg max-w-none text-[#3c3a47]">
             <p className="text-lg leading-relaxed mb-6">
-              VARA (Virtual Assets Regulatory Authority) est l&apos;autorité de régulation des actifs
-              virtuels de Dubaï. Elle supervise l&apos;ensemble des activités liées aux crypto-actifs
-              dans l&apos;émirat, de l&apos;échange à la custody en passant par les services de conseil.
+              {t("intro.text1")}
             </p>
             <p className="text-lg leading-relaxed mb-6">
-              Pour opérer à Dubaï, les Virtual Asset Service Providers (VASP) doivent obtenir
-              une licence VARA et respecter des exigences strictes en matière de gouvernance,
-              de sécurité et de conformité.
+              {t("intro.text2")}
             </p>
             <div className="bg-[#7d53de]/10 border-l-4 border-[#7d53de] p-6 rounded-r-lg">
-              <p className="text-[#0e0c19] font-semibold mb-2">Dubaï, hub crypto mondial</p>
-              <p>
-                Dubaï s&apos;est positionnée comme une destination attractive pour les entreprises
-                crypto grâce à un cadre réglementaire clair et favorable à l&apos;innovation.
-              </p>
+              <p className="text-[#0e0c19] font-semibold mb-2">{t("intro.hubTitle")}</p>
+              <p>{t("intro.hubText")}</p>
             </div>
           </div>
         </div>
@@ -114,7 +62,7 @@ export default function VARA() {
         <div className="max-w-7xl mx-auto px-6 lg:px-8">
           <div className="text-center mb-12">
             <h2 className="text-3xl font-bold text-[#0e0c19] mb-4">
-              Activités réglementées par VARA
+              {t("services.title")}
             </h2>
             <div className="w-24 h-1 bg-[#7d53de] mx-auto rounded-full"></div>
           </div>
@@ -137,27 +85,30 @@ export default function VARA() {
         <div className="max-w-7xl mx-auto px-6 lg:px-8">
           <div className="text-center mb-16">
             <h2 className="text-3xl md:text-4xl font-bold text-[#0e0c19] mb-4">
-              Exigences VARA
+              {t("requirements.title")}
             </h2>
             <div className="w-24 h-1 bg-[#7d53de] mx-auto rounded-full"></div>
           </div>
 
           <div className="grid grid-cols-1 md:grid-cols-2 gap-8">
-            {requirements.map((req, index) => (
-              <div key={index} className="bg-gray-50 p-8 rounded-xl">
-                <h3 className="text-xl font-bold text-[#0e0c19] mb-4">
-                  {req.title}
-                </h3>
-                <ul className="space-y-3">
-                  {req.items.map((item, idx) => (
-                    <li key={idx} className="flex items-start gap-3 text-[#3c3a47]">
-                      <span className="text-[#7d53de] mt-1">✓</span>
-                      {item}
-                    </li>
-                  ))}
-                </ul>
-              </div>
-            ))}
+            {requirementKeys.map((key) => {
+              const items = t.raw(`requirements.${key}.items`) as string[];
+              return (
+                <div key={key} className="bg-gray-50 p-8 rounded-xl">
+                  <h3 className="text-xl font-bold text-[#0e0c19] mb-4">
+                    {t(`requirements.${key}.title`)}
+                  </h3>
+                  <ul className="space-y-3">
+                    {items.map((item, idx) => (
+                      <li key={idx} className="flex items-start gap-3 text-[#3c3a47]">
+                        <span className="text-[#7d53de] mt-1">✓</span>
+                        {item}
+                      </li>
+                    ))}
+                  </ul>
+                </div>
+              );
+            })}
           </div>
         </div>
       </section>
@@ -167,35 +118,19 @@ export default function VARA() {
         <div className="max-w-7xl mx-auto px-6 lg:px-8">
           <div className="text-center mb-16">
             <h2 className="text-3xl md:text-4xl font-bold text-white mb-4">
-              Notre accompagnement VARA
+              {t("approach.title")}
             </h2>
             <div className="w-24 h-1 bg-[#7d53de] mx-auto rounded-full"></div>
           </div>
 
           <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
-            {[
-              {
-                step: "1",
-                title: "Préparation",
-                description: "Évaluation de votre éligibilité, définition du scope et préparation du dossier de candidature.",
-              },
-              {
-                step: "2",
-                title: "Mise en conformité",
-                description: "Implémentation des politiques, procédures et contrôles requis par VARA.",
-              },
-              {
-                step: "3",
-                title: "Licence & suivi",
-                description: "Accompagnement dans le processus de licensing et support post-licence.",
-              },
-            ].map((item, index) => (
-              <div key={index} className="text-center">
+            {["step1", "step2", "step3"].map((step, index) => (
+              <div key={step} className="text-center">
                 <div className="w-16 h-16 bg-[#7d53de] rounded-full flex items-center justify-center mx-auto mb-6">
-                  <span className="text-white text-2xl font-bold">{item.step}</span>
+                  <span className="text-white text-2xl font-bold">{index + 1}</span>
                 </div>
-                <h3 className="text-xl font-bold text-white mb-3">{item.title}</h3>
-                <p className="text-white/70">{item.description}</p>
+                <h3 className="text-xl font-bold text-white mb-3">{t(`approach.${step}.title`)}</h3>
+                <p className="text-white/70">{t(`approach.${step}.description`)}</p>
               </div>
             ))}
           </div>
@@ -206,15 +141,13 @@ export default function VARA() {
       <section className="py-16 bg-white">
         <div className="max-w-4xl mx-auto px-6 text-center">
           <h2 className="text-3xl font-bold text-[#0e0c19] mb-6">
-            Notre expertise crypto & blockchain
+            {t("expertise.title")}
           </h2>
           <p className="text-[#3c3a47] text-lg mb-8">
-            Cyber-SSI accompagne les acteurs DeFi, CeFi et Web3 dans leur conformité aux exigences
-            DORA, ISO 27001, SOC 2 et des régulateurs (AMF, ACPR, DFIC, VARA) en alliant expertise
-            réglementaire et technique.
+            {t("expertise.text")}
           </p>
           <div className="flex flex-wrap justify-center gap-4">
-            {["DeFi", "CeFi", "NFT", "Custody", "Exchange", "Staking"].map((tag, index) => (
+            {tags.map((tag, index) => (
               <span key={index} className="bg-[#7d53de]/10 text-[#7d53de] px-4 py-2 rounded-full text-sm font-medium">
                 {tag}
               </span>
@@ -227,16 +160,16 @@ export default function VARA() {
       <section className="py-16 bg-[#7d53de]">
         <div className="max-w-4xl mx-auto px-6 text-center">
           <h2 className="text-3xl md:text-4xl font-bold text-white mb-6">
-            Obtenez votre licence VARA
+            {t("cta.title")}
           </h2>
           <p className="text-white/90 text-lg mb-8">
-            Nos experts crypto vous accompagnent dans votre mise en conformité VARA.
+            {t("cta.description")}
           </p>
           <Link
             href="/#contact"
             className="inline-block rounded-full bg-white text-[#7d53de] px-8 py-4 text-lg font-semibold hover:bg-[#0e0c19] hover:text-white transition-colors"
           >
-            Contactez-nous
+            {t("cta.button")}
           </Link>
         </div>
       </section>

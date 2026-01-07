@@ -123,11 +123,6 @@ export default function Hero() {
           <span className="text-transparent bg-clip-text bg-gradient-to-r from-[#7d53de] to-[#a78bfa]">{t("titleHighlight")}</span>{t("titleEnd")}
         </h1>
 
-        {/* Subtitle */}
-        <p className="text-white/70 text-lg md:text-xl max-w-2xl mx-auto mb-8" data-animation="fadeInUp" data-delay="0.3">
-          {t("subtitle")}
-        </p>
-
         {/* CTA Buttons */}
         <div className="flex flex-col sm:flex-row gap-4 justify-center" data-animation="fadeInUp" data-delay="0.4">
           <Link

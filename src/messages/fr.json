@@ -184,6 +184,400 @@
   "languageSwitcher": {
     "label": "Langue"
   },
+  "grc": {
+    "hero": {
+      "label": "Nos Services",
+      "title": "Gouvernance, Risque et",
+      "titleHighlight": "Conformité",
+      "subtitle": "Structurez votre gouvernance cyber et assurez votre conformité réglementaire"
+    },
+    "intro": {
+      "text": "Les entreprises européennes font face à plusieurs réglementations cybersécurité :",
+      "regulations": {
+        "nis2": "Gouvernance, gestion d'incidents et analyse de risques pour secteurs essentiels",
+        "dora": "Obligations spécifiques au secteur financier",
+        "rgpd": "Protection des données personnelles",
+        "sectoral": "Exigences supplémentaires selon le domaine d'activité"
+      },
+      "conclusion": "Toutes les entreprises doivent démontrer leur conformité pour éviter sanctions, perte de confiance et blocages commerciaux."
+    },
+    "expertise": {
+      "title": "Nos Expertises",
+      "learnMore": "En savoir plus"
+    },
+    "services": {
+      "nis2": {
+        "title": "Mise en conformité NIS2",
+        "description": "Conformez-vous à NIS2 : gouvernance, gestion des risques, notification d'incidents et supervision chaîne d'approvisionnement."
+      },
+      "dora": {
+        "title": "Mise en conformité DORA",
+        "description": "Conformez-vous au règlement DORA : audit des risques TIC, tests de résilience, gestion des prestataires & réponse cyber pour entités financières."
+      },
+      "iso27001": {
+        "title": "ISO 27001",
+        "description": "Préparez votre certification ISO 27001 : audit du SMSI, cartographie des risques, mise en œuvre des contrôles et conformité garantie."
+      },
+      "iso42001": {
+        "title": "ISO/IEC 42001",
+        "description": "Adoptez une gouvernance IA responsable : audit SMIA, cartographie risques IA, conformité ISO/IEC 42001 pour une IA fiable et éthique."
+      },
+      "aiAct": {
+        "title": "AI Act",
+        "description": "Anticipez l'AI Act : audit IA, cartographie des systèmes, gouvernance & conformité pour éviter jusqu'à 35 M€ d'amende."
+      },
+      "vara": {
+        "title": "VARA",
+        "description": "Accompagnement VARA pour les VASP à Dubaï : gouvernance des crypto-actifs, sécurité des clés, conformité globale."
+      }
+    },
+    "cta": {
+      "title": "Besoin d'un accompagnement conformité ?",
+      "description": "Nos experts vous accompagnent dans votre mise en conformité réglementaire.",
+      "button": "Contactez-nous"
+    },
+    "nis2": {
+      "meta": {
+        "title": "Mise en conformité NIS2 | Cyber-SSI",
+        "description": "Conformez-vous à NIS2 : gouvernance, gestion des risques, notification d'incidents et supervision chaîne d'approvisionnement."
+      },
+      "hero": {
+        "label": "Gouvernance, Risque et Conformité",
+        "title": "Mise en conformité",
+        "titleHighlight": "NIS2",
+        "subtitle": "Conformez-vous à la directive européenne NIS2 avec notre accompagnement expert"
+      },
+      "intro": {
+        "title": "Qu'est-ce que NIS2 ?",
+        "text1": "La directive NIS2 (Network and Information Security 2) est le nouveau cadre réglementaire européen en matière de cybersécurité. Elle remplace la directive NIS1 et élargit considérablement son champ d'application à de nouveaux secteurs et types d'entités.",
+        "text2": "<strong>Applicable dès octobre 2024</strong>, cette directive impose des obligations renforcées en matière de gouvernance, de gestion des risques, de notification des incidents et de supervision de la chaîne d'approvisionnement.",
+        "sanctionsTitle": "Sanctions prévues :",
+        "sanctionsText": "Jusqu'à <strong>10 millions d'euros</strong> ou <strong>2% du chiffre d'affaires mondial</strong> pour les entités essentielles."
+      },
+      "sectors": {
+        "title": "Secteurs concernés",
+        "subtitle": "NIS2 s'applique aux entités essentielles et importantes dans de nombreux secteurs",
+        "list": ["Énergie", "Transports", "Santé", "Eau potable", "Infrastructures numériques", "Administration publique", "Espace", "Services postaux", "Gestion des déchets", "Fabrication de produits critiques", "Alimentaire", "Chimie"]
+      },
+      "requirements": {
+        "title": "Exigences NIS2",
+        "governance": {
+          "title": "Gouvernance de la cybersécurité",
+          "items": ["Responsabilité de la direction dans la gestion des risques cyber", "Mise en place d'une politique de sécurité des systèmes d'information", "Formation et sensibilisation obligatoires des dirigeants", "Nomination d'un responsable de la sécurité"]
+        },
+        "riskManagement": {
+          "title": "Gestion des risques",
+          "items": ["Analyse de risques régulière et documentée", "Mesures techniques et organisationnelles adaptées", "Plans de continuité et de reprise d'activité (PCA/PRA)", "Sécurité de la chaîne d'approvisionnement"]
+        },
+        "incidents": {
+          "title": "Notification des incidents",
+          "items": ["Alerte précoce sous 24h", "Notification complète sous 72h", "Rapport final dans le mois suivant l'incident", "Communication aux parties prenantes affectées"]
+        },
+        "security": {
+          "title": "Mesures de sécurité",
+          "items": ["Gestion des accès et authentification renforcée", "Chiffrement des données sensibles", "Détection et réponse aux incidents", "Tests et audits de sécurité réguliers"]
+        }
+      },
+      "approach": {
+        "title": "Notre accompagnement NIS2",
+        "step1": { "title": "Diagnostic initial", "description": "Évaluation de votre niveau de conformité actuel et identification des écarts par rapport aux exigences NIS2." },
+        "step2": { "title": "Plan d'action", "description": "Définition d'une feuille de route priorisée avec les actions correctives nécessaires et les délais associés." },
+        "step3": { "title": "Mise en œuvre", "description": "Accompagnement dans l'implémentation des mesures : politiques, procédures, solutions techniques." }
+      },
+      "cta": {
+        "title": "Préparez votre conformité NIS2",
+        "description": "Nos experts vous accompagnent dans votre mise en conformité NIS2.",
+        "button": "Demander un diagnostic"
+      }
+    },
+    "dora": {
+      "meta": {
+        "title": "Mise en conformité DORA | Cyber-SSI",
+        "description": "Conformez-vous au règlement DORA : audit des risques TIC, tests de résilience, gestion des prestataires & réponse cyber pour entités financières."
+      },
+      "hero": {
+        "label": "Gouvernance, Risque et Conformité",
+        "title": "Mise en conformité",
+        "titleHighlight": "DORA",
+        "subtitle": "Digital Operational Resilience Act - Résilience opérationnelle numérique du secteur financier"
+      },
+      "intro": {
+        "title": "Qu'est-ce que DORA ?",
+        "text1": "Le règlement DORA (Digital Operational Resilience Act) est le nouveau cadre européen qui harmonise les exigences en matière de résilience opérationnelle numérique pour le secteur financier.",
+        "text2": "<strong>Applicable dès janvier 2025</strong>, DORA impose aux entités financières de renforcer leur capacité à prévenir, résister et se remettre de perturbations liées aux TIC.",
+        "obligationsTitle": "Obligations spécifiques :",
+        "obligations": ["Tests de pénétration basés sur les menaces (TLPT) pour les entités significatives", "Notification des incidents majeurs sous 4 heures", "Registre des contrats avec les prestataires TIC"]
+      },
+      "entities": {
+        "title": "Entités concernées",
+        "subtitle": "DORA s'applique à l'ensemble des acteurs du secteur financier européen",
+        "list": ["Établissements de crédit", "Entreprises d'investissement", "Sociétés de gestion", "Compagnies d'assurance", "Institutions de retraite", "Prestataires de services crypto", "Plateformes de financement participatif", "Prestataires de services TIC critiques"]
+      },
+      "pillars": {
+        "title": "Les 5 piliers de DORA",
+        "pillar1": {
+          "title": "Gestion des risques TIC",
+          "description": "Cadre de gestion des risques liés aux technologies de l'information et de la communication",
+          "items": ["Gouvernance et organisation de la gestion des risques TIC", "Politique de sécurité des systèmes d'information", "Cartographie des actifs et des risques", "Mesures de protection et de détection"]
+        },
+        "pillar2": {
+          "title": "Gestion des incidents TIC",
+          "description": "Processus de détection, gestion et notification des incidents",
+          "items": ["Classification des incidents selon leur gravité", "Procédures de gestion et d'escalade", "Notification aux autorités compétentes", "Communication aux clients impactés"]
+        },
+        "pillar3": {
+          "title": "Tests de résilience",
+          "description": "Programme de tests pour évaluer la résilience opérationnelle numérique",
+          "items": ["Tests de vulnérabilités et scans de sécurité", "Tests de pénétration avancés (TLPT)", "Tests de scénarios de crise", "Exercices de continuité d'activité"]
+        },
+        "pillar4": {
+          "title": "Gestion des tiers TIC",
+          "description": "Supervision des prestataires de services TIC critiques",
+          "items": ["Due diligence des prestataires", "Clauses contractuelles obligatoires", "Surveillance continue des performances", "Plans de sortie et de substitution"]
+        },
+        "pillar5": {
+          "title": "Partage d'informations",
+          "description": "Échange de renseignements sur les cybermenaces entre entités financières",
+          "text": "DORA encourage le partage volontaire d'informations sur les menaces et vulnérabilités au sein de communautés de confiance pour renforcer la résilience collective du secteur."
+        }
+      },
+      "approach": {
+        "title": "Notre accompagnement DORA",
+        "step1": { "title": "Diagnostic de conformité", "description": "Évaluation de l'écart entre votre situation actuelle et les exigences DORA" },
+        "step2": { "title": "Cartographie des risques TIC", "description": "Identification et évaluation des risques liés à vos systèmes et prestataires" },
+        "step3": { "title": "Plan de remédiation", "description": "Définition des actions prioritaires pour atteindre la conformité" },
+        "step4": { "title": "Mise en œuvre", "description": "Accompagnement dans l'implémentation des mesures techniques et organisationnelles" },
+        "step5": { "title": "Tests de résilience", "description": "Réalisation des tests de pénétration et exercices de continuité requis" }
+      },
+      "cta": {
+        "title": "Préparez votre conformité DORA",
+        "description": "Nos experts financiers et cyber vous accompagnent vers la conformité DORA.",
+        "button": "Demander un diagnostic"
+      }
+    },
+    "iso27001": {
+      "meta": {
+        "title": "Certification ISO 27001 | Cyber-SSI",
+        "description": "Préparez votre certification ISO 27001 : audit du SMSI, cartographie des risques, mise en œuvre des contrôles et conformité garantie."
+      },
+      "hero": {
+        "label": "Gouvernance, Risque et Conformité",
+        "title": "Certification",
+        "titleHighlight": "ISO 27001",
+        "subtitle": "Système de Management de la Sécurité de l'Information"
+      },
+      "intro": {
+        "title": "Qu'est-ce que ISO 27001 ?",
+        "text1": "La norme ISO/IEC 27001 est le standard international de référence pour la mise en place d'un Système de Management de la Sécurité de l'Information (SMSI). Elle définit les exigences pour établir, implémenter, maintenir et améliorer continuellement la sécurité de l'information.",
+        "text2": "La certification ISO 27001 démontre à vos clients, partenaires et régulateurs que vous gérez la sécurité de l'information de manière structurée et conforme aux meilleures pratiques."
+      },
+      "benefits": {
+        "title": "Pourquoi se certifier ISO 27001 ?",
+        "benefit1": { "title": "Reconnaissance internationale", "description": "ISO 27001 est la référence mondiale en matière de sécurité de l'information, reconnue par vos clients et partenaires." },
+        "benefit2": { "title": "Avantage concurrentiel", "description": "Différenciez-vous de la concurrence et répondez aux exigences de vos donneurs d'ordres." },
+        "benefit3": { "title": "Conformité réglementaire", "description": "Facilitez votre conformité RGPD, NIS2 et autres réglementations sectorielles." },
+        "benefit4": { "title": "Réduction des risques", "description": "Identifiez et traitez systématiquement les risques de sécurité de l'information." }
+      },
+      "controls": {
+        "title": "Les 14 domaines de l'Annexe A",
+        "subtitle": "93 contrôles de sécurité organisés en 14 domaines",
+        "list": ["Politiques de sécurité de l'information", "Organisation de la sécurité", "Sécurité des ressources humaines", "Gestion des actifs", "Contrôle d'accès", "Cryptographie", "Sécurité physique", "Sécurité des opérations", "Sécurité des communications", "Acquisition et développement", "Relations fournisseurs", "Gestion des incidents", "Continuité d'activité", "Conformité"]
+      },
+      "phases": {
+        "title": "Notre démarche de certification",
+        "phase1": {
+          "phase": "Phase 1",
+          "title": "Diagnostic initial",
+          "items": ["Analyse de l'existant et du contexte", "Identification des parties prenantes", "Définition du périmètre de certification", "Évaluation de l'écart (Gap Analysis)"]
+        },
+        "phase2": {
+          "phase": "Phase 2",
+          "title": "Conception du SMSI",
+          "items": ["Politique de sécurité de l'information", "Méthodologie d'analyse des risques", "Déclaration d'applicabilité (SoA)", "Objectifs et indicateurs de sécurité"]
+        },
+        "phase3": {
+          "phase": "Phase 3",
+          "title": "Mise en œuvre",
+          "items": ["Implémentation des contrôles de l'Annexe A", "Rédaction des procédures et politiques", "Formation et sensibilisation", "Mise en place des outils de suivi"]
+        },
+        "phase4": {
+          "phase": "Phase 4",
+          "title": "Audit et certification",
+          "items": ["Audit interne préparatoire", "Revue de direction", "Accompagnement à l'audit de certification", "Suivi des actions correctives"]
+        }
+      },
+      "cta": {
+        "title": "Préparez votre certification ISO 27001",
+        "description": "Nos consultants certifiés ISO 27001 Lead Implementer et Lead Auditor vous accompagnent.",
+        "button": "Demander un devis"
+      }
+    },
+    "iso42001": {
+      "meta": {
+        "title": "Mise en conformité ISO/IEC 42001 | Cyber-SSI",
+        "description": "Adoptez une gouvernance IA responsable : audit SMIA, cartographie risques IA, conformité ISO/IEC 42001 pour une IA fiable et éthique."
+      },
+      "hero": {
+        "label": "Gouvernance, Risque et Conformité",
+        "title": "Conformité",
+        "titleHighlight": "ISO/IEC 42001",
+        "subtitle": "Système de Management de l'Intelligence Artificielle"
+      },
+      "intro": {
+        "title": "Qu'est-ce que ISO/IEC 42001 ?",
+        "text1": "La norme ISO/IEC 42001 est le premier standard international pour le management des systèmes d'intelligence artificielle. Elle fournit un cadre pour le développement, le déploiement et l'utilisation responsables de l'IA.",
+        "text2": "Cette norme aide les organisations à gérer les risques spécifiques à l'IA tout en maximisant les bénéfices de ces technologies émergentes.",
+        "synergyTitle": "Synergie réglementaire :",
+        "synergyText": "ISO 42001 facilite la conformité avec l'AI Act européen et s'intègre avec ISO 27001 pour une gouvernance globale de la sécurité et de l'IA."
+      },
+      "principles": {
+        "title": "Principes de l'IA responsable",
+        "transparency": { "title": "Transparence", "description": "Assurer la compréhensibilité des systèmes d'IA et de leurs décisions." },
+        "accountability": { "title": "Responsabilité", "description": "Établir des responsabilités claires pour le développement et l'utilisation de l'IA." },
+        "fairness": { "title": "Équité", "description": "Prévenir les biais et discriminations dans les systèmes d'IA." },
+        "reliability": { "title": "Fiabilité", "description": "Garantir la robustesse et la performance des systèmes d'IA." },
+        "security": { "title": "Sécurité", "description": "Protéger les systèmes d'IA contre les attaques et les utilisations malveillantes." },
+        "privacy": { "title": "Confidentialité", "description": "Assurer la protection des données personnelles traitées par l'IA." }
+      },
+      "approach": {
+        "title": "Notre accompagnement ISO 42001",
+        "step1": { "title": "Cartographie des systèmes IA", "description": "Inventaire et classification de tous les systèmes d'IA de l'organisation selon leur niveau de risque." },
+        "step2": { "title": "Analyse des risques IA", "description": "Évaluation des risques spécifiques à l'IA : biais, explicabilité, sécurité, conformité." },
+        "step3": { "title": "Conception du SMIA", "description": "Mise en place du Système de Management de l'Intelligence Artificielle conforme à ISO 42001." },
+        "step4": { "title": "Implémentation des contrôles", "description": "Déploiement des mesures techniques et organisationnelles pour une IA responsable." },
+        "step5": { "title": "Audit et amélioration", "description": "Vérification de la conformité et amélioration continue du SMIA." }
+      },
+      "useCases": {
+        "title": "Cas d'usage",
+        "list": ["Chatbots et assistants virtuels", "Systèmes de recommandation", "Analyse prédictive", "Reconnaissance d'images", "Traitement du langage naturel", "Automatisation des processus"]
+      },
+      "cta": {
+        "title": "Adoptez une gouvernance IA responsable",
+        "description": "Nos experts vous accompagnent dans la mise en conformité ISO/IEC 42001.",
+        "button": "Demander un audit IA"
+      }
+    },
+    "aiAct": {
+      "meta": {
+        "title": "Mise en conformité AI Act | Cyber-SSI",
+        "description": "Anticipez l'AI Act : audit IA, cartographie des systèmes, gouvernance & conformité pour éviter jusqu'à 35 M€ d'amende."
+      },
+      "hero": {
+        "label": "Gouvernance, Risque et Conformité",
+        "title": "Conformité",
+        "titleHighlight": "AI Act",
+        "subtitle": "Règlement européen sur l'intelligence artificielle"
+      },
+      "intro": {
+        "title": "Qu'est-ce que l'AI Act ?",
+        "text1": "L'AI Act est le premier cadre juridique complet au monde régulant l'intelligence artificielle. Ce règlement européen vise à garantir que les systèmes d'IA mis sur le marché européen soient sûrs et respectent les droits fondamentaux.",
+        "text2": "Basé sur une approche par les risques, l'AI Act impose des obligations différenciées selon le niveau de risque présenté par chaque système d'IA.",
+        "warningTitle": "Attention : Sanctions sévères",
+        "warningText": "Les violations peuvent entraîner des amendes allant jusqu'à <strong>35 millions d'euros</strong> ou <strong>7% du chiffre d'affaires mondial</strong>."
+      },
+      "riskLevels": {
+        "title": "Classification par niveau de risque",
+        "unacceptable": {
+          "level": "Risque inacceptable",
+          "description": "Systèmes d'IA interdits",
+          "examples": ["Manipulation comportementale", "Notation sociale (social scoring)", "Identification biométrique en temps réel dans les lieux publics", "Exploitation des vulnérabilités des personnes"]
+        },
+        "high": {
+          "level": "Haut risque",
+          "description": "Exigences strictes à respecter",
+          "examples": ["Recrutement et gestion des RH", "Évaluation de crédit", "Dispositifs médicaux", "Véhicules autonomes", "Identification biométrique"]
+        },
+        "limited": {
+          "level": "Risque limité",
+          "description": "Obligations de transparence",
+          "examples": ["Chatbots", "Deepfakes", "Systèmes de recommandation", "Génération de contenu"]
+        },
+        "minimal": {
+          "level": "Risque minimal",
+          "description": "Pas d'obligations spécifiques",
+          "examples": ["Filtres anti-spam", "Jeux vidéo avec IA", "Systèmes d'inventaire"]
+        }
+      },
+      "sanctions": {
+        "title": "Régime de sanctions",
+        "items": [
+          { "violation": "Systèmes interdits", "amount": "35 M€ ou 7% du CA" },
+          { "violation": "Non-conformité haut risque", "amount": "15 M€ ou 3% du CA" },
+          { "violation": "Informations incorrectes", "amount": "7,5 M€ ou 1,5% du CA" }
+        ]
+      },
+      "approach": {
+        "title": "Notre accompagnement AI Act",
+        "step1": { "title": "Cartographie IA", "description": "Inventaire et classification de vos systèmes d'IA selon les niveaux de risque AI Act" },
+        "step2": { "title": "Gap Analysis", "description": "Évaluation de l'écart entre votre situation actuelle et les exigences réglementaires" },
+        "step3": { "title": "Plan de conformité", "description": "Définition des actions prioritaires et de la feuille de route vers la conformité" },
+        "step4": { "title": "Documentation", "description": "Rédaction de la documentation technique et des évaluations de conformité" }
+      },
+      "cta": {
+        "title": "Anticipez l'AI Act",
+        "description": "Nos experts vous accompagnent dans votre mise en conformité AI Act.",
+        "button": "Demander un diagnostic"
+      }
+    },
+    "vara": {
+      "meta": {
+        "title": "Conformité VARA | Cyber-SSI",
+        "description": "Accompagnement VARA pour les VASP à Dubaï : gouvernance des crypto-actifs, sécurité des clés, conformité globale."
+      },
+      "hero": {
+        "label": "Gouvernance, Risque et Conformité",
+        "title": "Conformité",
+        "titleHighlight": "VARA",
+        "subtitle": "Virtual Assets Regulatory Authority - Dubai"
+      },
+      "intro": {
+        "title": "Qu'est-ce que VARA ?",
+        "text1": "VARA (Virtual Assets Regulatory Authority) est l'autorité de régulation des actifs virtuels de Dubaï. Elle supervise l'ensemble des activités liées aux crypto-actifs dans l'émirat, de l'échange à la custody en passant par les services de conseil.",
+        "text2": "Pour opérer à Dubaï, les Virtual Asset Service Providers (VASP) doivent obtenir une licence VARA et respecter des exigences strictes en matière de gouvernance, de sécurité et de conformité.",
+        "hubTitle": "Dubaï, hub crypto mondial",
+        "hubText": "Dubaï s'est positionnée comme une destination attractive pour les entreprises crypto grâce à un cadre réglementaire clair et favorable à l'innovation."
+      },
+      "services": {
+        "title": "Activités réglementées par VARA",
+        "list": ["Exchange de crypto-actifs", "Broker-dealer", "Custody services", "Lending platforms", "Advisory services", "Management & Investment", "Transfer & Settlement"]
+      },
+      "requirements": {
+        "title": "Exigences VARA",
+        "governance": {
+          "title": "Gouvernance et organisation",
+          "items": ["Structure organisationnelle adaptée aux activités crypto", "Séparation des fonctions clés", "Comité de direction qualifié", "Responsable conformité dédié"]
+        },
+        "riskManagement": {
+          "title": "Gestion des risques",
+          "items": ["Cadre de gestion des risques opérationnels", "Évaluation des risques crypto-spécifiques", "Plans de continuité d'activité", "Gestion des risques de garde"]
+        },
+        "assetSecurity": {
+          "title": "Sécurité des actifs",
+          "items": ["Ségrégation des actifs clients", "Solutions de custody sécurisées", "Gestion des clés cryptographiques", "Protocoles de récupération"]
+        },
+        "compliance": {
+          "title": "Conformité réglementaire",
+          "items": ["KYC/AML renforcés", "Travel Rule compliance", "Reporting aux autorités", "Audit et certification"]
+        }
+      },
+      "approach": {
+        "title": "Notre accompagnement VARA",
+        "step1": { "title": "Préparation", "description": "Évaluation de votre éligibilité, définition du scope et préparation du dossier de candidature." },
+        "step2": { "title": "Mise en conformité", "description": "Implémentation des politiques, procédures et contrôles requis par VARA." },
+        "step3": { "title": "Licence & suivi", "description": "Accompagnement dans le processus de licensing et support post-licence." }
+      },
+      "expertise": {
+        "title": "Notre expertise crypto & blockchain",
+        "text": "Cyber-SSI accompagne les acteurs DeFi, CeFi et Web3 dans leur conformité aux exigences DORA, ISO 27001, SOC 2 et des régulateurs (AMF, ACPR, DFIC, VARA) en alliant expertise réglementaire et technique.",
+        "tags": ["DeFi", "CeFi", "NFT", "Custody", "Exchange", "Staking"]
+      },
+      "cta": {
+        "title": "Obtenez votre licence VARA",
+        "description": "Nos experts crypto vous accompagnent dans votre mise en conformité VARA.",
+        "button": "Contactez-nous"
+      }
+    }
+  },
   "confidentialite": {
     "meta": {
       "title": "Politique de Confidentialité | Cyber-SSI",
@@ -521,6 +915,223 @@
       "title": "Prêt à sécuriser votre entreprise ?",
       "description": "Contactez-nous pour un diagnostic personnalisé de vos besoins en cybersécurité.",
       "button": "Contactez-nous"
+    }
+  },
+  "conseilsAudits": {
+    "hero": {
+      "label": "Nos Services",
+      "title": "Conseils et",
+      "titleHighlight": "Audits",
+      "subtitle": "Accompagnement stratégique pour renforcer votre cybersécurité"
+    },
+    "intro": {
+      "text": "Nos consultants et RSSI à temps partagé structurent votre gouvernance cybersécurité, pilotent vos analyses de risques, encadrent vos prestataires critiques et renforcent votre sécurité opérationnelle par des tests d'intrusion et des audits techniques."
+    },
+    "expertise": {
+      "title": "Nos Expertises",
+      "learnMore": "En savoir plus"
+    },
+    "services": {
+      "maturity": {
+        "title": "Amélioration de la maturité cyber",
+        "description": "Renforcez votre résilience cyber : gouvernance, gestion des risques, outils et sensibilisation pour passer à la vitesse supérieure."
+      },
+      "posture": {
+        "title": "Évaluer votre posture de sécurité",
+        "description": "Évaluez votre posture de sécurité : audit complet, tests d'intrusion, cartographie des risques et plan pour renforcer votre cybersécurité."
+      },
+      "dueDiligence": {
+        "title": "Due Diligence Cyber",
+        "description": "Analysez la maturité cyber avant acquisition : due diligence complète pour sécuriser vos deals et décisions M&A."
+      },
+      "ciso": {
+        "title": "RSSI à temps partagé",
+        "description": "Bénéficiez d'un RSSI senior à temps partiel pour piloter votre sécurité, conformité et résilience cyber sans recrutement interne."
+      }
+    },
+    "whyUs": {
+      "title": "Pourquoi choisir Cyber-SSI ?",
+      "expertise": { "title": "Expertise certifiée", "description": "Consultants CISSP, CISM, ISO 27001 LA/LI avec une expérience terrain significative." },
+      "pragmatic": { "title": "Approche pragmatique", "description": "Des recommandations concrètes et adaptées à votre contexte, pas de conseils théoriques." },
+      "support": { "title": "Accompagnement complet", "description": "Du diagnostic à la mise en œuvre, nous vous accompagnons à chaque étape." }
+    },
+    "cta": {
+      "title": "Besoin d'un accompagnement ?",
+      "description": "Discutons de vos enjeux cybersécurité et voyons comment nous pouvons vous aider.",
+      "button": "Contactez-nous"
+    },
+    "maturity": {
+      "hero": {
+        "label": "Conseils et Audits",
+        "title": "Amélioration de la",
+        "titleHighlight": "maturité cyber",
+        "subtitle": "Passez au niveau supérieur en cybersécurité"
+      },
+      "intro": {
+        "title": "Qu'est-ce que la maturité cyber ?",
+        "text": "La maturité cybersécurité mesure la capacité de votre organisation à identifier, protéger, détecter, répondre et récupérer face aux menaces cyber. Un niveau de maturité élevé signifie des processus structurés, mesurés et en amélioration continue.",
+        "approachTitle": "Notre approche",
+        "approachText": "Nous évaluons votre maturité actuelle, définissons votre cible et vous accompagnons dans la mise en œuvre des améliorations prioritaires."
+      },
+      "levels": {
+        "title": "Niveaux de maturité",
+        "list": [
+          { "level": 1, "name": "Initial", "desc": "Processus ad hoc, non documentés" },
+          { "level": 2, "name": "Géré", "desc": "Processus définis mais pas standardisés" },
+          { "level": 3, "name": "Défini", "desc": "Processus documentés et standardisés" },
+          { "level": 4, "name": "Mesuré", "desc": "Processus mesurés et contrôlés" },
+          { "level": 5, "name": "Optimisé", "desc": "Amélioration continue" }
+        ]
+      },
+      "domains": {
+        "title": "Domaines évalués",
+        "governance": { "title": "Gouvernance", "items": ["Politique de sécurité de l'information", "Organisation de la sécurité", "Comité de sécurité", "Rôles et responsabilités"] },
+        "riskManagement": { "title": "Gestion des risques", "items": ["Méthodologie d'analyse des risques", "Cartographie des actifs", "Plan de traitement des risques", "Indicateurs de risques"] },
+        "protection": { "title": "Protection", "items": ["Contrôle des accès", "Sécurité des réseaux", "Protection des données", "Sécurité des endpoints"] },
+        "detection": { "title": "Détection et réponse", "items": ["Surveillance des événements", "Gestion des incidents", "Plans de continuité (PCA/PRA)", "Exercices de crise"] },
+        "human": { "title": "Facteur humain", "items": ["Sensibilisation des utilisateurs", "Formation des équipes IT", "Simulations de phishing", "Culture sécurité"] },
+        "compliance": { "title": "Conformité", "items": ["Veille réglementaire", "Audits de conformité", "Documentation", "Amélioration continue"] }
+      },
+      "approach": {
+        "title": "Notre démarche",
+        "steps": [
+          { "step": "1", "title": "Diagnostic", "desc": "Évaluation de votre niveau de maturité actuel" },
+          { "step": "2", "title": "Analyse des écarts", "desc": "Identification des points d'amélioration prioritaires" },
+          { "step": "3", "title": "Feuille de route", "desc": "Plan d'action priorisé et chiffré" },
+          { "step": "4", "title": "Accompagnement", "desc": "Support à la mise en œuvre des améliorations" }
+        ]
+      },
+      "cta": {
+        "title": "Évaluez votre maturité cyber",
+        "description": "Identifiez vos axes d'amélioration prioritaires.",
+        "button": "Demander un diagnostic"
+      }
+    },
+    "posture": {
+      "hero": {
+        "label": "Conseils et Audits",
+        "title": "Évaluer votre",
+        "titleHighlight": "posture de sécurité",
+        "subtitle": "Connaissez votre niveau de sécurité réel et vos priorités d'action"
+      },
+      "intro": {
+        "title": "Pourquoi évaluer sa posture ?",
+        "text": "Vous ne pouvez pas protéger ce que vous ne connaissez pas. L'évaluation de votre posture de sécurité vous donne une vision claire de votre exposition aux risques et de vos priorités d'investissement en cybersécurité.",
+        "visionTitle": "Vision 360°",
+        "visionText": "Notre évaluation combine audits organisationnels, tests techniques et analyse des risques pour une vision complète de votre sécurité."
+      },
+      "assessmentTypes": {
+        "title": "Composantes de l'évaluation",
+        "organizational": { "title": "Audit organisationnel", "description": "Évaluation de votre gouvernance et de vos processus de sécurité", "items": ["Revue des politiques de sécurité", "Analyse de l'organisation", "Évaluation des processus", "Conformité réglementaire"] },
+        "technical": { "title": "Audit technique", "description": "Tests et analyses de vos systèmes et infrastructures", "items": ["Tests d'intrusion", "Audit de configuration", "Scan de vulnérabilités", "Analyse des architectures"] },
+        "riskAnalysis": { "title": "Analyse des risques", "description": "Identification et évaluation des risques cyber", "items": ["Cartographie des actifs", "Identification des menaces", "Évaluation des impacts", "Plan de traitement"] },
+        "human": { "title": "Évaluation humaine", "description": "Test de la sensibilisation et des pratiques", "items": ["Campagnes de phishing", "Tests d'ingénierie sociale", "Évaluation des pratiques", "Niveau de sensibilisation"] }
+      },
+      "deliverables": {
+        "title": "Livrables",
+        "list": ["Rapport d'audit détaillé", "Cartographie des risques", "Scoring de maturité", "Benchmark sectoriel", "Recommandations priorisées", "Plan d'action opérationnel"]
+      },
+      "approach": {
+        "title": "Notre démarche",
+        "steps": [
+          { "step": "1", "title": "Cadrage", "desc": "Définition du périmètre" },
+          { "step": "2", "title": "Collecte", "desc": "Documentation & interviews" },
+          { "step": "3", "title": "Tests", "desc": "Audits techniques" },
+          { "step": "4", "title": "Analyse", "desc": "Évaluation des risques" },
+          { "step": "5", "title": "Restitution", "desc": "Rapport & plan d'action" }
+        ]
+      },
+      "cta": {
+        "title": "Évaluez votre sécurité",
+        "description": "Obtenez une vision claire de votre posture de sécurité.",
+        "button": "Demander une évaluation"
+      }
+    },
+    "ciso": {
+      "hero": {
+        "label": "Conseils et Audits",
+        "title": "RSSI à",
+        "titleHighlight": "temps partagé",
+        "subtitle": "Un responsable sécurité expérimenté, sans les contraintes du recrutement"
+      },
+      "intro": {
+        "title": "Pourquoi un RSSI externalisé ?",
+        "text": "Toutes les organisations n'ont pas les moyens ou le besoin d'un RSSI à temps plein. Pourtant, la cybersécurité nécessite une expertise et un pilotage continus. Notre offre de RSSI à temps partagé vous permet de bénéficier d'une compétence senior adaptée à votre contexte.",
+        "operationalTitle": "Opérationnel immédiatement",
+        "operationalText": "Nos RSSI sont des professionnels expérimentés qui connaissent les enjeux des PME et ETI. Ils sont opérationnels dès le premier jour."
+      },
+      "benefits": {
+        "title": "Avantages du RSSI externalisé",
+        "expertise": { "title": "Expertise senior", "description": "Un RSSI expérimenté et certifié (CISSP, CISM, ISO 27001 LI/LA) dès le premier jour." },
+        "flexibility": { "title": "Flexibilité", "description": "Adaptez le temps de présence à vos besoins réels : quelques jours par mois à plusieurs jours par semaine." },
+        "cost": { "title": "Coût maîtrisé", "description": "L'expertise d'un RSSI senior sans le coût d'un recrutement à temps plein." },
+        "vision": { "title": "Vision externe", "description": "Un regard neuf et des benchmarks issus d'autres contextes pour enrichir vos pratiques." }
+      },
+      "missions": {
+        "title": "Missions du RSSI",
+        "governance": { "title": "Gouvernance SSI", "items": ["Définition de la stratégie de sécurité", "Rédaction des politiques et procédures", "Animation du comité de sécurité", "Reporting à la direction"] },
+        "riskManagement": { "title": "Gestion des risques", "items": ["Cartographie des actifs critiques", "Analyse des risques cyber", "Plan de traitement des risques", "Suivi des indicateurs de risques"] },
+        "compliance": { "title": "Conformité", "items": ["Mise en conformité réglementaire", "Préparation aux audits", "Certification ISO 27001", "Veille réglementaire"] },
+        "operational": { "title": "Opérationnel", "items": ["Pilotage des projets sécurité", "Supervision des prestataires", "Gestion des incidents", "Sensibilisation des équipes"] }
+      },
+      "formulas": {
+        "title": "Nos formules",
+        "list": [
+          { "name": "Essential", "days": "2-4 jours/mois", "desc": "Pour les PME souhaitant structurer leur gouvernance SSI" },
+          { "name": "Business", "days": "1-2 jours/semaine", "desc": "Pour les entreprises avec des enjeux de conformité" },
+          { "name": "Premium", "days": "3-4 jours/semaine", "desc": "Pour les organisations nécessitant une présence soutenue" }
+        ]
+      },
+      "certifications": {
+        "title": "Certifications de nos RSSI",
+        "list": ["CISSP", "CISM", "CISA", "ISO 27001 LA", "ISO 27001 LI", "CRISC", "CEH"]
+      },
+      "cta": {
+        "title": "Besoin d'un RSSI ?",
+        "description": "Discutons de vos besoins et trouvons la formule adaptée.",
+        "button": "Contactez-nous"
+      }
+    },
+    "dueDiligence": {
+      "hero": {
+        "label": "Conseils et Audits",
+        "title": "Due Diligence",
+        "titleHighlight": "Cyber",
+        "subtitle": "Sécurisez vos opérations M&A et vos décisions d'investissement"
+      },
+      "intro": {
+        "title": "Qu'est-ce que la due diligence cyber ?",
+        "text": "La due diligence cybersécurité est l'évaluation approfondie de la posture de sécurité d'une entreprise cible dans le cadre d'une opération M&A, d'un investissement ou d'un partenariat stratégique.",
+        "warningTitle": "Risques à identifier",
+        "warningText": "Un incident cyber non détecté lors de l'acquisition peut entraîner des coûts significatifs : remédiation, litiges, perte de clients, impact sur la valorisation."
+      },
+      "contexts": {
+        "title": "Contextes d'intervention",
+        "list": [
+          { "title": "Acquisition / M&A", "desc": "Évaluez les risques cyber avant de finaliser une acquisition" },
+          { "title": "Investissement", "desc": "Identifiez les faiblesses cyber des cibles d'investissement" },
+          { "title": "Partenariat stratégique", "desc": "Vérifiez la maturité cyber de vos futurs partenaires" },
+          { "title": "Externalisation", "desc": "Évaluez les prestataires critiques avant contractualisation" }
+        ]
+      },
+      "areas": {
+        "title": "Domaines analysés",
+        "governance": { "title": "Gouvernance & Organisation", "items": ["Politique de sécurité", "Organisation de la SSI", "Gestion des risques", "Conformité réglementaire"] },
+        "infrastructure": { "title": "Infrastructure & Technique", "items": ["Architecture réseau", "Sécurité des systèmes", "Protection des données", "Cloud et externalisation"] },
+        "incidents": { "title": "Historique des incidents", "items": ["Incidents passés", "Data breaches", "Litiges en cours", "Vulnérabilités connues"] },
+        "exposure": { "title": "Exposition aux risques", "items": ["Surface d'attaque", "Données sensibles", "Dépendances critiques", "Assurance cyber"] }
+      },
+      "deliverables": {
+        "title": "Livrables",
+        "report": { "title": "Rapport de due diligence", "description": "Analyse détaillée de la posture cyber avec scoring de maturité et cartographie des risques." },
+        "redFlags": { "title": "Red Flags identifiés", "description": "Liste des points de vigilance majeurs pouvant impacter la transaction." },
+        "remediation": { "title": "Plan de remédiation", "description": "Actions correctives à intégrer dans le plan d'intégration post-acquisition." }
+      },
+      "cta": {
+        "title": "Sécurisez vos transactions",
+        "description": "Identifiez les risques cyber avant de finaliser votre opération.",
+        "button": "Demander une due diligence"
+      }
     }
   }
 }

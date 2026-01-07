@@ -1,65 +1,21 @@
-import Link from "next/link";
-import type { Metadata } from "next";
+"use client";
 
-export const metadata: Metadata = {
-  title: "Mise en conformité AI Act | Cyber-SSI",
-  description: "Anticipez l'AI Act : audit IA, cartographie des systèmes, gouvernance & conformité pour éviter jusqu'à 35 M€ d'amende.",
+import { useTranslations } from "next-intl";
+import { Link } from "@/i18n/navigation";
+
+const riskLevelKeys = ["unacceptable", "high", "limited", "minimal"] as const;
+const riskColors = {
+  unacceptable: "bg-red-500",
+  high: "bg-orange-500",
+  limited: "bg-yellow-500",
+  minimal: "bg-green-500",
 };
 
-const riskLevels = [
-  {
-    level: "Risque inacceptable",
-    color: "bg-red-500",
-    description: "Systèmes d'IA interdits",
-    examples: [
-      "Manipulation comportementale",
-      "Notation sociale (social scoring)",
-      "Identification biométrique en temps réel dans les lieux publics",
-      "Exploitation des vulnérabilités des personnes",
-    ],
-  },
-  {
-    level: "Haut risque",
-    color: "bg-orange-500",
-    description: "Exigences strictes à respecter",
-    examples: [
-      "Recrutement et gestion des RH",
-      "Évaluation de crédit",
-      "Dispositifs médicaux",
-      "Véhicules autonomes",
-      "Identification biométrique",
-    ],
-  },
-  {
-    level: "Risque limité",
-    color: "bg-yellow-500",
-    description: "Obligations de transparence",
-    examples: [
-      "Chatbots",
-      "Deepfakes",
-      "Systèmes de recommandation",
-      "Génération de contenu",
-    ],
-  },
-  {
-    level: "Risque minimal",
-    color: "bg-green-500",
-    description: "Pas d'obligations spécifiques",
-    examples: [
-      "Filtres anti-spam",
-      "Jeux vidéo avec IA",
-      "Systèmes d'inventaire",
-    ],
-  },
-];
-
-const sanctions = [
-  { violation: "Systèmes interdits", amount: "35 M€ ou 7% du CA" },
-  { violation: "Non-conformité haut risque", amount: "15 M€ ou 3% du CA" },
-  { violation: "Informations incorrectes", amount: "7,5 M€ ou 1,5% du CA" },
-];
-
 export default function AIAct() {
+  const t = useTranslations("grc.aiAct");
+
+  const sanctions = t.raw("sanctions.items") as Array<{ violation: string; amount: string }>;
+
   return (
     <>
       {/* Hero Section */}
@@ -70,13 +26,13 @@ export default function AIAct() {
         </div>
         <div className="relative z-10 text-center px-4 max-w-4xl mx-auto pt-20">
           <p className="text-[#7d53de] font-semibold uppercase tracking-wider mb-4">
-            Gouvernance, Risque et Conformité
+            {t("hero.label")}
           </p>
           <h1 className="text-4xl md:text-5xl lg:text-6xl font-bold text-white leading-tight">
-            Conformité <span className="text-[#7d53de]">AI Act</span>
+            {t("hero.title")} <span className="text-[#7d53de]">{t("hero.titleHighlight")}</span>
           </h1>
           <p className="text-white/80 text-xl mt-6 max-w-2xl mx-auto">
-            Règlement européen sur l&apos;intelligence artificielle
+            {t("hero.subtitle")}
           </p>
         </div>
       </section>
@@ -86,27 +42,21 @@ export default function AIAct() {
         <div className="max-w-4xl mx-auto px-6">
           <div className="text-center mb-12">
             <h2 className="text-3xl font-bold text-[#0e0c19] mb-4">
-              Qu&apos;est-ce que l&apos;AI Act ?
+              {t("intro.title")}
             </h2>
             <div className="w-24 h-1 bg-[#7d53de] mx-auto rounded-full"></div>
           </div>
 
           <div className="prose prose-lg max-w-none text-[#3c3a47]">
             <p className="text-lg leading-relaxed mb-6">
-              L&apos;AI Act est le premier cadre juridique complet au monde régulant l&apos;intelligence
-              artificielle. Ce règlement européen vise à garantir que les systèmes d&apos;IA mis sur
-              le marché européen soient sûrs et respectent les droits fondamentaux.
+              {t("intro.text1")}
             </p>
             <p className="text-lg leading-relaxed mb-6">
-              Basé sur une approche par les risques, l&apos;AI Act impose des obligations différenciées
-              selon le niveau de risque présenté par chaque système d&apos;IA.
+              {t("intro.text2")}
             </p>
             <div className="bg-red-50 border-l-4 border-red-500 p-6 rounded-r-lg">
-              <p className="text-red-800 font-semibold mb-2">Attention : Sanctions sévères</p>
-              <p className="text-red-700">
-                Les violations peuvent entraîner des amendes allant jusqu&apos;à <strong>35 millions d&apos;euros</strong> ou
-                <strong> 7% du chiffre d&apos;affaires mondial</strong>.
-              </p>
+              <p className="text-red-800 font-semibold mb-2">{t("intro.warningTitle")}</p>
+              <p className="text-red-700" dangerouslySetInnerHTML={{ __html: t("intro.warningText") }} />
             </div>
           </div>
         </div>
@@ -117,30 +67,33 @@ export default function AIAct() {
         <div className="max-w-7xl mx-auto px-6 lg:px-8">
           <div className="text-center mb-16">
             <h2 className="text-3xl md:text-4xl font-bold text-[#0e0c19] mb-4">
-              Classification par niveau de risque
+              {t("riskLevels.title")}
             </h2>
             <div className="w-24 h-1 bg-[#7d53de] mx-auto rounded-full"></div>
           </div>
 
           <div className="grid grid-cols-1 md:grid-cols-2 gap-8">
-            {riskLevels.map((risk, index) => (
-              <div key={index} className="bg-white rounded-xl shadow-lg overflow-hidden">
-                <div className={`${risk.color} p-4`}>
-                  <h3 className="text-xl font-bold text-white">{risk.level}</h3>
-                  <p className="text-white/80 text-sm">{risk.description}</p>
+            {riskLevelKeys.map((key) => {
+              const examples = t.raw(`riskLevels.${key}.examples`) as string[];
+              return (
+                <div key={key} className="bg-white rounded-xl shadow-lg overflow-hidden">
+                  <div className={`${riskColors[key]} p-4`}>
+                    <h3 className="text-xl font-bold text-white">{t(`riskLevels.${key}.level`)}</h3>
+                    <p className="text-white/80 text-sm">{t(`riskLevels.${key}.description`)}</p>
+                  </div>
+                  <div className="p-6">
+                    <ul className="space-y-2">
+                      {examples.map((example, idx) => (
+                        <li key={idx} className="flex items-start gap-2 text-[#3c3a47]">
+                          <span className="text-[#7d53de]">•</span>
+                          {example}
+                        </li>
+                      ))}
+                    </ul>
+                  </div>
                 </div>
-                <div className="p-6">
-                  <ul className="space-y-2">
-                    {risk.examples.map((example, idx) => (
-                      <li key={idx} className="flex items-start gap-2 text-[#3c3a47]">
-                        <span className="text-[#7d53de]">•</span>
-                        {example}
-                      </li>
-                    ))}
-                  </ul>
-                </div>
-              </div>
-            ))}
+              );
+            })}
           </div>
         </div>
       </section>
@@ -150,7 +103,7 @@ export default function AIAct() {
         <div className="max-w-4xl mx-auto px-6 lg:px-8">
           <div className="text-center mb-12">
             <h2 className="text-3xl font-bold text-[#0e0c19] mb-4">
-              Régime de sanctions
+              {t("sanctions.title")}
             </h2>
             <div className="w-24 h-1 bg-[#7d53de] mx-auto rounded-full"></div>
           </div>
@@ -174,33 +127,16 @@ export default function AIAct() {
         <div className="max-w-7xl mx-auto px-6 lg:px-8">
           <div className="text-center mb-16">
             <h2 className="text-3xl md:text-4xl font-bold text-white mb-4">
-              Notre accompagnement AI Act
+              {t("approach.title")}
             </h2>
             <div className="w-24 h-1 bg-[#7d53de] mx-auto rounded-full"></div>
           </div>
 
           <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-6">
-            {[
-              {
-                title: "Cartographie IA",
-                description: "Inventaire et classification de vos systèmes d'IA selon les niveaux de risque AI Act",
-              },
-              {
-                title: "Gap Analysis",
-                description: "Évaluation de l'écart entre votre situation actuelle et les exigences réglementaires",
-              },
-              {
-                title: "Plan de conformité",
-                description: "Définition des actions prioritaires et de la feuille de route vers la conformité",
-              },
-              {
-                title: "Documentation",
-                description: "Rédaction de la documentation technique et des évaluations de conformité",
-              },
-            ].map((item, index) => (
-              <div key={index} className="bg-white/5 border border-[#7d53de]/20 p-6 rounded-xl">
-                <h3 className="text-lg font-bold text-white mb-3">{item.title}</h3>
-                <p className="text-white/70 text-sm">{item.description}</p>
+            {["step1", "step2", "step3", "step4"].map((step) => (
+              <div key={step} className="bg-white/5 border border-[#7d53de]/20 p-6 rounded-xl">
+                <h3 className="text-lg font-bold text-white mb-3">{t(`approach.${step}.title`)}</h3>
+                <p className="text-white/70 text-sm">{t(`approach.${step}.description`)}</p>
               </div>
             ))}
           </div>
@@ -211,16 +147,16 @@ export default function AIAct() {
       <section className="py-16 bg-[#7d53de]">
         <div className="max-w-4xl mx-auto px-6 text-center">
           <h2 className="text-3xl md:text-4xl font-bold text-white mb-6">
-            Anticipez l&apos;AI Act
+            {t("cta.title")}
           </h2>
           <p className="text-white/90 text-lg mb-8">
-            Nos experts vous accompagnent dans votre mise en conformité AI Act.
+            {t("cta.description")}
           </p>
           <Link
             href="/#contact"
             className="inline-block rounded-full bg-white text-[#7d53de] px-8 py-4 text-lg font-semibold hover:bg-[#0e0c19] hover:text-white transition-colors"
           >
-            Demander un diagnostic
+            {t("cta.button")}
           </Link>
         </div>
       </section>
