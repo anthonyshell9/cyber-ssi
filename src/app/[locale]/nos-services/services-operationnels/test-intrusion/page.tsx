@@ -1,83 +1,16 @@
-import Link from "next/link";
-import type { Metadata } from "next";
+"use client";
 
-export const metadata: Metadata = {
-  title: "Test d'intrusion (Pentest) | Cyber-SSI",
-  description: "Simulez une attaque réelle pour identifier vos vulnérabilités, renforcer votre défense et répondre aux enjeux conformité (NIS2, ISO 27001...).",
-};
+import { useTranslations } from "next-intl";
+import { Link } from "@/i18n/navigation";
 
-const testTypes = [
-  {
-    title: "Pentest applicatif",
-    description: "Tests de sécurité sur vos applications web, mobiles et API.",
-    items: [
-      "Applications web (OWASP Top 10)",
-      "Applications mobiles iOS/Android",
-      "API REST, GraphQL, SOAP",
-      "Applications métier",
-    ],
-  },
-  {
-    title: "Pentest infrastructure",
-    description: "Évaluation de la sécurité de votre infrastructure réseau.",
-    items: [
-      "Infrastructure réseau",
-      "Active Directory",
-      "Cloud (Azure, AWS, GCP)",
-      "Postes de travail",
-    ],
-  },
-  {
-    title: "Pentest externe",
-    description: "Simulation d'attaque depuis Internet sur votre périmètre exposé.",
-    items: [
-      "Reconnaissance et OSINT",
-      "Scan de vulnérabilités",
-      "Exploitation des failles",
-      "Test des services exposés",
-    ],
-  },
-  {
-    title: "Pentest interne",
-    description: "Simulation d'un attaquant ayant déjà un accès au réseau interne.",
-    items: [
-      "Élévation de privilèges",
-      "Mouvement latéral",
-      "Compromission du domaine",
-      "Exfiltration de données",
-    ],
-  },
-];
-
-const methodology = [
-  {
-    step: "1",
-    title: "Cadrage",
-    description: "Définition du périmètre, des objectifs et des règles d'engagement.",
-  },
-  {
-    step: "2",
-    title: "Reconnaissance",
-    description: "Collecte d'informations sur la cible et identification des surfaces d'attaque.",
-  },
-  {
-    step: "3",
-    title: "Analyse",
-    description: "Recherche de vulnérabilités et analyse des failles identifiées.",
-  },
-  {
-    step: "4",
-    title: "Exploitation",
-    description: "Tentatives d'exploitation des vulnérabilités pour évaluer l'impact réel.",
-  },
-  {
-    step: "5",
-    title: "Rapport",
-    description: "Documentation détaillée des vulnérabilités avec recommandations priorisées.",
-  },
-];
+const testTypeKeys = ["applicative", "infrastructure", "external", "internal"] as const;
 
 export default function TestIntrusion() {
+  const t = useTranslations("servicesOperationnels.pentest");
+
+  const methodologySteps = t.raw("methodology.steps") as Array<{ step: string; title: string; description: string }>;
+  const certifications = t.raw("certifications.list") as string[];
+
   return (
     <>
       {/* Hero Section */}
@@ -88,13 +21,13 @@ export default function TestIntrusion() {
         </div>
         <div className="relative z-10 text-center px-4 max-w-4xl mx-auto pt-20">
           <p className="text-[#7d53de] font-semibold uppercase tracking-wider mb-4">
-            Services Opérationnels
+            {t("hero.label")}
           </p>
           <h1 className="text-4xl md:text-5xl lg:text-6xl font-bold text-white leading-tight">
-            Test d&apos;intrusion <span className="text-[#7d53de]">(Pentest)</span>
+            {t("hero.title")} <span className="text-[#7d53de]">{t("hero.titleHighlight")}</span>
           </h1>
           <p className="text-white/80 text-xl mt-6 max-w-2xl mx-auto">
-            Identifiez vos vulnérabilités avant qu&apos;un attaquant ne les exploite
+            {t("hero.subtitle")}
           </p>
         </div>
       </section>
@@ -104,24 +37,18 @@ export default function TestIntrusion() {
         <div className="max-w-4xl mx-auto px-6">
           <div className="text-center mb-12">
             <h2 className="text-3xl font-bold text-[#0e0c19] mb-4">
-              Pourquoi réaliser un test d&apos;intrusion ?
+              {t("intro.title")}
             </h2>
             <div className="w-24 h-1 bg-[#7d53de] mx-auto rounded-full"></div>
           </div>
 
           <div className="prose prose-lg max-w-none text-[#3c3a47]">
             <p className="text-lg leading-relaxed mb-6">
-              Un test d&apos;intrusion (pentest) simule une cyberattaque réelle contre votre système
-              d&apos;information pour identifier les vulnérabilités exploitables par un attaquant.
-              Contrairement à un simple scan de vulnérabilités, le pentest valide concrètement
-              la possibilité d&apos;exploitation des failles.
+              {t("intro.text")}
             </p>
             <div className="bg-[#7d53de]/10 border-l-4 border-[#7d53de] p-6 rounded-r-lg">
-              <p className="text-[#0e0c19] font-semibold mb-2">Exigence réglementaire</p>
-              <p>
-                Les tests d&apos;intrusion sont requis par de nombreuses réglementations et normes :
-                NIS2, DORA (TLPT), ISO 27001, PCI-DSS, et sont souvent demandés par les assureurs cyber.
-              </p>
+              <p className="text-[#0e0c19] font-semibold mb-2">{t("intro.regulatoryTitle")}</p>
+              <p>{t("intro.regulatoryText")}</p>
             </div>
           </div>
         </div>
@@ -132,28 +59,31 @@ export default function TestIntrusion() {
         <div className="max-w-7xl mx-auto px-6 lg:px-8">
           <div className="text-center mb-16">
             <h2 className="text-3xl md:text-4xl font-bold text-[#0e0c19] mb-4">
-              Types de tests d&apos;intrusion
+              {t("testTypes.title")}
             </h2>
             <div className="w-24 h-1 bg-[#7d53de] mx-auto rounded-full"></div>
           </div>
 
           <div className="grid grid-cols-1 md:grid-cols-2 gap-8">
-            {testTypes.map((type, index) => (
-              <div key={index} className="bg-white p-8 rounded-xl shadow-lg">
-                <h3 className="text-xl font-bold text-[#0e0c19] mb-2">
-                  {type.title}
-                </h3>
-                <p className="text-[#7d53de] text-sm mb-4">{type.description}</p>
-                <ul className="space-y-2">
-                  {type.items.map((item, idx) => (
-                    <li key={idx} className="flex items-start gap-3 text-[#3c3a47]">
-                      <span className="text-[#7d53de] mt-1">✓</span>
-                      {item}
-                    </li>
-                  ))}
-                </ul>
-              </div>
-            ))}
+            {testTypeKeys.map((key) => {
+              const items = t.raw(`testTypes.${key}.items`) as string[];
+              return (
+                <div key={key} className="bg-white p-8 rounded-xl shadow-lg">
+                  <h3 className="text-xl font-bold text-[#0e0c19] mb-2">
+                    {t(`testTypes.${key}.title`)}
+                  </h3>
+                  <p className="text-[#7d53de] text-sm mb-4">{t(`testTypes.${key}.description`)}</p>
+                  <ul className="space-y-2">
+                    {items.map((item, idx) => (
+                      <li key={idx} className="flex items-start gap-3 text-[#3c3a47]">
+                        <span className="text-[#7d53de] mt-1">✓</span>
+                        {item}
+                      </li>
+                    ))}
+                  </ul>
+                </div>
+              );
+            })}
           </div>
         </div>
       </section>
@@ -163,13 +93,13 @@ export default function TestIntrusion() {
         <div className="max-w-4xl mx-auto px-6 lg:px-8">
           <div className="text-center mb-16">
             <h2 className="text-3xl md:text-4xl font-bold text-[#0e0c19] mb-4">
-              Notre méthodologie
+              {t("methodology.title")}
             </h2>
             <div className="w-24 h-1 bg-[#7d53de] mx-auto rounded-full"></div>
           </div>
 
           <div className="space-y-8">
-            {methodology.map((step, index) => (
+            {methodologySteps.map((step, index) => (
               <div key={index} className="flex gap-6 items-start">
                 <div className="w-12 h-12 bg-[#7d53de] rounded-full flex items-center justify-center flex-shrink-0">
                   <span className="text-white font-bold">{step.step}</span>
@@ -189,13 +119,13 @@ export default function TestIntrusion() {
         <div className="max-w-7xl mx-auto px-6 lg:px-8">
           <div className="text-center mb-12">
             <h2 className="text-3xl font-bold text-white mb-4">
-              Certifications de nos pentesters
+              {t("certifications.title")}
             </h2>
             <div className="w-24 h-1 bg-[#7d53de] mx-auto rounded-full"></div>
           </div>
 
           <div className="flex flex-wrap justify-center gap-4">
-            {["OSCP", "OSWE", "OSEP", "CEH", "GPEN", "eWPT", "CRTO"].map((cert, index) => (
+            {certifications.map((cert, index) => (
               <div
                 key={index}
                 className="bg-white/5 border border-[#7d53de]/20 px-6 py-3 rounded-full"
@@ -211,16 +141,16 @@ export default function TestIntrusion() {
       <section className="py-16 bg-[#7d53de]">
         <div className="max-w-4xl mx-auto px-6 text-center">
           <h2 className="text-3xl md:text-4xl font-bold text-white mb-6">
-            Testez votre sécurité
+            {t("cta.title")}
           </h2>
           <p className="text-white/90 text-lg mb-8">
-            Identifiez vos vulnérabilités avant qu&apos;un attaquant ne le fasse.
+            {t("cta.description")}
           </p>
           <Link
             href="/#contact"
             className="inline-block rounded-full bg-white text-[#7d53de] px-8 py-4 text-lg font-semibold hover:bg-[#0e0c19] hover:text-white transition-colors"
           >
-            Demander un devis
+            {t("cta.button")}
           </Link>
         </div>
       </section>

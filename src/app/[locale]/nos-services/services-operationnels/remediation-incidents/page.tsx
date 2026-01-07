@@ -1,70 +1,15 @@
-import Link from "next/link";
-import type { Metadata } from "next";
+"use client";
 
-export const metadata: Metadata = {
-  title: "Support à la remédiation d'incidents | Cyber-SSI",
-  description: "Intervention rapide après cyberattaque : analyse forensique, suppression de la menace, restauration sécurisée de votre infrastructure.",
-};
-
-const phases = [
-  {
-    phase: "Phase 1",
-    title: "Containment",
-    description: "Isoler la menace pour stopper sa propagation",
-    items: [
-      "Isolation des systèmes compromis",
-      "Blocage des communications malveillantes",
-      "Préservation des preuves",
-      "Communication de crise",
-    ],
-  },
-  {
-    phase: "Phase 2",
-    title: "Investigation",
-    description: "Comprendre l'attaque et son étendue",
-    items: [
-      "Analyse forensique",
-      "Timeline de l'attaque",
-      "Identification du vecteur initial",
-      "Cartographie de la compromission",
-    ],
-  },
-  {
-    phase: "Phase 3",
-    title: "Eradication",
-    description: "Éliminer la menace de l'environnement",
-    items: [
-      "Suppression des malwares",
-      "Fermeture des backdoors",
-      "Révocation des accès compromis",
-      "Nettoyage des systèmes",
-    ],
-  },
-  {
-    phase: "Phase 4",
-    title: "Recovery",
-    description: "Restaurer les opérations en toute sécurité",
-    items: [
-      "Restauration des systèmes",
-      "Vérification de l'intégrité",
-      "Remise en production progressive",
-      "Monitoring renforcé",
-    ],
-  },
-];
-
-const incidents = [
-  "Ransomware",
-  "Data Breach",
-  "Compromission de comptes",
-  "Attaque sur Active Directory",
-  "Phishing / BEC",
-  "Intrusion réseau",
-  "Cryptominage",
-  "Défacement web",
-];
+import { useTranslations } from "next-intl";
+import { Link } from "@/i18n/navigation";
 
 export default function RemediationIncidents() {
+  const t = useTranslations("servicesOperationnels.incidentResponse");
+
+  const phases = t.raw("phases.list") as Array<{ phase: string; title: string; description: string; items: string[] }>;
+  const incidents = t.raw("incidents.list") as string[];
+  const postIncidentItems = t.raw("postIncident.items") as Array<{ title: string; description: string }>;
+
   return (
     <>
       {/* Hero Section */}
@@ -75,13 +20,13 @@ export default function RemediationIncidents() {
         </div>
         <div className="relative z-10 text-center px-4 max-w-4xl mx-auto pt-20">
           <p className="text-[#7d53de] font-semibold uppercase tracking-wider mb-4">
-            Services Opérationnels
+            {t("hero.label")}
           </p>
           <h1 className="text-4xl md:text-5xl lg:text-6xl font-bold text-white leading-tight">
-            Support à la <span className="text-[#7d53de]">remédiation d&apos;incidents</span>
+            {t("hero.title")} <span className="text-[#7d53de]">{t("hero.titleHighlight")}</span>
           </h1>
           <p className="text-white/80 text-xl mt-6 max-w-2xl mx-auto">
-            Intervention rapide pour contenir, éradiquer et récupérer après une cyberattaque
+            {t("hero.subtitle")}
           </p>
         </div>
       </section>
@@ -90,7 +35,7 @@ export default function RemediationIncidents() {
       <section className="bg-red-600 py-4">
         <div className="max-w-4xl mx-auto px-6 text-center">
           <p className="text-white font-semibold">
-            Vous êtes victime d&apos;une cyberattaque ? Contactez-nous en urgence : contact@cyber-ssi.com
+            {t("emergency.text")}
           </p>
         </div>
       </section>
@@ -100,23 +45,18 @@ export default function RemediationIncidents() {
         <div className="max-w-4xl mx-auto px-6">
           <div className="text-center mb-12">
             <h2 className="text-3xl font-bold text-[#0e0c19] mb-4">
-              Réponse aux incidents de sécurité
+              {t("intro.title")}
             </h2>
             <div className="w-24 h-1 bg-[#7d53de] mx-auto rounded-full"></div>
           </div>
 
           <div className="prose prose-lg max-w-none text-[#3c3a47]">
             <p className="text-lg leading-relaxed mb-6">
-              Face à une cyberattaque, chaque minute compte. Notre équipe d&apos;experts intervient
-              rapidement pour vous aider à contenir la menace, comprendre l&apos;attaque, éradiquer
-              les éléments malveillants et restaurer vos opérations en toute sécurité.
+              {t("intro.text")}
             </p>
             <div className="bg-[#7d53de]/10 border-l-4 border-[#7d53de] p-6 rounded-r-lg">
-              <p className="text-[#0e0c19] font-semibold mb-2">Notre engagement</p>
-              <p>
-                Intervention rapide, communication transparente, préservation des preuves pour
-                d&apos;éventuelles poursuites judiciaires.
-              </p>
+              <p className="text-[#0e0c19] font-semibold mb-2">{t("intro.commitmentTitle")}</p>
+              <p>{t("intro.commitmentText")}</p>
             </div>
           </div>
         </div>
@@ -127,7 +67,7 @@ export default function RemediationIncidents() {
         <div className="max-w-7xl mx-auto px-6 lg:px-8">
           <div className="text-center mb-12">
             <h2 className="text-3xl font-bold text-[#0e0c19] mb-4">
-              Types d&apos;incidents traités
+              {t("incidents.title")}
             </h2>
             <div className="w-24 h-1 bg-[#7d53de] mx-auto rounded-full"></div>
           </div>
@@ -150,7 +90,7 @@ export default function RemediationIncidents() {
         <div className="max-w-7xl mx-auto px-6 lg:px-8">
           <div className="text-center mb-16">
             <h2 className="text-3xl md:text-4xl font-bold text-[#0e0c19] mb-4">
-              Notre méthodologie PICERL
+              {t("phases.title")}
             </h2>
             <div className="w-24 h-1 bg-[#7d53de] mx-auto rounded-full"></div>
           </div>
@@ -180,26 +120,13 @@ export default function RemediationIncidents() {
         <div className="max-w-7xl mx-auto px-6 lg:px-8">
           <div className="text-center mb-12">
             <h2 className="text-3xl font-bold text-white mb-4">
-              Après l&apos;incident
+              {t("postIncident.title")}
             </h2>
             <div className="w-24 h-1 bg-[#7d53de] mx-auto rounded-full"></div>
           </div>
 
           <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
-            {[
-              {
-                title: "Rapport d'incident",
-                description: "Documentation complète de l'incident, timeline, vecteur d'attaque, impacts et actions menées.",
-              },
-              {
-                title: "Lessons Learned",
-                description: "Analyse des causes racines et recommandations pour éviter la récurrence.",
-              },
-              {
-                title: "Plan d'amélioration",
-                description: "Actions de renforcement de la sécurité basées sur les enseignements de l'incident.",
-              },
-            ].map((item, index) => (
+            {postIncidentItems.map((item, index) => (
               <div key={index} className="bg-white/5 border border-[#7d53de]/20 p-6 rounded-xl">
                 <h3 className="text-lg font-bold text-white mb-3">{item.title}</h3>
                 <p className="text-white/70 text-sm">{item.description}</p>
@@ -213,16 +140,16 @@ export default function RemediationIncidents() {
       <section className="py-16 bg-[#7d53de]">
         <div className="max-w-4xl mx-auto px-6 text-center">
           <h2 className="text-3xl md:text-4xl font-bold text-white mb-6">
-            Besoin d&apos;une intervention urgente ?
+            {t("cta.title")}
           </h2>
           <p className="text-white/90 text-lg mb-8">
-            Notre équipe est disponible pour vous accompagner face à un incident de sécurité.
+            {t("cta.description")}
           </p>
           <Link
             href="/#contact"
             className="inline-block rounded-full bg-white text-[#7d53de] px-8 py-4 text-lg font-semibold hover:bg-[#0e0c19] hover:text-white transition-colors"
           >
-            Contact urgence
+            {t("cta.button")}
           </Link>
         </div>
       </section>

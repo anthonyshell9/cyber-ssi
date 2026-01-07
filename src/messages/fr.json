@@ -1133,5 +1133,653 @@
         "button": "Demander une due diligence"
       }
     }
+  },
+  "servicesOperationnels": {
+    "hero": {
+      "label": "Nos Services",
+      "title": "Services",
+      "titleHighlight": "Opérationnels",
+      "subtitle": "Testez concrètement la résistance de votre système d'information face aux cyberattaques"
+    },
+    "intro": {
+      "text": "Nos services opérationnels vous permettent d'évaluer <strong>concrètement</strong> la sécurité de votre infrastructure, de vos applications et de vos équipes. De la simulation d'attaque à l'audit technique approfondi, nous identifions vos vulnérabilités et vous aidons à les corriger."
+    },
+    "services": {
+      "pentest": {
+        "title": "Tests d'intrusion (Pentest)",
+        "description": "Simulez des attaques réelles pour identifier les vulnérabilités de votre système d'information avant qu'un attaquant ne les exploite.",
+        "items": ["Pentest applicatif (Web, Mobile, API)", "Pentest infrastructure (réseau, Active Directory)", "Pentest externe et interne", "Rapport détaillé avec recommandations priorisées"]
+      },
+      "redTeam": {
+        "title": "Red Team",
+        "description": "Évaluez votre capacité de détection et de réaction face à des attaques sophistiquées simulant un adversaire réel.",
+        "items": ["Scénarios d'attaque réalistes", "Test des équipes Blue Team", "Ingénierie sociale et phishing ciblé", "Évaluation de la chaîne de détection"]
+      },
+      "configAudit": {
+        "title": "Audit de configuration",
+        "description": "Analysez la configuration de vos équipements et systèmes pour identifier les écarts par rapport aux bonnes pratiques de sécurité.",
+        "items": ["Audit Active Directory", "Audit cloud (Azure, AWS, GCP)", "Audit des équipements réseau", "Conformité aux benchmarks CIS"]
+      },
+      "codeAudit": {
+        "title": "Audit de code source",
+        "description": "Identifiez les failles de sécurité dans votre code applicatif avant la mise en production.",
+        "items": ["Analyse statique (SAST)", "Revue manuelle du code critique", "Identification des vulnérabilités OWASP", "Recommandations de remédiation"]
+      },
+      "azure": {
+        "title": "Sécurité des infrastructures Azure & Microsoft 365",
+        "description": "Sécurisez vos environnements cloud Microsoft : Azure, Office 365, Intune, Entra ID.",
+        "items": ["Audit de configuration Azure/M365", "Durcissement Entra ID (Azure AD)", "Sécurisation des accès conditionnels", "Protection des données sensibles"]
+      },
+      "directory": {
+        "title": "Sécurité des services d'annuaire",
+        "description": "Protégez votre Active Directory, cible privilégiée des attaquants.",
+        "items": ["Audit de sécurité AD", "Détection des chemins d'attaque", "Tiering model et PAW", "Surveillance et alerting"]
+      }
+    },
+    "learnMore": "En savoir plus",
+    "cta": {
+      "title": "Prêt à tester votre sécurité ?",
+      "description": "Contactez-nous pour définir ensemble le périmètre de votre audit.",
+      "button": "Demander un devis"
+    },
+    "pentest": {
+      "hero": {
+        "label": "Services Opérationnels",
+        "title": "Test d'intrusion",
+        "titleHighlight": "(Pentest)",
+        "subtitle": "Identifiez vos vulnérabilités avant qu'un attaquant ne les exploite"
+      },
+      "intro": {
+        "title": "Pourquoi réaliser un test d'intrusion ?",
+        "text": "Un test d'intrusion (pentest) simule une cyberattaque réelle contre votre système d'information pour identifier les vulnérabilités exploitables par un attaquant. Contrairement à un simple scan de vulnérabilités, le pentest valide concrètement la possibilité d'exploitation des failles.",
+        "regulatoryTitle": "Exigence réglementaire",
+        "regulatoryText": "Les tests d'intrusion sont requis par de nombreuses réglementations et normes : NIS2, DORA (TLPT), ISO 27001, PCI-DSS, et sont souvent demandés par les assureurs cyber."
+      },
+      "testTypes": {
+        "title": "Types de tests d'intrusion",
+        "applicative": {
+          "title": "Pentest applicatif",
+          "description": "Tests de sécurité sur vos applications web, mobiles et API.",
+          "items": ["Applications web (OWASP Top 10)", "Applications mobiles iOS/Android", "API REST, GraphQL, SOAP", "Applications métier"]
+        },
+        "infrastructure": {
+          "title": "Pentest infrastructure",
+          "description": "Évaluation de la sécurité de votre infrastructure réseau.",
+          "items": ["Infrastructure réseau", "Active Directory", "Cloud (Azure, AWS, GCP)", "Postes de travail"]
+        },
+        "external": {
+          "title": "Pentest externe",
+          "description": "Simulation d'attaque depuis Internet sur votre périmètre exposé.",
+          "items": ["Reconnaissance et OSINT", "Scan de vulnérabilités", "Exploitation des failles", "Test des services exposés"]
+        },
+        "internal": {
+          "title": "Pentest interne",
+          "description": "Simulation d'un attaquant ayant déjà un accès au réseau interne.",
+          "items": ["Élévation de privilèges", "Mouvement latéral", "Compromission du domaine", "Exfiltration de données"]
+        }
+      },
+      "methodology": {
+        "title": "Notre méthodologie",
+        "steps": [
+          { "step": "1", "title": "Cadrage", "description": "Définition du périmètre, des objectifs et des règles d'engagement." },
+          { "step": "2", "title": "Reconnaissance", "description": "Collecte d'informations sur la cible et identification des surfaces d'attaque." },
+          { "step": "3", "title": "Analyse", "description": "Recherche de vulnérabilités et analyse des failles identifiées." },
+          { "step": "4", "title": "Exploitation", "description": "Tentatives d'exploitation des vulnérabilités pour évaluer l'impact réel." },
+          { "step": "5", "title": "Rapport", "description": "Documentation détaillée des vulnérabilités avec recommandations priorisées." }
+        ]
+      },
+      "certifications": {
+        "title": "Certifications de nos pentesters",
+        "list": ["OSCP", "OSWE", "OSEP", "CEH", "GPEN", "eWPT", "CRTO"]
+      },
+      "cta": {
+        "title": "Testez votre sécurité",
+        "description": "Identifiez vos vulnérabilités avant qu'un attaquant ne le fasse.",
+        "button": "Demander un devis"
+      }
+    },
+    "redTeam": {
+      "hero": {
+        "label": "Services Opérationnels",
+        "title": "",
+        "titleHighlight": "Red Team",
+        "subtitle": "Simulation d'attaques avancées pour tester votre résilience"
+      },
+      "intro": {
+        "title": "Qu'est-ce qu'un exercice Red Team ?",
+        "text1": "Un exercice Red Team est une simulation d'attaque réaliste et avancée contre votre organisation. Contrairement à un test d'intrusion classique, la Red Team utilise les mêmes tactiques, techniques et procédures (TTP) que les vrais attaquants.",
+        "text2": "L'objectif est d'évaluer non seulement vos vulnérabilités techniques, mais surtout la capacité de votre organisation à <strong>détecter</strong> et <strong>répondre</strong> à une attaque sophistiquée.",
+        "dora": {
+          "title": "TIBER-EU / DORA TLPT",
+          "text": "Nos exercices Red Team peuvent être réalisés dans le cadre des tests TLPT (Threat-Led Penetration Testing) requis par DORA pour les entités financières significatives."
+        }
+      },
+      "differences": {
+        "title": "Red Team vs Pentest",
+        "headers": { "aspect": "Aspect", "pentest": "Pentest", "redteam": "Red Team" },
+        "rows": [
+          { "aspect": "Durée", "pentest": "1-4 semaines", "redteam": "2-6 mois" },
+          { "aspect": "Objectif", "pentest": "Identifier les vulnérabilités", "redteam": "Tester la détection et réponse" },
+          { "aspect": "Périmètre", "pentest": "Défini et limité", "redteam": "Large, évolutif" },
+          { "aspect": "Connaissance", "pentest": "Blue Team informée", "redteam": "Blue Team non informée" },
+          { "aspect": "Approche", "pentest": "Exhaustif sur le périmètre", "redteam": "Réaliste et ciblé" }
+        ]
+      },
+      "phases": {
+        "title": "Déroulement d'un exercice Red Team",
+        "list": [
+          { "title": "Reconnaissance", "description": "Collecte d'informations sur votre organisation via OSINT, ingénierie sociale préparatoire.", "items": ["Intelligence open source (OSINT)", "Identification des cibles", "Analyse des vecteurs d'attaque", "Préparation des prétextes"] },
+          { "title": "Intrusion initiale", "description": "Tentatives de compromission initiale par différents vecteurs.", "items": ["Phishing ciblé (spear phishing)", "Exploitation de services exposés", "Attaques sur la chaîne d'approvisionnement", "Compromission physique"] },
+          { "title": "Persistance & mouvement", "description": "Maintien de l'accès et progression vers les objectifs.", "items": ["Établissement de persistance", "Élévation de privilèges", "Mouvement latéral", "Évitement de la détection"] },
+          { "title": "Objectifs & exfiltration", "description": "Atteinte des objectifs définis et démonstration d'impact.", "items": ["Accès aux données sensibles", "Compromission des systèmes critiques", "Simulation d'exfiltration", "Démonstration d'impact business"] }
+        ]
+      },
+      "techniques": {
+        "title": "Techniques utilisées",
+        "list": ["Spear Phishing", "Vishing", "Malware personnalisé", "Exploitation 0-day", "Social Engineering", "Physical Security", "Wireless Attacks", "Supply Chain"]
+      },
+      "cta": {
+        "title": "Testez votre résilience",
+        "description": "Découvrez comment votre organisation réagirait face à une attaque sophistiquée.",
+        "button": "Planifier un exercice"
+      }
+    },
+    "configAudit": {
+      "hero": {
+        "label": "Services Opérationnels",
+        "title": "Audit de",
+        "titleHighlight": "configuration",
+        "subtitle": "Vérifiez la conformité de vos systèmes aux bonnes pratiques de sécurité"
+      },
+      "intro": {
+        "title": "Pourquoi auditer vos configurations ?",
+        "text": "Les erreurs de configuration sont l'une des principales causes de compromission des systèmes d'information. Un audit de configuration permet d'identifier les écarts par rapport aux bonnes pratiques de sécurité et aux standards de l'industrie.",
+        "statTitle": "Statistique clé",
+        "statText": "<strong>80%</strong> des attaques réussies exploitent des erreurs de configuration ou des paramètres par défaut non modifiés."
+      },
+      "auditTypes": {
+        "title": "Périmètres d'audit",
+        "ad": {
+          "title": "Active Directory",
+          "description": "Audit complet de votre environnement AD",
+          "items": ["Architecture et topologie", "Politique de mots de passe", "Comptes privilégiés et service accounts", "GPO et délégations", "Chemins d'attaque (BloodHound)"]
+        },
+        "cloud": {
+          "title": "Cloud Azure/M365",
+          "description": "Sécurité de vos environnements Microsoft Cloud",
+          "items": ["Configuration Entra ID (Azure AD)", "Accès conditionnels et MFA", "Microsoft 365 et Exchange Online", "Azure RBAC et IAM", "Microsoft Defender"]
+        },
+        "network": {
+          "title": "Infrastructure réseau",
+          "description": "Configuration de vos équipements réseau",
+          "items": ["Firewalls et segmentation", "VPN et accès distants", "Wi-Fi et NAC", "Switches et routeurs", "Load balancers et WAF"]
+        },
+        "systems": {
+          "title": "Systèmes et serveurs",
+          "description": "Durcissement de vos serveurs",
+          "items": ["Windows Server", "Linux (RHEL, Ubuntu, Debian)", "Conteneurs et Kubernetes", "Bases de données", "Services web (Apache, Nginx, IIS)"]
+        }
+      },
+      "benchmarks": {
+        "title": "Référentiels utilisés",
+        "subtitle": "Nos audits s'appuient sur les référentiels reconnus de l'industrie",
+        "list": [
+          { "name": "CIS Benchmarks", "description": "Center for Internet Security" },
+          { "name": "NIST", "description": "National Institute of Standards" },
+          { "name": "ANSSI", "description": "Guides de l'ANSSI" },
+          { "name": "Microsoft", "description": "Security Baselines" },
+          { "name": "STIGs", "description": "Security Technical Implementation Guides" }
+        ]
+      },
+      "methodology": {
+        "title": "Notre méthodologie",
+        "steps": [
+          { "step": "1", "title": "Collecte", "desc": "Extraction automatisée des configurations actuelles" },
+          { "step": "2", "title": "Analyse", "desc": "Comparaison avec les référentiels et bonnes pratiques" },
+          { "step": "3", "title": "Priorisation", "desc": "Classification des écarts par criticité" },
+          { "step": "4", "title": "Remédiation", "desc": "Plan d'action détaillé avec scripts de correction" }
+        ]
+      },
+      "cta": {
+        "title": "Durcissez vos systèmes",
+        "description": "Identifiez et corrigez les erreurs de configuration de votre SI.",
+        "button": "Demander un audit"
+      }
+    },
+    "codeAudit": {
+      "hero": {
+        "label": "Services Opérationnels",
+        "title": "Audit de",
+        "titleHighlight": "code source",
+        "subtitle": "Identifiez les vulnérabilités dans votre code avant la mise en production"
+      },
+      "intro": {
+        "title": "Pourquoi auditer votre code ?",
+        "text": "L'audit de code source permet d'identifier les failles de sécurité directement dans votre code applicatif, avant qu'elles ne soient exploitées en production. Cette approche proactive permet de corriger les vulnérabilités au plus tôt dans le cycle de développement, réduisant significativement les coûts de correction.",
+        "shiftLeftTitle": "Shift-Left Security",
+        "shiftLeftText": "Intégrer la sécurité dès les premières phases de développement permet de réduire de 100x le coût de correction des vulnérabilités par rapport à une découverte en production."
+      },
+      "approaches": {
+        "title": "Notre approche",
+        "sast": {
+          "title": "Analyse statique (SAST)",
+          "description": "Analyse automatisée du code source sans exécution",
+          "items": ["Détection des patterns de code vulnérable", "Identification des erreurs de configuration", "Vérification des dépendances (SCA)", "Analyse des secrets hardcodés"]
+        },
+        "manual": {
+          "title": "Revue manuelle",
+          "description": "Analyse approfondie par nos experts sécurité",
+          "items": ["Revue des fonctions critiques", "Analyse de la logique métier", "Vérification des contrôles d'accès", "Évaluation de l'architecture"]
+        }
+      },
+      "owasp": {
+        "title": "Vulnérabilités OWASP Top 10",
+        "subtitle": "Notre audit couvre l'ensemble des vulnérabilités du Top 10 OWASP",
+        "list": ["Injection (SQL, LDAP, OS Command)", "Cross-Site Scripting (XSS)", "Broken Authentication", "Sensitive Data Exposure", "XML External Entities (XXE)", "Broken Access Control", "Security Misconfiguration", "Insecure Deserialization", "Using Components with Known Vulnerabilities", "Insufficient Logging & Monitoring"]
+      },
+      "languages": {
+        "title": "Langages et frameworks supportés",
+        "list": ["Java / Spring", "Python / Django / Flask", "JavaScript / Node.js", "TypeScript / Angular / React", "C# / .NET", "PHP / Laravel / Symfony", "Go", "Ruby / Rails", "Swift / Kotlin", "C / C++"]
+      },
+      "deliverables": {
+        "title": "Livrables",
+        "list": ["Rapport détaillé des vulnérabilités identifiées", "Classification par criticité (CVSS)", "Extraits de code vulnérable", "Recommandations de correction avec exemples", "Synthèse exécutive pour la direction"]
+      },
+      "cta": {
+        "title": "Sécurisez votre code",
+        "description": "Identifiez les vulnérabilités dans votre code source avant la mise en production.",
+        "button": "Demander un audit"
+      }
+    },
+    "soc": {
+      "hero": {
+        "label": "Services Opérationnels",
+        "title": "",
+        "titleHighlight": "SOC",
+        "titleEnd": "Essential",
+        "subtitle": "Centre opérationnel de sécurité externalisé, disponible 24/7"
+      },
+      "intro": {
+        "title": "Pourquoi un SOC externalisé ?",
+        "text": "Mettre en place un SOC interne nécessite des investissements conséquents : technologies, recrutement d'analystes, formation continue, astreintes 24/7. Notre offre SOC Essential vous permet de bénéficier d'une surveillance professionnelle sans ces contraintes.",
+        "stats": [
+          { "value": "24/7", "label": "Surveillance continue" },
+          { "value": "<15min", "label": "Temps de réponse" },
+          { "value": "100%", "label": "Alertes qualifiées" }
+        ]
+      },
+      "services": {
+        "title": "Nos services SOC",
+        "monitoring": {
+          "title": "Surveillance 24/7",
+          "description": "Monitoring continu de votre SI",
+          "items": ["Collecte centralisée des logs", "Analyse en temps réel", "Corrélation des événements", "Détection des anomalies"]
+        },
+        "detection": {
+          "title": "Détection des menaces",
+          "description": "Identification proactive des attaques",
+          "items": ["Règles de détection personnalisées", "Threat Intelligence intégrée", "Machine Learning / UEBA", "IOC et TTPs surveillés"]
+        },
+        "response": {
+          "title": "Réponse aux incidents",
+          "description": "Actions rapides en cas d'alerte",
+          "items": ["Qualification des alertes", "Triage et priorisation", "Procédures de réponse", "Coordination avec vos équipes"]
+        },
+        "reporting": {
+          "title": "Reporting",
+          "description": "Visibilité sur votre sécurité",
+          "items": ["Tableaux de bord temps réel", "Rapports mensuels", "KPIs de sécurité", "Tendances et recommandations"]
+        }
+      },
+      "coverage": {
+        "title": "Périmètre de surveillance",
+        "list": [
+          { "label": "Endpoints", "desc": "Postes de travail et serveurs" },
+          { "label": "Réseau", "desc": "Firewalls, IDS/IPS, proxy" },
+          { "label": "Cloud", "desc": "Azure, AWS, GCP, M365" },
+          { "label": "Identités", "desc": "Active Directory, Entra ID" },
+          { "label": "Applications", "desc": "Applicatifs métiers, web" },
+          { "label": "Email", "desc": "Protection messagerie" }
+        ]
+      },
+      "technologies": {
+        "title": "Technologies utilisées",
+        "subtitle": "Notre SOC s'appuie sur les meilleures solutions du marché",
+        "list": ["Microsoft Sentinel", "Splunk", "Elastic Security", "IBM QRadar", "Google Chronicle", "CrowdStrike", "SentinelOne", "Palo Alto Cortex"]
+      },
+      "cta": {
+        "title": "Protégez votre SI 24/7",
+        "description": "Bénéficiez d'une surveillance professionnelle sans les contraintes d'un SOC interne.",
+        "button": "Demander une démo"
+      }
+    },
+    "azure": {
+      "hero": {
+        "label": "Services Opérationnels",
+        "title": "Sécurité",
+        "titleHighlight": "Azure & Microsoft 365",
+        "subtitle": "Protégez vos environnements cloud Microsoft"
+      },
+      "intro": {
+        "title": "Expertise Microsoft Security",
+        "text": "La migration vers le cloud Microsoft offre de nombreux avantages, mais expose également votre organisation à de nouveaux risques. Nos experts certifiés Microsoft vous accompagnent dans la sécurisation de vos environnements Azure, Microsoft 365 et Intune.",
+        "sharedTitle": "Modèle de responsabilité partagée",
+        "sharedText": "Dans le cloud, Microsoft sécurise l'infrastructure, mais vous restez responsable de la configuration et de la protection de vos données. C'est là que nous intervenons."
+      },
+      "services": {
+        "title": "Nos services",
+        "entra": {
+          "title": "Microsoft Entra ID (Azure AD)",
+          "items": ["Audit de configuration Entra ID", "Mise en place des accès conditionnels", "Configuration MFA et passwordless", "Protection des identités (Identity Protection)", "Privileged Identity Management (PIM)"]
+        },
+        "m365": {
+          "title": "Microsoft 365",
+          "items": ["Sécurisation Exchange Online", "Protection contre le phishing", "Data Loss Prevention (DLP)", "Microsoft Defender for Office 365", "Classification et étiquetage des données"]
+        },
+        "azureSec": {
+          "title": "Azure Security",
+          "items": ["Audit Azure RBAC et IAM", "Microsoft Defender for Cloud", "Azure Network Security", "Key Vault et gestion des secrets", "Azure Policy et Blueprints"]
+        },
+        "intune": {
+          "title": "Microsoft Intune",
+          "items": ["Configuration des politiques MDM", "Gestion des appareils (BYOD, Corporate)", "Déploiement des configurations", "Compliance policies", "App Protection Policies"]
+        }
+      },
+      "features": {
+        "title": "Technologies Microsoft Security",
+        "subtitle": "Nous déployons et configurons l'ensemble des solutions de sécurité Microsoft",
+        "list": ["Conditional Access", "Identity Protection", "Privileged Identity Management", "Microsoft Defender for Endpoint", "Microsoft Defender for Cloud Apps", "Microsoft Sentinel", "Azure Information Protection", "Data Loss Prevention"]
+      },
+      "approach": {
+        "title": "Notre approche",
+        "steps": [
+          { "step": "1", "title": "Audit", "description": "Évaluation de la configuration actuelle de vos environnements Microsoft" },
+          { "step": "2", "title": "Plan de sécurisation", "description": "Recommandations priorisées basées sur les best practices Microsoft" },
+          { "step": "3", "title": "Implémentation", "description": "Déploiement des mesures de sécurité et accompagnement au changement" }
+        ]
+      },
+      "certifications": {
+        "title": "Certifications Microsoft de nos consultants",
+        "list": ["MS-500", "AZ-500", "SC-200", "SC-300", "SC-400", "MD-102"]
+      },
+      "cta": {
+        "title": "Sécurisez votre cloud Microsoft",
+        "description": "Nos experts Microsoft vous accompagnent dans la sécurisation de vos environnements.",
+        "button": "Demander un audit"
+      }
+    },
+    "directory": {
+      "hero": {
+        "label": "Services Opérationnels",
+        "title": "Sécurité des",
+        "titleHighlight": "services d'annuaire",
+        "subtitle": "Protégez votre Active Directory, cible privilégiée des attaquants"
+      },
+      "intro": {
+        "title": "Pourquoi sécuriser Active Directory ?",
+        "text": "Active Directory est au cœur de la plupart des systèmes d'information. Il gère les identités, les accès et les politiques de sécurité de votre organisation. C'est pourquoi il constitue une cible privilégiée pour les attaquants.",
+        "statTitle": "Statistique clé",
+        "statText": "<strong>95%</strong> des attaques par ransomware passent par la compromission de l'Active Directory pour se propager dans le réseau."
+      },
+      "services": {
+        "title": "Nos services",
+        "audit": {
+          "title": "Audit Active Directory",
+          "description": "Évaluation complète de la sécurité de votre environnement AD",
+          "items": ["Architecture et conception", "Comptes à privilèges", "Chemins d'attaque (BloodHound)", "Politique de mots de passe", "Group Policy Objects (GPO)", "Délégations et permissions"]
+        },
+        "hardening": {
+          "title": "Durcissement AD",
+          "description": "Mise en œuvre des mesures de protection",
+          "items": ["Tiering Model (Tiers 0, 1, 2)", "Privileged Access Workstations (PAW)", "LAPS (Local Administrator Password Solution)", "Suppression des chemins d'attaque", "Configuration des GPO de sécurité", "Restriction des protocoles obsolètes"]
+        },
+        "monitoring": {
+          "title": "Surveillance et détection",
+          "description": "Mise en place de la supervision",
+          "items": ["Collecte et analyse des logs AD", "Détection des attaques (Kerberoasting, DCSync...)", "Alerting sur les modifications critiques", "Microsoft Defender for Identity", "Honeypots et leurres"]
+        },
+        "recovery": {
+          "title": "Plan de reprise",
+          "description": "Préparation à la récupération en cas d'incident",
+          "items": ["Sauvegarde des contrôleurs de domaine", "Procédures de restauration", "Tests de reprise d'activité", "Documentation technique"]
+        }
+      },
+      "attacks": {
+        "title": "Attaques courantes sur Active Directory",
+        "subtitle": "Nous identifions et protégeons contre les techniques d'attaque les plus courantes",
+        "list": [
+          { "name": "Kerberoasting", "desc": "Extraction de tickets de service" },
+          { "name": "AS-REP Roasting", "desc": "Attaque sur les comptes sans pré-authentification" },
+          { "name": "DCSync", "desc": "Réplication des credentials AD" },
+          { "name": "Golden Ticket", "desc": "Forge de tickets Kerberos" },
+          { "name": "Silver Ticket", "desc": "Forge de tickets de service" },
+          { "name": "Pass-the-Hash", "desc": "Réutilisation de hash NTLM" },
+          { "name": "Pass-the-Ticket", "desc": "Réutilisation de tickets Kerberos" },
+          { "name": "AdminSDHolder", "desc": "Persistance via SDProp" }
+        ]
+      },
+      "tiering": {
+        "title": "Modèle de Tiering",
+        "subtitle": "Nous implémentons le modèle de tiering Microsoft pour protéger vos assets critiques",
+        "tiers": [
+          { "tier": "Tier 0", "title": "Contrôle de l'identité", "assets": "Contrôleurs de domaine, PKI, ADFS, Azure AD Connect" },
+          { "tier": "Tier 1", "title": "Serveurs et applications", "assets": "Serveurs d'applications, bases de données, middleware" },
+          { "tier": "Tier 2", "title": "Postes de travail", "assets": "Postes utilisateurs, appareils mobiles, imprimantes" }
+        ]
+      },
+      "cta": {
+        "title": "Sécurisez votre Active Directory",
+        "description": "Protégez le cœur de votre système d'information contre les attaquants.",
+        "button": "Demander un audit AD"
+      }
+    },
+    "iot": {
+      "hero": {
+        "label": "Services Opérationnels",
+        "title": "Sécurité",
+        "titleHighlight": "IoT",
+        "subtitle": "Protégez vos objets connectés et infrastructures IoT"
+      },
+      "intro": {
+        "title": "Les enjeux de la sécurité IoT",
+        "text": "Les objets connectés (IoT) se multiplient dans les entreprises : capteurs industriels, caméras de surveillance, équipements médicaux, systèmes de contrôle d'accès... Ces appareils, souvent mal sécurisés, constituent une surface d'attaque importante.",
+        "risksTitle": "Risques spécifiques",
+        "risks": ["Mots de passe par défaut non modifiés", "Firmwares obsolètes et vulnérables", "Communications non chiffrées", "Absence de segmentation réseau"]
+      },
+      "sectors": {
+        "title": "Secteurs d'intervention",
+        "list": [
+          { "name": "Industrie 4.0", "icon": "🏭" },
+          { "name": "Smart Building", "icon": "🏢" },
+          { "name": "Healthcare", "icon": "🏥" },
+          { "name": "Smart City", "icon": "🌆" },
+          { "name": "Transport", "icon": "🚗" },
+          { "name": "Énergie", "icon": "⚡" },
+          { "name": "Retail", "icon": "🛒" },
+          { "name": "Agriculture", "icon": "🌾" }
+        ]
+      },
+      "services": {
+        "title": "Nos services IoT",
+        "audit": {
+          "title": "Audit de sécurité IoT",
+          "items": ["Inventaire et cartographie des objets connectés", "Analyse des risques spécifiques IoT", "Tests de sécurité des protocoles", "Évaluation des firmwares", "Analyse des communications"]
+        },
+        "hardening": {
+          "title": "Durcissement des appareils",
+          "items": ["Configuration sécurisée", "Mise à jour des firmwares", "Désactivation des services non nécessaires", "Chiffrement des communications", "Authentification renforcée"]
+        },
+        "architecture": {
+          "title": "Architecture sécurisée",
+          "items": ["Segmentation réseau IoT", "Passerelles sécurisées", "Zones de confiance", "Accès contrôlés", "Monitoring dédié"]
+        },
+        "monitoring": {
+          "title": "Surveillance continue",
+          "items": ["Détection d'anomalies comportementales", "Monitoring du trafic IoT", "Alerting sur les menaces", "Gestion des incidents IoT", "Threat Intelligence IoT"]
+        }
+      },
+      "standards": {
+        "title": "Standards et référentiels",
+        "list": ["IEC 62443", "NIST IoT", "ETSI EN 303 645", "OWASP IoT", "ISO 27400", "GSMA IoT"]
+      },
+      "cta": {
+        "title": "Sécurisez vos objets connectés",
+        "description": "Nos experts IoT vous accompagnent dans la sécurisation de votre parc d'objets connectés.",
+        "button": "Demander un audit IoT"
+      }
+    },
+    "robotics": {
+      "hero": {
+        "label": "Services Opérationnels",
+        "title": "Sécurité",
+        "titleHighlight": "robotique",
+        "subtitle": "Protégez vos robots industriels et systèmes automatisés"
+      },
+      "intro": {
+        "title": "Enjeux de la cybersécurité robotique",
+        "text": "Les robots industriels sont de plus en plus connectés et automatisés. Cette digitalisation améliore la productivité mais crée de nouvelles vulnérabilités. Une cyberattaque sur un robot peut avoir des conséquences graves : arrêt de production, dommages physiques, vol de propriété intellectuelle.",
+        "convergenceTitle": "Convergence IT/OT",
+        "convergenceText": "La connexion des systèmes robotiques au réseau IT crée de nouveaux vecteurs d'attaque. Les protocoles industriels (Modbus, OPC UA, EtherNet/IP) ne sont pas conçus pour la sécurité."
+      },
+      "risks": {
+        "title": "Risques cyber sur les robots",
+        "list": [
+          { "title": "Prise de contrôle", "description": "Un attaquant peut prendre le contrôle du robot et lui faire exécuter des actions malveillantes." },
+          { "title": "Sabotage de production", "description": "Modification des paramètres pour produire des pièces défectueuses ou endommager les équipements." },
+          { "title": "Espionnage industriel", "description": "Exfiltration des programmes, trajectoires et données de production confidentielles." },
+          { "title": "Sécurité physique", "description": "Mise en danger des opérateurs par des mouvements imprévisibles ou dangereux." }
+        ]
+      },
+      "services": {
+        "title": "Nos services",
+        "audit": {
+          "title": "Audit de sécurité robotique",
+          "items": ["Inventaire des systèmes robotiques", "Analyse des risques spécifiques", "Tests de pénétration OT", "Évaluation des protocoles industriels", "Analyse des interfaces homme-machine"]
+        },
+        "hardening": {
+          "title": "Durcissement des systèmes",
+          "items": ["Configuration sécurisée des robots", "Mise à jour des firmwares", "Gestion des accès et authentification", "Chiffrement des communications", "Désactivation des services non utilisés"]
+        },
+        "architecture": {
+          "title": "Architecture sécurisée",
+          "items": ["Segmentation OT/IT", "Zones de sécurité (Purdue Model)", "DMZ industrielle", "Passerelles sécurisées", "Accès distants contrôlés"]
+        },
+        "monitoring": {
+          "title": "Surveillance et détection",
+          "items": ["Monitoring des systèmes robotiques", "Détection d'anomalies", "Alerting sur les comportements suspects", "Forensics OT", "SOC industriel"]
+        }
+      },
+      "manufacturers": {
+        "title": "Expertise multi-fabricants",
+        "subtitle": "Nous intervenons sur les principaux fabricants de robots industriels",
+        "list": ["ABB", "FANUC", "KUKA", "Universal Robots", "Yaskawa", "Stäubli", "Mitsubishi", "Kawasaki"]
+      },
+      "cta": {
+        "title": "Sécurisez vos robots industriels",
+        "description": "Nos experts OT vous accompagnent dans la sécurisation de vos systèmes robotiques.",
+        "button": "Demander un audit"
+      }
+    },
+    "vulnerabilities": {
+      "hero": {
+        "label": "Services Opérationnels",
+        "title": "Gestion des",
+        "titleHighlight": "vulnérabilités",
+        "subtitle": "Identifiez et corrigez vos failles de sécurité en continu"
+      },
+      "intro": {
+        "title": "Pourquoi la gestion des vulnérabilités ?",
+        "text": "Chaque jour, de nouvelles vulnérabilités sont découvertes dans les systèmes, applications et équipements. Sans un processus structuré de gestion des vulnérabilités, votre exposition aux risques augmente continuellement.",
+        "regulatoryTitle": "Exigence réglementaire",
+        "regulatoryText": "La gestion des vulnérabilités est requise par NIS2, DORA, ISO 27001, PCI-DSS et la plupart des référentiels de sécurité."
+      },
+      "process": {
+        "title": "Notre processus",
+        "steps": [
+          { "step": "1", "title": "Découverte", "description": "Inventaire automatisé de tous vos actifs et découverte continue des nouveaux équipements." },
+          { "step": "2", "title": "Scan", "description": "Scans de vulnérabilités réguliers sur l'ensemble du périmètre (interne et externe)." },
+          { "step": "3", "title": "Analyse", "description": "Qualification des vulnérabilités, élimination des faux positifs, priorisation par criticité." },
+          { "step": "4", "title": "Remédiation", "description": "Accompagnement à la correction : patches, configurations, workarounds." },
+          { "step": "5", "title": "Vérification", "description": "Re-scan pour valider la correction effective des vulnérabilités." },
+          { "step": "6", "title": "Reporting", "description": "Tableaux de bord, KPIs, rapports de tendance et conformité." }
+        ]
+      },
+      "features": {
+        "title": "Fonctionnalités",
+        "scans": {
+          "title": "Scans automatisés",
+          "items": ["Scans planifiés et à la demande", "Scans authentifiés et non authentifiés", "Couverture interne et externe", "Intégration CI/CD"]
+        },
+        "prioritization": {
+          "title": "Priorisation intelligente",
+          "items": ["Score CVSS contextualisé", "Threat Intelligence intégrée", "Criticité des actifs", "Exploitabilité réelle"]
+        },
+        "remediation": {
+          "title": "Suivi de remédiation",
+          "items": ["Workflow de correction", "Attribution aux équipes", "SLA par criticité", "Escalade automatique"]
+        },
+        "reporting": {
+          "title": "Reporting avancé",
+          "items": ["Dashboards temps réel", "Évolution de la posture", "Rapports de conformité", "Export multi-format"]
+        }
+      },
+      "kpis": {
+        "title": "Indicateurs clés suivis",
+        "list": [
+          { "label": "MTTR", "desc": "Mean Time To Remediate" },
+          { "label": "% Critiques", "desc": "Vulnérabilités critiques ouvertes" },
+          { "label": "Couverture", "desc": "Actifs scannés" },
+          { "label": "Tendance", "desc": "Évolution de l'exposition" }
+        ]
+      },
+      "cta": {
+        "title": "Maîtrisez vos vulnérabilités",
+        "description": "Mettez en place un processus structuré de gestion des vulnérabilités.",
+        "button": "Demander une démo"
+      }
+    },
+    "incidentResponse": {
+      "hero": {
+        "label": "Services Opérationnels",
+        "title": "Support à la",
+        "titleHighlight": "remédiation d'incidents",
+        "subtitle": "Intervention rapide pour contenir, éradiquer et récupérer après une cyberattaque"
+      },
+      "emergency": {
+        "text": "Vous êtes victime d'une cyberattaque ? Contactez-nous en urgence : contact@cyber-ssi.com"
+      },
+      "intro": {
+        "title": "Réponse aux incidents de sécurité",
+        "text": "Face à une cyberattaque, chaque minute compte. Notre équipe d'experts intervient rapidement pour vous aider à contenir la menace, comprendre l'attaque, éradiquer les éléments malveillants et restaurer vos opérations en toute sécurité.",
+        "commitmentTitle": "Notre engagement",
+        "commitmentText": "Intervention rapide, communication transparente, préservation des preuves pour d'éventuelles poursuites judiciaires."
+      },
+      "incidents": {
+        "title": "Types d'incidents traités",
+        "list": ["Ransomware", "Data Breach", "Compromission de comptes", "Attaque sur Active Directory", "Phishing / BEC", "Intrusion réseau", "Cryptominage", "Défacement web"]
+      },
+      "phases": {
+        "title": "Notre méthodologie PICERL",
+        "list": [
+          { "phase": "Phase 1", "title": "Containment", "description": "Isoler la menace pour stopper sa propagation", "items": ["Isolation des systèmes compromis", "Blocage des communications malveillantes", "Préservation des preuves", "Communication de crise"] },
+          { "phase": "Phase 2", "title": "Investigation", "description": "Comprendre l'attaque et son étendue", "items": ["Analyse forensique", "Timeline de l'attaque", "Identification du vecteur initial", "Cartographie de la compromission"] },
+          { "phase": "Phase 3", "title": "Eradication", "description": "Éliminer la menace de l'environnement", "items": ["Suppression des malwares", "Fermeture des backdoors", "Révocation des accès compromis", "Nettoyage des systèmes"] },
+          { "phase": "Phase 4", "title": "Recovery", "description": "Restaurer les opérations en toute sécurité", "items": ["Restauration des systèmes", "Vérification de l'intégrité", "Remise en production progressive", "Monitoring renforcé"] }
+        ]
+      },
+      "postIncident": {
+        "title": "Après l'incident",
+        "items": [
+          { "title": "Rapport d'incident", "description": "Documentation complète de l'incident, timeline, vecteur d'attaque, impacts et actions menées." },
+          { "title": "Lessons Learned", "description": "Analyse des causes racines et recommandations pour éviter la récurrence." },
+          { "title": "Plan d'amélioration", "description": "Actions de renforcement de la sécurité basées sur les enseignements de l'incident." }
+        ]
+      },
+      "cta": {
+        "title": "Besoin d'une intervention urgente ?",
+        "description": "Notre équipe est disponible pour vous accompagner face à un incident de sécurité.",
+        "button": "Contact urgence"
+      }
+    }
   }
 }

@@ -1,74 +1,16 @@
-import Link from "next/link";
-import type { Metadata } from "next";
+"use client";
 
-export const metadata: Metadata = {
-  title: "Sécurité robotique | Cyber-SSI",
-  description: "Protégez vos robots et systèmes automatisés : audit, durcissement, surveillance & conformité pour une exploitation sécurisée.",
-};
+import { useTranslations } from "next-intl";
+import { Link } from "@/i18n/navigation";
 
-const risks = [
-  {
-    title: "Prise de contrôle",
-    description: "Un attaquant peut prendre le contrôle du robot et lui faire exécuter des actions malveillantes.",
-  },
-  {
-    title: "Sabotage de production",
-    description: "Modification des paramètres pour produire des pièces défectueuses ou endommager les équipements.",
-  },
-  {
-    title: "Espionnage industriel",
-    description: "Exfiltration des programmes, trajectoires et données de production confidentielles.",
-  },
-  {
-    title: "Sécurité physique",
-    description: "Mise en danger des opérateurs par des mouvements imprévisibles ou dangereux.",
-  },
-];
-
-const services = [
-  {
-    title: "Audit de sécurité robotique",
-    items: [
-      "Inventaire des systèmes robotiques",
-      "Analyse des risques spécifiques",
-      "Tests de pénétration OT",
-      "Évaluation des protocoles industriels",
-      "Analyse des interfaces homme-machine",
-    ],
-  },
-  {
-    title: "Durcissement des systèmes",
-    items: [
-      "Configuration sécurisée des robots",
-      "Mise à jour des firmwares",
-      "Gestion des accès et authentification",
-      "Chiffrement des communications",
-      "Désactivation des services non utilisés",
-    ],
-  },
-  {
-    title: "Architecture sécurisée",
-    items: [
-      "Segmentation OT/IT",
-      "Zones de sécurité (Purdue Model)",
-      "DMZ industrielle",
-      "Passerelles sécurisées",
-      "Accès distants contrôlés",
-    ],
-  },
-  {
-    title: "Surveillance et détection",
-    items: [
-      "Monitoring des systèmes robotiques",
-      "Détection d'anomalies",
-      "Alerting sur les comportements suspects",
-      "Forensics OT",
-      "SOC industriel",
-    ],
-  },
-];
+const serviceKeys = ["audit", "hardening", "architecture", "monitoring"] as const;
 
 export default function SecuriteRobotique() {
+  const t = useTranslations("servicesOperationnels.robotics");
+
+  const risks = t.raw("risks.list") as Array<{ title: string; description: string }>;
+  const manufacturers = t.raw("manufacturers.list") as string[];
+
   return (
     <>
       {/* Hero Section */}
@@ -79,13 +21,13 @@ export default function SecuriteRobotique() {
         </div>
         <div className="relative z-10 text-center px-4 max-w-4xl mx-auto pt-20">
           <p className="text-[#7d53de] font-semibold uppercase tracking-wider mb-4">
-            Services Opérationnels
+            {t("hero.label")}
           </p>
           <h1 className="text-4xl md:text-5xl lg:text-6xl font-bold text-white leading-tight">
-            Sécurité <span className="text-[#7d53de]">robotique</span>
+            {t("hero.title")} <span className="text-[#7d53de]">{t("hero.titleHighlight")}</span>
           </h1>
           <p className="text-white/80 text-xl mt-6 max-w-2xl mx-auto">
-            Protégez vos robots industriels et systèmes automatisés
+            {t("hero.subtitle")}
           </p>
         </div>
       </section>
@@ -95,24 +37,18 @@ export default function SecuriteRobotique() {
         <div className="max-w-4xl mx-auto px-6">
           <div className="text-center mb-12">
             <h2 className="text-3xl font-bold text-[#0e0c19] mb-4">
-              Enjeux de la cybersécurité robotique
+              {t("intro.title")}
             </h2>
             <div className="w-24 h-1 bg-[#7d53de] mx-auto rounded-full"></div>
           </div>
 
           <div className="prose prose-lg max-w-none text-[#3c3a47]">
             <p className="text-lg leading-relaxed mb-6">
-              Les robots industriels sont de plus en plus connectés et automatisés. Cette digitalisation
-              améliore la productivité mais crée de nouvelles vulnérabilités. Une cyberattaque sur
-              un robot peut avoir des conséquences graves : arrêt de production, dommages physiques,
-              vol de propriété intellectuelle.
+              {t("intro.text")}
             </p>
             <div className="bg-red-50 border-l-4 border-red-500 p-6 rounded-r-lg">
-              <p className="text-red-800 font-semibold mb-2">Convergence IT/OT</p>
-              <p className="text-red-700">
-                La connexion des systèmes robotiques au réseau IT crée de nouveaux vecteurs d&apos;attaque.
-                Les protocoles industriels (Modbus, OPC UA, EtherNet/IP) ne sont pas conçus pour la sécurité.
-              </p>
+              <p className="text-red-800 font-semibold mb-2">{t("intro.convergenceTitle")}</p>
+              <p className="text-red-700">{t("intro.convergenceText")}</p>
             </div>
           </div>
         </div>
@@ -123,7 +59,7 @@ export default function SecuriteRobotique() {
         <div className="max-w-7xl mx-auto px-6 lg:px-8">
           <div className="text-center mb-12">
             <h2 className="text-3xl font-bold text-[#0e0c19] mb-4">
-              Risques cyber sur les robots
+              {t("risks.title")}
             </h2>
             <div className="w-24 h-1 bg-[#7d53de] mx-auto rounded-full"></div>
           </div>
@@ -144,27 +80,30 @@ export default function SecuriteRobotique() {
         <div className="max-w-7xl mx-auto px-6 lg:px-8">
           <div className="text-center mb-16">
             <h2 className="text-3xl md:text-4xl font-bold text-[#0e0c19] mb-4">
-              Nos services
+              {t("services.title")}
             </h2>
             <div className="w-24 h-1 bg-[#7d53de] mx-auto rounded-full"></div>
           </div>
 
           <div className="grid grid-cols-1 md:grid-cols-2 gap-8">
-            {services.map((service, index) => (
-              <div key={index} className="bg-gray-50 p-8 rounded-xl">
-                <h3 className="text-xl font-bold text-[#0e0c19] mb-4">
-                  {service.title}
-                </h3>
-                <ul className="space-y-3">
-                  {service.items.map((item, idx) => (
-                    <li key={idx} className="flex items-start gap-3 text-[#3c3a47]">
-                      <span className="text-[#7d53de] mt-1">✓</span>
-                      {item}
-                    </li>
-                  ))}
-                </ul>
-              </div>
-            ))}
+            {serviceKeys.map((key) => {
+              const items = t.raw(`services.${key}.items`) as string[];
+              return (
+                <div key={key} className="bg-gray-50 p-8 rounded-xl">
+                  <h3 className="text-xl font-bold text-[#0e0c19] mb-4">
+                    {t(`services.${key}.title`)}
+                  </h3>
+                  <ul className="space-y-3">
+                    {items.map((item, idx) => (
+                      <li key={idx} className="flex items-start gap-3 text-[#3c3a47]">
+                        <span className="text-[#7d53de] mt-1">✓</span>
+                        {item}
+                      </li>
+                    ))}
+                  </ul>
+                </div>
+              );
+            })}
           </div>
         </div>
       </section>
@@ -174,16 +113,16 @@ export default function SecuriteRobotique() {
         <div className="max-w-7xl mx-auto px-6 lg:px-8">
           <div className="text-center mb-12">
             <h2 className="text-3xl font-bold text-white mb-4">
-              Expertise multi-fabricants
+              {t("manufacturers.title")}
             </h2>
             <div className="w-24 h-1 bg-[#7d53de] mx-auto rounded-full mb-6"></div>
             <p className="text-white/70 max-w-2xl mx-auto">
-              Nous intervenons sur les principaux fabricants de robots industriels
+              {t("manufacturers.subtitle")}
             </p>
           </div>
 
           <div className="flex flex-wrap justify-center gap-4">
-            {["ABB", "FANUC", "KUKA", "Universal Robots", "Yaskawa", "Stäubli", "Mitsubishi", "Kawasaki"].map((brand, index) => (
+            {manufacturers.map((brand, index) => (
               <div
                 key={index}
                 className="bg-white/5 border border-[#7d53de]/20 px-6 py-3 rounded-full"
@@ -199,16 +138,16 @@ export default function SecuriteRobotique() {
       <section className="py-16 bg-[#7d53de]">
         <div className="max-w-4xl mx-auto px-6 text-center">
           <h2 className="text-3xl md:text-4xl font-bold text-white mb-6">
-            Sécurisez vos robots industriels
+            {t("cta.title")}
           </h2>
           <p className="text-white/90 text-lg mb-8">
-            Nos experts OT vous accompagnent dans la sécurisation de vos systèmes robotiques.
+            {t("cta.description")}
           </p>
           <Link
             href="/#contact"
             className="inline-block rounded-full bg-white text-[#7d53de] px-8 py-4 text-lg font-semibold hover:bg-[#0e0c19] hover:text-white transition-colors"
           >
-            Demander un audit
+            {t("cta.button")}
           </Link>
         </div>
       </section>
