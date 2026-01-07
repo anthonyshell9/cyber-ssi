@@ -162,22 +162,18 @@ export default function Hero() {
 
       {/* Stats Section */}
       <div className="relative z-10 w-full max-w-4xl mx-auto px-4 mt-8 mb-16" data-animation="fadeInUp" data-delay="0.5">
-        <div className="grid grid-cols-2 md:grid-cols-4 gap-6 bg-white/5 backdrop-blur-sm rounded-2xl p-6 border border-white/10">
+        <div className="grid grid-cols-3 gap-6 bg-white/5 backdrop-blur-sm rounded-2xl p-6 border border-white/10">
           <div className="text-center">
             <AnimatedCounter target={50} suffix="+" />
             <p className="text-white/60 text-sm mt-1">Clients protégés</p>
           </div>
           <div className="text-center">
-            <AnimatedCounter target={100} suffix="%" />
-            <p className="text-white/60 text-sm mt-1">Satisfaction</p>
+            <AnimatedCounter target={100} suffix="+" />
+            <p className="text-white/60 text-sm mt-1">Accompagnements certification</p>
           </div>
           <div className="text-center">
             <AnimatedCounter target={15} suffix="+" />
-            <p className="text-white/60 text-sm mt-1">Certifications</p>
-          </div>
-          <div className="text-center">
-            <div className="text-4xl md:text-5xl font-bold text-white">24/7</div>
-            <p className="text-white/60 text-sm mt-1">Support disponible</p>
+            <p className="text-white/60 text-sm mt-1">Certifications experts</p>
           </div>
         </div>
       </div>
