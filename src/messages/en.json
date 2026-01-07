@@ -184,6 +184,214 @@
   "languageSwitcher": {
     "label": "Language"
   },
+  "confidentialite": {
+    "meta": {
+      "title": "Privacy Policy | Cyber-SSI",
+      "description": "Privacy policy and personal data protection of Cyber-SSI, GDPR compliant."
+    },
+    "hero": {
+      "title": "Privacy",
+      "titleHighlight": "Policy",
+      "lastUpdate": "Last updated: January 2025"
+    },
+    "sections": {
+      "introduction": {
+        "title": "1. Introduction",
+        "content": "Cyber-SSI is committed to protecting the privacy of users of its website and services. This privacy policy describes how we collect, use, store and protect your personal data in accordance with the General Data Protection Regulation (GDPR - EU Regulation 2016/679)."
+      },
+      "controller": {
+        "title": "2. Data Controller",
+        "company": "Company name:",
+        "email": "Email:",
+        "dpo": "Data Protection Officer (DPO):"
+      },
+      "dataCollected": {
+        "title": "3. Personal Data Collected",
+        "intro": "We may collect the following categories of data:",
+        "identification": "Identification data:",
+        "identificationDesc": "name, surname, email address, phone number",
+        "professional": "Professional data:",
+        "professionalDesc": "company name, position",
+        "connection": "Connection data:",
+        "connectionDesc": "IP address, browser type, pages visited, date and time of connection",
+        "communication": "Communication data:",
+        "communicationDesc": "content of messages sent via our contact form"
+      },
+      "purposes": {
+        "title": "4. Processing Purposes",
+        "intro": "Your personal data is processed for the following purposes:",
+        "items": [
+          "Respond to your contact and information requests",
+          "Provide our cybersecurity consulting services",
+          "Manage commercial and contractual relationships",
+          "Improve our website and services",
+          "Comply with our legal and regulatory obligations",
+          "Send commercial communications (with your consent)"
+        ]
+      },
+      "legalBasis": {
+        "title": "5. Legal Basis for Processing",
+        "intro": "The processing of your data is based on the following legal bases:",
+        "consent": "Your consent:",
+        "consentDesc": "for sending commercial communications",
+        "contract": "Contract execution:",
+        "contractDesc": "for the provision of our services",
+        "interest": "Our legitimate interest:",
+        "interestDesc": "to improve our services and ensure the security of our website",
+        "legal": "Our legal obligations:",
+        "legalDesc": "to comply with applicable regulations"
+      },
+      "recipients": {
+        "title": "6. Data Recipients",
+        "intro": "Your personal data may be transmitted to the following categories of recipients:",
+        "items": [
+          "Our authorized personnel within the scope of their duties",
+          "Our technical subcontractors (hosting, maintenance)",
+          "Competent authorities in case of legal obligation"
+        ],
+        "noSale": "We never sell your personal data to third parties."
+      },
+      "transfers": {
+        "title": "7. Transfers Outside the EU",
+        "content": "Your data is primarily processed within the European Union. In case of transfer to a third country, we ensure that appropriate safeguards are in place (European Commission standard contractual clauses, adequacy decision, etc.)."
+      },
+      "retention": {
+        "title": "8. Retention Period",
+        "intro": "Your data is retained for the following periods:",
+        "contact": "Contact data:",
+        "contactDuration": "3 years from last contact",
+        "client": "Client data:",
+        "clientDuration": "duration of contractual relationship + 5 years (legal obligations)",
+        "connection": "Connection data:",
+        "connectionDuration": "13 months maximum",
+        "cookies": "Cookies:",
+        "cookiesDuration": "13 months maximum"
+      },
+      "rights": {
+        "title": "9. Your Rights",
+        "intro": "In accordance with GDPR, you have the following rights:",
+        "access": {
+          "title": "Right of access",
+          "desc": "Obtain confirmation that your data is being processed and receive a copy"
+        },
+        "rectification": {
+          "title": "Right to rectification",
+          "desc": "Have your inaccurate or incomplete data corrected"
+        },
+        "erasure": {
+          "title": "Right to erasure",
+          "desc": "Request deletion of your data in certain cases"
+        },
+        "restriction": {
+          "title": "Right to restriction",
+          "desc": "Limit the processing of your data in certain situations"
+        },
+        "portability": {
+          "title": "Right to portability",
+          "desc": "Receive your data in a structured and readable format"
+        },
+        "objection": {
+          "title": "Right to object",
+          "desc": "Object to processing for legitimate reasons"
+        },
+        "howTo": "How to exercise your rights?",
+        "howToDesc": "Send your request by email to contact@cyber-ssi.com specifying your identity and the right you wish to exercise. We will respond within one month."
+      },
+      "complaint": {
+        "title": "10. Right to Complain",
+        "content": "If you believe that the processing of your personal data constitutes a violation of GDPR, you have the right to lodge a complaint with the CNIL (Commission Nationale de l'Informatique et des Libertés):"
+      },
+      "cookies": {
+        "title": "11. Cookies",
+        "intro": "Our website uses cookies to improve your browsing experience. Cookies are small text files stored on your device.",
+        "typesTitle": "Types of cookies used:",
+        "essential": "Essential cookies:",
+        "essentialDesc": "necessary for the website to function",
+        "analytics": "Analytics cookies:",
+        "analyticsDesc": "to understand how the website is used (with your consent)",
+        "manage": "You can manage your cookie preferences in your browser settings."
+      },
+      "security": {
+        "title": "12. Data Security",
+        "intro": "As cybersecurity experts, we implement appropriate technical and organizational measures to protect your personal data against unauthorized access, modification, disclosure or destruction:",
+        "items": [
+          "Data encryption in transit (HTTPS/TLS)",
+          "Strict data access control",
+          "Access monitoring and logging",
+          "Regular and secure backups",
+          "Staff training on data protection"
+        ]
+      },
+      "modifications": {
+        "title": "13. Policy Modifications",
+        "content": "We reserve the right to modify this privacy policy at any time. Any modification will be published on this page with an updated date. We encourage you to regularly check this page."
+      },
+      "contact": {
+        "title": "14. Contact Us",
+        "content": "For any questions regarding this privacy policy or the exercise of your rights, contact our DPO:"
+      }
+    }
+  },
+  "entreprise": {
+    "meta": {
+      "title": "Our Company | Cyber-SSI",
+      "description": "Discover Cyber-SSI, a cybersecurity company specialized in supporting SMBs, public administrations and institutions."
+    },
+    "hero": {
+      "title": "Our",
+      "titleHighlight": "Company",
+      "subtitle": "Cybersecurity expertise serving SMBs, public administrations and institutions"
+    },
+    "mission": {
+      "label": "Our mission",
+      "title": "Protecting what matters to you",
+      "text1": "<strong>Cyber-SSI</strong> was born from a simple observation: SMBs, administrations and institutions face the same cyber threats as large companies, but don't always have the resources to deal with them.",
+      "text2": "Our mission is to democratize access to quality cybersecurity, by offering services adapted to your size, your sector and your budget constraints.",
+      "text3": "We support our clients from defining their security strategy to its operational implementation, including regulatory compliance and technical testing.",
+      "quote": "\"Your security, our expertise\""
+    },
+    "values": {
+      "title": "Our Values",
+      "excellence": {
+        "title": "Excellence",
+        "description": "We strive for excellence in every mission, with proven methodologies and certified experts."
+      },
+      "trust": {
+        "title": "Trust",
+        "description": "Confidentiality and integrity are at the heart of our relationship with our clients."
+      },
+      "pragmatism": {
+        "title": "Pragmatism",
+        "description": "We offer concrete solutions adapted to your context, not theoretical answers."
+      },
+      "commitment": {
+        "title": "Commitment",
+        "description": "We are committed to measurable results and long-term support."
+      }
+    },
+    "certifications": {
+      "title": "Our Certifications",
+      "description": "Our consultants hold the most recognized certifications in the cybersecurity market."
+    },
+    "sectors": {
+      "title": "Our Sectors of Intervention",
+      "list": {
+        "finance": "Finance & Banking",
+        "health": "Healthcare",
+        "industry": "Industry",
+        "public": "Public Services",
+        "ecommerce": "E-commerce",
+        "insurance": "Insurance",
+        "transport": "Transport",
+        "energy": "Energy"
+      }
+    },
+    "cta": {
+      "title": "Let's Work Together",
+      "description": "Let's discuss your cybersecurity challenges and see how we can support you.",
+      "button": "Contact Us"
+    }
+  },
   "nosServices": {
     "meta": {
       "title": "Our Cybersecurity Services | Cyber-SSI",

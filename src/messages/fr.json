@@ -184,6 +184,214 @@
   "languageSwitcher": {
     "label": "Langue"
   },
+  "confidentialite": {
+    "meta": {
+      "title": "Politique de Confidentialité | Cyber-SSI",
+      "description": "Politique de confidentialité et protection des données personnelles de Cyber-SSI, conforme au RGPD."
+    },
+    "hero": {
+      "title": "Politique de",
+      "titleHighlight": "Confidentialité",
+      "lastUpdate": "Dernière mise à jour : Janvier 2025"
+    },
+    "sections": {
+      "introduction": {
+        "title": "1. Introduction",
+        "content": "Cyber-SSI s'engage à protéger la vie privée des utilisateurs de son site web et de ses services. La présente politique de confidentialité décrit comment nous collectons, utilisons, stockons et protégeons vos données personnelles conformément au Règlement Général sur la Protection des Données (RGPD - Règlement UE 2016/679)."
+      },
+      "controller": {
+        "title": "2. Responsable du traitement",
+        "company": "Raison sociale :",
+        "email": "Email :",
+        "dpo": "Délégué à la Protection des Données (DPO) :"
+      },
+      "dataCollected": {
+        "title": "3. Données personnelles collectées",
+        "intro": "Nous pouvons collecter les catégories de données suivantes :",
+        "identification": "Données d'identification :",
+        "identificationDesc": "nom, prénom, adresse email, numéro de téléphone",
+        "professional": "Données professionnelles :",
+        "professionalDesc": "nom de l'entreprise, fonction",
+        "connection": "Données de connexion :",
+        "connectionDesc": "adresse IP, type de navigateur, pages visitées, date et heure de connexion",
+        "communication": "Données de communication :",
+        "communicationDesc": "contenu des messages envoyés via notre formulaire de contact"
+      },
+      "purposes": {
+        "title": "4. Finalités du traitement",
+        "intro": "Vos données personnelles sont traitées pour les finalités suivantes :",
+        "items": [
+          "Répondre à vos demandes de contact et de renseignements",
+          "Fournir nos services de conseil en cybersécurité",
+          "Gérer la relation commerciale et contractuelle",
+          "Améliorer notre site web et nos services",
+          "Respecter nos obligations légales et réglementaires",
+          "Envoyer des communications commerciales (avec votre consentement)"
+        ]
+      },
+      "legalBasis": {
+        "title": "5. Base légale du traitement",
+        "intro": "Le traitement de vos données repose sur les bases légales suivantes :",
+        "consent": "Votre consentement :",
+        "consentDesc": "pour l'envoi de communications commerciales",
+        "contract": "L'exécution d'un contrat :",
+        "contractDesc": "pour la fourniture de nos services",
+        "interest": "Notre intérêt légitime :",
+        "interestDesc": "pour améliorer nos services et assurer la sécurité de notre site",
+        "legal": "Nos obligations légales :",
+        "legalDesc": "pour respecter la réglementation applicable"
+      },
+      "recipients": {
+        "title": "6. Destinataires des données",
+        "intro": "Vos données personnelles peuvent être transmises aux catégories de destinataires suivantes :",
+        "items": [
+          "Notre personnel habilité dans le cadre de leurs fonctions",
+          "Nos sous-traitants techniques (hébergement, maintenance)",
+          "Les autorités compétentes en cas d'obligation légale"
+        ],
+        "noSale": "Nous ne vendons jamais vos données personnelles à des tiers."
+      },
+      "transfers": {
+        "title": "7. Transferts hors UE",
+        "content": "Vos données sont principalement traitées au sein de l'Union Européenne. En cas de transfert vers un pays tiers, nous nous assurons que des garanties appropriées sont mises en place (clauses contractuelles types de la Commission européenne, décision d'adéquation, etc.)."
+      },
+      "retention": {
+        "title": "8. Durée de conservation",
+        "intro": "Vos données sont conservées pendant les durées suivantes :",
+        "contact": "Données de contact :",
+        "contactDuration": "3 ans à compter du dernier contact",
+        "client": "Données clients :",
+        "clientDuration": "durée de la relation contractuelle + 5 ans (obligations légales)",
+        "connection": "Données de connexion :",
+        "connectionDuration": "13 mois maximum",
+        "cookies": "Cookies :",
+        "cookiesDuration": "13 mois maximum"
+      },
+      "rights": {
+        "title": "9. Vos droits",
+        "intro": "Conformément au RGPD, vous disposez des droits suivants :",
+        "access": {
+          "title": "Droit d'accès",
+          "desc": "Obtenir la confirmation que vos données sont traitées et en recevoir une copie"
+        },
+        "rectification": {
+          "title": "Droit de rectification",
+          "desc": "Faire corriger vos données inexactes ou incomplètes"
+        },
+        "erasure": {
+          "title": "Droit à l'effacement",
+          "desc": "Demander la suppression de vos données dans certains cas"
+        },
+        "restriction": {
+          "title": "Droit à la limitation",
+          "desc": "Limiter le traitement de vos données dans certaines situations"
+        },
+        "portability": {
+          "title": "Droit à la portabilité",
+          "desc": "Recevoir vos données dans un format structuré et lisible"
+        },
+        "objection": {
+          "title": "Droit d'opposition",
+          "desc": "Vous opposer au traitement pour des motifs légitimes"
+        },
+        "howTo": "Comment exercer vos droits ?",
+        "howToDesc": "Envoyez votre demande par email à contact@cyber-ssi.com en précisant votre identité et le droit que vous souhaitez exercer. Nous répondrons dans un délai d'un mois."
+      },
+      "complaint": {
+        "title": "10. Droit de réclamation",
+        "content": "Si vous estimez que le traitement de vos données personnelles constitue une violation du RGPD, vous avez le droit d'introduire une réclamation auprès de la CNIL (Commission Nationale de l'Informatique et des Libertés) :"
+      },
+      "cookies": {
+        "title": "11. Cookies",
+        "intro": "Notre site utilise des cookies pour améliorer votre expérience de navigation. Les cookies sont de petits fichiers texte stockés sur votre appareil.",
+        "typesTitle": "Types de cookies utilisés :",
+        "essential": "Cookies essentiels :",
+        "essentialDesc": "nécessaires au fonctionnement du site",
+        "analytics": "Cookies analytiques :",
+        "analyticsDesc": "pour comprendre comment le site est utilisé (avec votre consentement)",
+        "manage": "Vous pouvez gérer vos préférences de cookies dans les paramètres de votre navigateur."
+      },
+      "security": {
+        "title": "12. Sécurité des données",
+        "intro": "En tant qu'experts en cybersécurité, nous mettons en œuvre des mesures techniques et organisationnelles appropriées pour protéger vos données personnelles contre tout accès non autorisé, modification, divulgation ou destruction :",
+        "items": [
+          "Chiffrement des données en transit (HTTPS/TLS)",
+          "Contrôle d'accès strict aux données",
+          "Surveillance et journalisation des accès",
+          "Sauvegardes régulières et sécurisées",
+          "Formation du personnel à la protection des données"
+        ]
+      },
+      "modifications": {
+        "title": "13. Modifications de la politique",
+        "content": "Nous nous réservons le droit de modifier cette politique de confidentialité à tout moment. Toute modification sera publiée sur cette page avec une date de mise à jour. Nous vous encourageons à consulter régulièrement cette page."
+      },
+      "contact": {
+        "title": "14. Nous contacter",
+        "content": "Pour toute question concernant cette politique de confidentialité ou l'exercice de vos droits, contactez notre DPO :"
+      }
+    }
+  },
+  "entreprise": {
+    "meta": {
+      "title": "Notre Entreprise | Cyber-SSI",
+      "description": "Découvrez Cyber-SSI, entreprise de cybersécurité spécialisée dans l'accompagnement des PME, administrations et institutions."
+    },
+    "hero": {
+      "title": "Notre",
+      "titleHighlight": "Entreprise",
+      "subtitle": "L'expertise cybersécurité au service des PME, administrations et institutions"
+    },
+    "mission": {
+      "label": "Notre mission",
+      "title": "Protéger ce qui compte pour vous",
+      "text1": "<strong>Cyber-SSI</strong> est née d'un constat simple : les PME, administrations et institutions font face aux mêmes menaces cyber que les grandes entreprises, mais n'ont pas toujours les ressources pour y faire face.",
+      "text2": "Notre mission est de démocratiser l'accès à une cybersécurité de qualité, en proposant des services adaptés à votre taille, votre secteur et vos contraintes budgétaires.",
+      "text3": "Nous accompagnons nos clients de la définition de leur stratégie de sécurité jusqu'à sa mise en œuvre opérationnelle, en passant par la conformité réglementaire et les tests techniques.",
+      "quote": "\"Votre sécurité, notre expertise\""
+    },
+    "values": {
+      "title": "Nos Valeurs",
+      "excellence": {
+        "title": "Excellence",
+        "description": "Nous visons l'excellence dans chaque mission, avec des méthodologies éprouvées et des experts certifiés."
+      },
+      "trust": {
+        "title": "Confiance",
+        "description": "La confidentialité et l'intégrité sont au cœur de notre relation avec nos clients."
+      },
+      "pragmatism": {
+        "title": "Pragmatisme",
+        "description": "Nous proposons des solutions concrètes et adaptées à votre contexte, pas des réponses théoriques."
+      },
+      "commitment": {
+        "title": "Engagement",
+        "description": "Nous nous engageons sur des résultats mesurables et un accompagnement dans la durée."
+      }
+    },
+    "certifications": {
+      "title": "Nos Certifications",
+      "description": "Nos consultants détiennent les certifications les plus reconnues du marché de la cybersécurité."
+    },
+    "sectors": {
+      "title": "Nos Secteurs d'Intervention",
+      "list": {
+        "finance": "Finance & Banque",
+        "health": "Santé",
+        "industry": "Industrie",
+        "public": "Services publics",
+        "ecommerce": "E-commerce",
+        "insurance": "Assurance",
+        "transport": "Transport",
+        "energy": "Énergie"
+      }
+    },
+    "cta": {
+      "title": "Travaillons ensemble",
+      "description": "Discutons de vos enjeux cybersécurité et voyons comment nous pouvons vous accompagner.",
+      "button": "Contactez-nous"
+    }
+  },
   "nosServices": {
     "meta": {
       "title": "Nos Services de Cybersécurité | Cyber-SSI",

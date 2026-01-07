@@ -1,11 +1,8 @@
-import Link from "next/link";
-import Image from "next/image";
-import type { Metadata } from "next";
+"use client";
 
-export const metadata: Metadata = {
-  title: "Notre Entreprise | Cyber-SSI",
-  description: "Découvrez Cyber-SSI, entreprise de cybersécurité spécialisée dans l'accompagnement des PME, administrations et institutions.",
-};
+import { useTranslations } from "next-intl";
+import { Link } from "@/i18n/navigation";
+import Image from "next/image";
 
 const certifications = [
   { name: "CREST", description: "Council of Registered Ethical Security Testers", logo: "/images/certifications/crest.svg" },
@@ -18,30 +15,13 @@ const certifications = [
   { name: "ISO 27001 LI", description: "Lead Implementer", logo: "/images/certifications/iso27001.svg" },
 ];
 
-const values = [
-  {
-    title: "Excellence",
-    description: "Nous visons l'excellence dans chaque mission, avec des méthodologies éprouvées et des experts certifiés.",
-    icon: "⭐",
-  },
-  {
-    title: "Confiance",
-    description: "La confidentialité et l'intégrité sont au cœur de notre relation avec nos clients.",
-    icon: "🤝",
-  },
-  {
-    title: "Pragmatisme",
-    description: "Nous proposons des solutions concrètes et adaptées à votre contexte, pas des réponses théoriques.",
-    icon: "🎯",
-  },
-  {
-    title: "Engagement",
-    description: "Nous nous engageons sur des résultats mesurables et un accompagnement dans la durée.",
-    icon: "💪",
-  },
-];
+const valueKeys = ["excellence", "trust", "pragmatism", "commitment"];
+const valueIcons = ["⭐", "🤝", "🎯", "💪"];
+const sectorKeys = ["finance", "health", "industry", "public", "ecommerce", "insurance", "transport", "energy"];
 
 export default function Entreprise() {
+  const t = useTranslations("entreprise");
+
   return (
     <>
       {/* Hero Section */}
@@ -52,10 +32,10 @@ export default function Entreprise() {
         </div>
         <div className="relative z-10 text-center px-4 max-w-4xl mx-auto pt-20">
           <h1 className="text-4xl md:text-5xl lg:text-6xl font-bold text-white leading-tight">
-            Notre <span className="text-[#7d53de]">Entreprise</span>
+            {t("hero.title")} <span className="text-[#7d53de]">{t("hero.titleHighlight")}</span>
           </h1>
           <p className="text-white/80 text-xl mt-6 max-w-2xl mx-auto">
-            L&apos;expertise cybersécurité au service des PME, administrations et institutions
+            {t("hero.subtitle")}
           </p>
         </div>
       </section>
@@ -66,24 +46,20 @@ export default function Entreprise() {
           <div className="grid grid-cols-1 lg:grid-cols-2 gap-12 items-center">
             <div>
               <span className="text-[#7d53de] font-semibold uppercase tracking-wider text-sm">
-                Notre mission
+                {t("mission.label")}
               </span>
               <h2 className="text-3xl md:text-4xl font-bold text-[#0e0c19] mt-4 mb-6">
-                Protéger ce qui compte pour vous
+                {t("mission.title")}
               </h2>
+              <p
+                className="text-[#3c3a47] text-lg leading-relaxed mb-6"
+                dangerouslySetInnerHTML={{ __html: t.raw("mission.text1") }}
+              />
               <p className="text-[#3c3a47] text-lg leading-relaxed mb-6">
-                <strong>Cyber-SSI</strong> est née d&apos;un constat simple : les PME, administrations et institutions
-                font face aux mêmes menaces cyber que les grandes entreprises, mais n&apos;ont pas toujours
-                les ressources pour y faire face.
-              </p>
-              <p className="text-[#3c3a47] text-lg leading-relaxed mb-6">
-                Notre mission est de démocratiser l&apos;accès à une cybersécurité de qualité,
-                en proposant des services adaptés à votre taille, votre secteur et vos contraintes budgétaires.
+                {t("mission.text2")}
               </p>
               <p className="text-[#3c3a47] text-lg leading-relaxed">
-                Nous accompagnons nos clients de la définition de leur stratégie de sécurité
-                jusqu&apos;à sa mise en œuvre opérationnelle, en passant par la conformité réglementaire
-                et les tests techniques.
+                {t("mission.text3")}
               </p>
             </div>
             <div className="relative">
@@ -91,7 +67,7 @@ export default function Entreprise() {
               <div className="relative bg-gradient-to-br from-[#0e0c19] to-[#161131] rounded-2xl p-12 text-center">
                 <div className="text-6xl mb-4">🛡️</div>
                 <p className="text-white text-xl font-semibold">
-                  &quot;Votre sécurité, notre expertise&quot;
+                  {t("mission.quote")}
                 </p>
               </div>
             </div>
@@ -104,17 +80,17 @@ export default function Entreprise() {
         <div className="max-w-7xl mx-auto px-6 lg:px-8">
           <div className="text-center mb-16">
             <h2 className="text-3xl md:text-4xl font-bold text-[#0e0c19] mb-4">
-              Nos Valeurs
+              {t("values.title")}
             </h2>
             <div className="w-24 h-1 bg-[#7d53de] mx-auto rounded-full"></div>
           </div>
 
           <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8">
-            {values.map((value, index) => (
-              <div key={index} className="bg-white p-6 rounded-xl shadow-lg text-center">
-                <div className="text-4xl mb-4">{value.icon}</div>
-                <h3 className="text-xl font-bold text-[#0e0c19] mb-2">{value.title}</h3>
-                <p className="text-[#3c3a47] text-sm">{value.description}</p>
+            {valueKeys.map((key, index) => (
+              <div key={key} className="bg-white p-6 rounded-xl shadow-lg text-center">
+                <div className="text-4xl mb-4">{valueIcons[index]}</div>
+                <h3 className="text-xl font-bold text-[#0e0c19] mb-2">{t(`values.${key}.title`)}</h3>
+                <p className="text-[#3c3a47] text-sm">{t(`values.${key}.description`)}</p>
               </div>
             ))}
           </div>
@@ -126,11 +102,11 @@ export default function Entreprise() {
         <div className="max-w-7xl mx-auto px-6 lg:px-8">
           <div className="text-center mb-16">
             <h2 className="text-3xl md:text-4xl font-bold text-[#0e0c19] mb-4">
-              Nos Certifications
+              {t("certifications.title")}
             </h2>
             <div className="w-24 h-1 bg-[#7d53de] mx-auto rounded-full mb-6"></div>
             <p className="text-[#3c3a47] max-w-2xl mx-auto">
-              Nos consultants détiennent les certifications les plus reconnues du marché de la cybersécurité.
+              {t("certifications.description")}
             </p>
           </div>
 
@@ -162,27 +138,18 @@ export default function Entreprise() {
         <div className="max-w-7xl mx-auto px-6 lg:px-8">
           <div className="text-center mb-16">
             <h2 className="text-3xl md:text-4xl font-bold text-white mb-4">
-              Nos Secteurs d&apos;Intervention
+              {t("sectors.title")}
             </h2>
             <div className="w-24 h-1 bg-[#7d53de] mx-auto rounded-full"></div>
           </div>
 
           <div className="grid grid-cols-2 md:grid-cols-4 gap-6">
-            {[
-              "Finance & Banque",
-              "Santé",
-              "Industrie",
-              "Services publics",
-              "E-commerce",
-              "Assurance",
-              "Transport",
-              "Énergie",
-            ].map((sector, index) => (
+            {sectorKeys.map((key, index) => (
               <div
                 key={index}
                 className="bg-white/5 border border-[#7d53de]/20 p-6 rounded-xl text-center text-white hover:bg-[#7d53de]/20 transition-colors"
               >
-                {sector}
+                {t(`sectors.list.${key}`)}
               </div>
             ))}
           </div>
@@ -193,16 +160,16 @@ export default function Entreprise() {
       <section className="py-16 bg-[#7d53de]">
         <div className="max-w-4xl mx-auto px-6 text-center">
           <h2 className="text-3xl md:text-4xl font-bold text-white mb-6">
-            Travaillons ensemble
+            {t("cta.title")}
           </h2>
           <p className="text-white/90 text-lg mb-8">
-            Discutons de vos enjeux cybersécurité et voyons comment nous pouvons vous accompagner.
+            {t("cta.description")}
           </p>
           <Link
             href="/#contact"
             className="inline-block rounded-full bg-white text-[#7d53de] px-8 py-4 text-lg font-semibold hover:bg-[#0e0c19] hover:text-white transition-colors"
           >
-            Contactez-nous
+            {t("cta.button")}
           </Link>
         </div>
       </section>
