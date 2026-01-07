@@ -1,21 +1,17 @@
-import Link from "next/link";
-import type { Metadata } from "next";
+"use client";
 
-export const metadata: Metadata = {
-  title: "Nos Services de Cybersécurité | Cyber-SSI",
-  description: "Découvrez nos services : gouvernance et conformité (NIS2, DORA, RGPD), conseils et audits, RSSI externalisé, tests d'intrusion, Red Team.",
-};
+import { useTranslations } from "next-intl";
+import { Link } from "@/i18n/navigation";
 
 const serviceCategories = [
   {
-    title: "Gouvernance, Risque & Conformité",
-    description: "Structurez votre démarche cybersécurité et assurez votre conformité réglementaire.",
+    key: "governance",
     services: [
-      { name: "Mise en conformité NIS2", href: "/nos-services/gouvernance-risque-conformite/nis2" },
-      { name: "Conformité DORA", href: "/nos-services/gouvernance-risque-conformite/dora" },
-      { name: "Certifications ISO 27001", href: "/nos-services/gouvernance-risque-conformite/iso-27001" },
-      { name: "AI Act", href: "/nos-services/gouvernance-risque-conformite/ai-act" },
-      { name: "VARA (Crypto)", href: "/nos-services/gouvernance-risque-conformite/vara" },
+      { key: "nis2", href: "/nos-services/gouvernance-risque-conformite/nis2" },
+      { key: "dora", href: "/nos-services/gouvernance-risque-conformite/dora" },
+      { key: "iso27001", href: "/nos-services/gouvernance-risque-conformite/iso-27001" },
+      { key: "aiAct", href: "/nos-services/gouvernance-risque-conformite/ai-act" },
+      { key: "vara", href: "/nos-services/gouvernance-risque-conformite/vara" },
     ],
     href: "/nos-services/gouvernance-risque-conformite",
     icon: (
@@ -25,13 +21,12 @@ const serviceCategories = [
     ),
   },
   {
-    title: "Conseils & Audits",
-    description: "Évaluez votre posture de sécurité et identifiez vos axes d'amélioration.",
+    key: "consulting",
     services: [
-      { name: "Amélioration maturité cyber", href: "/nos-services/conseils-audits/maturite-cyber" },
-      { name: "Évaluer votre posture", href: "/nos-services/conseils-audits/evaluer-posture" },
-      { name: "Due Diligence Cyber", href: "/nos-services/conseils-audits/due-diligence" },
-      { name: "RSSI à temps partagé", href: "/nos-services/conseils-audits/rssi-temps-partage" },
+      { key: "maturity", href: "/nos-services/conseils-audits/maturite-cyber" },
+      { key: "posture", href: "/nos-services/conseils-audits/evaluer-posture" },
+      { key: "dueDiligence", href: "/nos-services/conseils-audits/due-diligence" },
+      { key: "ciso", href: "/nos-services/conseils-audits/rssi-temps-partage" },
     ],
     href: "/nos-services/conseils-audits",
     icon: (
@@ -41,14 +36,13 @@ const serviceCategories = [
     ),
   },
   {
-    title: "Services Opérationnels",
-    description: "Testez et renforcez concrètement la résistance de votre système d'information.",
+    key: "operational",
     services: [
-      { name: "Tests d'intrusion (Pentest)", href: "/nos-services/services-operationnels/test-intrusion" },
-      { name: "Red Team", href: "/nos-services/services-operationnels/red-team" },
-      { name: "Audit de configuration", href: "/nos-services/services-operationnels/audit-configuration" },
-      { name: "Audit de code", href: "/nos-services/services-operationnels/audit-code" },
-      { name: "SOC 24/7", href: "/nos-services/services-operationnels/soc" },
+      { key: "pentest", href: "/nos-services/services-operationnels/test-intrusion" },
+      { key: "redTeam", href: "/nos-services/services-operationnels/red-team" },
+      { key: "configAudit", href: "/nos-services/services-operationnels/audit-configuration" },
+      { key: "codeAudit", href: "/nos-services/services-operationnels/audit-code" },
+      { key: "soc", href: "/nos-services/services-operationnels/soc" },
     ],
     href: "/nos-services/services-operationnels",
     icon: (
@@ -58,13 +52,12 @@ const serviceCategories = [
     ),
   },
   {
-    title: "Sécurité Spécialisée",
-    description: "Expertise sécurité pour vos environnements spécifiques.",
+    key: "specialized",
     services: [
-      { name: "Sécurité Azure & M365", href: "/nos-services/services-operationnels/securite-azure" },
-      { name: "Sécurité Active Directory", href: "/nos-services/services-operationnels/securite-annuaire" },
-      { name: "Sécurité IoT", href: "/nos-services/services-operationnels/securite-iot" },
-      { name: "Sécurité Robotique", href: "/nos-services/services-operationnels/securite-robotique" },
+      { key: "azure", href: "/nos-services/services-operationnels/securite-azure" },
+      { key: "ad", href: "/nos-services/services-operationnels/securite-annuaire" },
+      { key: "iot", href: "/nos-services/services-operationnels/securite-iot" },
+      { key: "robotics", href: "/nos-services/services-operationnels/securite-robotique" },
     ],
     href: "/nos-services/services-operationnels",
     icon: (
@@ -75,7 +68,11 @@ const serviceCategories = [
   },
 ];
 
+const reasonKeys = ["expertise", "tailored", "support"];
+
 export default function NosServices() {
+  const t = useTranslations("nosServices");
+
   return (
     <>
       {/* Hero Section */}
@@ -86,10 +83,10 @@ export default function NosServices() {
         </div>
         <div className="relative z-10 text-center px-4 max-w-4xl mx-auto pt-20">
           <h1 className="text-4xl md:text-5xl lg:text-6xl font-bold text-white leading-tight" data-animation="fadeInDown">
-            Nos <span className="text-[#7d53de]">Services</span> de Cybersécurité
+            {t("hero.title")} <span className="text-[#7d53de]">{t("hero.titleHighlight")}</span> {t("hero.titleEnd")}
           </h1>
           <p className="text-white/80 text-xl mt-6 max-w-2xl mx-auto" data-animation="fadeInUp" data-delay="0.2">
-            Des solutions adaptées pour protéger votre entreprise face aux menaces cyber
+            {t("hero.subtitle")}
           </p>
         </div>
       </section>
@@ -107,9 +104,9 @@ export default function NosServices() {
               >
                 <div className="text-[#7d53de] mb-4">{category.icon}</div>
                 <h2 className="text-2xl font-bold text-[#0e0c19] mb-3">
-                  {category.title}
+                  {t(`categories.${category.key}.title`)}
                 </h2>
-                <p className="text-[#3c3a47] mb-6">{category.description}</p>
+                <p className="text-[#3c3a47] mb-6">{t(`categories.${category.key}.description`)}</p>
 
                 <ul className="space-y-2 mb-6">
                   {category.services.map((service, idx) => (
@@ -119,7 +116,7 @@ export default function NosServices() {
                         className="text-[#7d53de] hover:text-[#161131] transition-colors flex items-center gap-2"
                       >
                         <span>→</span>
-                        {service.name}
+                        {t(`categories.${category.key}.services.${service.key}`)}
                       </Link>
                     </li>
                   ))}
@@ -129,7 +126,7 @@ export default function NosServices() {
                   href={category.href}
                   className="inline-block rounded-full bg-[#7d53de] px-6 py-3 text-sm font-semibold text-white hover:bg-[#161131] transition-colors"
                 >
-                  En savoir plus
+                  {t("learnMore")}
                 </Link>
               </div>
             ))}
@@ -142,32 +139,19 @@ export default function NosServices() {
         <div className="max-w-7xl mx-auto px-6 lg:px-8">
           <div className="text-center mb-16">
             <h2 className="text-3xl md:text-4xl font-bold text-[#0e0c19] mb-4" data-animation="fadeInDown">
-              Pourquoi choisir Cyber-SSI ?
+              {t("whyUs.title")}
             </h2>
             <div className="w-24 h-1 bg-[#7d53de] mx-auto rounded-full" data-animation="scaleIn" data-delay="0.2"></div>
           </div>
 
           <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
-            {[
-              {
-                title: "Expertise certifiée",
-                description: "Nos consultants sont certifiés CISSP, CISM, ISO 27001 Lead Auditor/Implementer.",
-              },
-              {
-                title: "Approche sur-mesure",
-                description: "Chaque mission est adaptée à votre contexte, votre secteur et vos contraintes.",
-              },
-              {
-                title: "Accompagnement complet",
-                description: "De l'audit initial au déploiement, nous vous accompagnons à chaque étape.",
-              },
-            ].map((item, index) => (
-              <div key={index} className="text-center" data-animation="fadeInUp" data-delay={String(index * 0.15)}>
+            {reasonKeys.map((key, index) => (
+              <div key={key} className="text-center" data-animation="fadeInUp" data-delay={String(index * 0.15)}>
                 <div className="w-16 h-16 bg-[#7d53de]/10 rounded-full flex items-center justify-center mx-auto mb-4">
                   <span className="text-[#7d53de] text-2xl font-bold">{index + 1}</span>
                 </div>
-                <h3 className="text-xl font-bold text-[#0e0c19] mb-2">{item.title}</h3>
-                <p className="text-[#3c3a47]">{item.description}</p>
+                <h3 className="text-xl font-bold text-[#0e0c19] mb-2">{t(`whyUs.reasons.${key}.title`)}</h3>
+                <p className="text-[#3c3a47]">{t(`whyUs.reasons.${key}.description`)}</p>
               </div>
             ))}
           </div>
@@ -178,17 +162,17 @@ export default function NosServices() {
       <section className="py-16 bg-[#7d53de]">
         <div className="max-w-4xl mx-auto px-6 text-center">
           <h2 className="text-3xl md:text-4xl font-bold text-white mb-6" data-animation="fadeInDown">
-            Besoin d&apos;un accompagnement personnalisé ?
+            {t("cta.title")}
           </h2>
           <p className="text-white/90 text-lg mb-8" data-animation="fadeInUp" data-delay="0.1">
-            Discutons de vos enjeux cybersécurité et trouvons ensemble la solution adaptée.
+            {t("cta.description")}
           </p>
           <div data-animation="fadeInUp" data-delay="0.2">
             <Link
               href="/#contact"
               className="inline-block rounded-full bg-white text-[#7d53de] px-8 py-4 text-lg font-semibold hover:bg-[#0e0c19] hover:text-white transition-colors"
             >
-              Contactez-nous
+              {t("cta.button")}
             </Link>
           </div>
         </div>

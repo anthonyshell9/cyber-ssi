@@ -183,5 +183,136 @@
   },
   "languageSwitcher": {
     "label": "Language"
+  },
+  "nosServices": {
+    "meta": {
+      "title": "Our Cybersecurity Services | Cyber-SSI",
+      "description": "Discover our services: governance and compliance (NIS2, DORA, GDPR), consulting and audits, outsourced CISO, penetration testing, Red Team."
+    },
+    "hero": {
+      "title": "Our Cybersecurity",
+      "titleHighlight": "Services",
+      "titleEnd": "",
+      "subtitle": "Tailored solutions to protect your business against cyber threats"
+    },
+    "categories": {
+      "governance": {
+        "title": "Governance, Risk & Compliance",
+        "description": "Structure your cybersecurity approach and ensure regulatory compliance.",
+        "services": {
+          "nis2": "NIS2 Compliance",
+          "dora": "DORA Compliance",
+          "iso27001": "ISO 27001 Certifications",
+          "aiAct": "AI Act",
+          "vara": "VARA (Crypto)"
+        }
+      },
+      "consulting": {
+        "title": "Consulting & Audits",
+        "description": "Assess your security posture and identify areas for improvement.",
+        "services": {
+          "maturity": "Cyber Maturity Improvement",
+          "posture": "Assess Your Posture",
+          "dueDiligence": "Cyber Due Diligence",
+          "ciso": "Part-time CISO"
+        }
+      },
+      "operational": {
+        "title": "Operational Services",
+        "description": "Test and concretely strengthen your information system's resistance.",
+        "services": {
+          "pentest": "Penetration Testing (Pentest)",
+          "redTeam": "Red Team",
+          "configAudit": "Configuration Audit",
+          "codeAudit": "Code Audit",
+          "soc": "SOC 24/7"
+        }
+      },
+      "specialized": {
+        "title": "Specialized Security",
+        "description": "Security expertise for your specific environments.",
+        "services": {
+          "azure": "Azure & M365 Security",
+          "ad": "Active Directory Security",
+          "iot": "IoT Security",
+          "robotics": "Robotics Security"
+        }
+      }
+    },
+    "learnMore": "Learn more",
+    "whyUs": {
+      "title": "Why Choose Cyber-SSI?",
+      "reasons": {
+        "expertise": {
+          "title": "Certified Expertise",
+          "description": "Our consultants are CISSP, CISM, ISO 27001 Lead Auditor/Implementer certified."
+        },
+        "tailored": {
+          "title": "Tailored Approach",
+          "description": "Each mission is adapted to your context, your sector and your constraints."
+        },
+        "support": {
+          "title": "Complete Support",
+          "description": "From initial audit to deployment, we support you every step of the way."
+        }
+      }
+    },
+    "cta": {
+      "title": "Need personalized support?",
+      "description": "Let's discuss your cybersecurity challenges and find the right solution together.",
+      "button": "Contact Us"
+    }
+  },
+  "vosBesoins": {
+    "meta": {
+      "title": "Your Cybersecurity Needs | Cyber-SSI",
+      "description": "Identify your IT security needs: regulatory compliance, security posture assessment, cyber maturity improvement, penetration testing."
+    },
+    "hero": {
+      "title": "What are your",
+      "titleHighlight": "IT security",
+      "titleEnd": "needs?"
+    },
+    "intro": {
+      "text": "You haven't yet structured your <strong>IT security strategy</strong>? You don't know if you comply with the latest regulations applicable to your business? It may be time to call on a cybersecurity company to protect your business, your data, your clients' data, and preserve your revenue:",
+      "benefits": {
+        "protect": "<strong>Protect your sensitive information</strong> against threats",
+        "trust": "<strong>Strengthen the trust</strong> of your clients and partners",
+        "continuity": "<strong>Ensure the continuity</strong> of your operations",
+        "anticipate": "<strong>Anticipate the requirements</strong> of regulators"
+      },
+      "conclusion": "Protect today what will still matter tomorrow.",
+      "cta": "Book an appointment",
+      "imageAlt": "IT Security"
+    },
+    "needs": {
+      "title": "What are your needs?",
+      "need1": {
+        "title": "Regulatory Compliance",
+        "description": "Do you want to identify the obligations applicable to your business and be supported in their implementation?"
+      },
+      "need2": {
+        "title": "Assess Your Security Posture",
+        "description": "Do you want to evaluate your company against cybersecurity regulations and standards? Identify your gaps and prioritize your compliance actions?"
+      },
+      "need3": {
+        "title": "Improve Your Company's Cyber Maturity",
+        "description": "Do you want to structure your cybersecurity approach, strengthen your existing systems and align your practices with market standards?"
+      },
+      "need4": {
+        "title": "Test Your System's Resistance",
+        "description": "Do you want to simulate real attacks to assess the resistance of your information system? Our teams perform penetration tests, technical audits and Red Team exercises."
+      }
+    },
+    "priority": {
+      "title": "Is my IT security a priority?",
+      "text1": "As an SMB or institution, neglecting your <strong>IT security</strong> directly endangers <strong>your profitability</strong>. A cyberattack can paralyze your operations for days, expose sensitive data from your clients and suppliers, and cause <strong>major financial losses</strong>.",
+      "text2": "Between business interruptions, loss of trust from your partners and potential sanctions, investing in your cybersecurity is no longer an option, it's a strategic necessity."
+    },
+    "cta": {
+      "title": "Ready to secure your business?",
+      "description": "Contact us for a personalized assessment of your cybersecurity needs.",
+      "button": "Contact Us"
+    }
   }
 }

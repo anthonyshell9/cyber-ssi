@@ -183,5 +183,136 @@
   },
   "languageSwitcher": {
     "label": "Langue"
+  },
+  "nosServices": {
+    "meta": {
+      "title": "Nos Services de Cybersécurité | Cyber-SSI",
+      "description": "Découvrez nos services : gouvernance et conformité (NIS2, DORA, RGPD), conseils et audits, RSSI externalisé, tests d'intrusion, Red Team."
+    },
+    "hero": {
+      "title": "Nos",
+      "titleHighlight": "Services",
+      "titleEnd": "de Cybersécurité",
+      "subtitle": "Des solutions adaptées pour protéger votre entreprise face aux menaces cyber"
+    },
+    "categories": {
+      "governance": {
+        "title": "Gouvernance, Risque & Conformité",
+        "description": "Structurez votre démarche cybersécurité et assurez votre conformité réglementaire.",
+        "services": {
+          "nis2": "Mise en conformité NIS2",
+          "dora": "Conformité DORA",
+          "iso27001": "Certifications ISO 27001",
+          "aiAct": "AI Act",
+          "vara": "VARA (Crypto)"
+        }
+      },
+      "consulting": {
+        "title": "Conseils & Audits",
+        "description": "Évaluez votre posture de sécurité et identifiez vos axes d'amélioration.",
+        "services": {
+          "maturity": "Amélioration maturité cyber",
+          "posture": "Évaluer votre posture",
+          "dueDiligence": "Due Diligence Cyber",
+          "ciso": "RSSI à temps partagé"
+        }
+      },
+      "operational": {
+        "title": "Services Opérationnels",
+        "description": "Testez et renforcez concrètement la résistance de votre système d'information.",
+        "services": {
+          "pentest": "Tests d'intrusion (Pentest)",
+          "redTeam": "Red Team",
+          "configAudit": "Audit de configuration",
+          "codeAudit": "Audit de code",
+          "soc": "SOC 24/7"
+        }
+      },
+      "specialized": {
+        "title": "Sécurité Spécialisée",
+        "description": "Expertise sécurité pour vos environnements spécifiques.",
+        "services": {
+          "azure": "Sécurité Azure & M365",
+          "ad": "Sécurité Active Directory",
+          "iot": "Sécurité IoT",
+          "robotics": "Sécurité Robotique"
+        }
+      }
+    },
+    "learnMore": "En savoir plus",
+    "whyUs": {
+      "title": "Pourquoi choisir Cyber-SSI ?",
+      "reasons": {
+        "expertise": {
+          "title": "Expertise certifiée",
+          "description": "Nos consultants sont certifiés CISSP, CISM, ISO 27001 Lead Auditor/Implementer."
+        },
+        "tailored": {
+          "title": "Approche sur-mesure",
+          "description": "Chaque mission est adaptée à votre contexte, votre secteur et vos contraintes."
+        },
+        "support": {
+          "title": "Accompagnement complet",
+          "description": "De l'audit initial au déploiement, nous vous accompagnons à chaque étape."
+        }
+      }
+    },
+    "cta": {
+      "title": "Besoin d'un accompagnement personnalisé ?",
+      "description": "Discutons de vos enjeux cybersécurité et trouvons ensemble la solution adaptée.",
+      "button": "Contactez-nous"
+    }
+  },
+  "vosBesoins": {
+    "meta": {
+      "title": "Vos Besoins en Cybersécurité | Cyber-SSI",
+      "description": "Identifiez vos besoins en sécurité informatique : conformité réglementaire, évaluation de posture, amélioration de maturité cyber, tests d'intrusion."
+    },
+    "hero": {
+      "title": "Quels sont vos besoins en",
+      "titleHighlight": "sécurité informatique",
+      "titleEnd": "?"
+    },
+    "intro": {
+      "text": "Vous n'avez pas encore structuré votre <strong>stratégie de sécurité informatique</strong> ? Vous ignorez si vous êtes conforme aux dernières réglementations qui s'imposent à votre entreprise ? Il est peut-être temps de faire appel à une entreprise de cybersécurité pour protéger votre activité, vos données, celles de vos clients, et préserver votre chiffre d'affaires :",
+      "benefits": {
+        "protect": "<strong>Protéger vos informations</strong> sensibles face aux menaces",
+        "trust": "<strong>Renforcer la confiance</strong> de vos clients et partenaires",
+        "continuity": "<strong>Assurer la continuité</strong> de vos activités",
+        "anticipate": "<strong>Anticiper les exigences</strong> des régulateurs"
+      },
+      "conclusion": "Protégez aujourd'hui ce qui comptera encore demain.",
+      "cta": "Prendre rendez-vous",
+      "imageAlt": "Sécurité informatique"
+    },
+    "needs": {
+      "title": "Quels sont vos besoins ?",
+      "need1": {
+        "title": "Mise en conformité réglementaire",
+        "description": "Vous souhaitez identifier les obligations applicables à votre activité et être accompagné dans leur mise en œuvre ?"
+      },
+      "need2": {
+        "title": "Évaluer votre posture de sécurité",
+        "description": "Vous souhaitez évaluer votre entreprise au regard des réglementations et des normes en cybersécurité ? Identifier vos écarts et prioriser vos actions de mise en conformité ?"
+      },
+      "need3": {
+        "title": "Améliorer la maturité cyber de votre entreprise",
+        "description": "Vous souhaitez structurer votre démarche cybersécurité, renforcer vos dispositifs existants et aligner vos pratiques avec les standards du marché ?"
+      },
+      "need4": {
+        "title": "Tester la résistance de votre système",
+        "description": "Vous souhaitez simuler des attaques réelles pour évaluer la résistance de votre système d'information ? Nos équipes réalisent des tests d'intrusion, audits techniques et exercices Red Team."
+      }
+    },
+    "priority": {
+      "title": "Ma sécurité informatique est-elle une priorité ?",
+      "text1": "En tant que PME ou institution, négliger votre <strong>sécurité informatique</strong> met directement en danger <strong>votre rentabilité</strong>. Une cyberattaque peut paralyser vos opérations pendant des jours, exposer les données sensibles de vos clients et fournisseurs, et entraîner des <strong>pertes financières majeures</strong>.",
+      "text2": "Entre les interruptions d'activité, la perte de confiance de vos partenaires et les sanctions potentielles, investir dans votre cybersécurité n'est plus une option, c'est une nécessité stratégique."
+    },
+    "cta": {
+      "title": "Prêt à sécuriser votre entreprise ?",
+      "description": "Contactez-nous pour un diagnostic personnalisé de vos besoins en cybersécurité.",
+      "button": "Contactez-nous"
+    }
   }
 }

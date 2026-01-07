@@ -1,35 +1,18 @@
-import Link from "next/link";
-import type { Metadata } from "next";
+"use client";
 
-export const metadata: Metadata = {
-  title: "Vos Besoins en Cybersécurité | Cyber-SSI",
-  description: "Identifiez vos besoins en sécurité informatique : conformité réglementaire, évaluation de posture, amélioration de maturité cyber, tests d'intrusion.",
-};
+import { useTranslations } from "next-intl";
+import { Link } from "@/i18n/navigation";
 
-const besoins = [
-  {
-    title: "Mise en conformité réglementaire",
-    description: "Vous souhaitez identifier les obligations applicables à votre activité et être accompagné dans leur mise en œuvre ?",
-    href: "/nos-services/gouvernance-risque-conformite",
-  },
-  {
-    title: "Évaluer votre posture de sécurité",
-    description: "Vous souhaitez évaluer votre entreprise au regard des réglementations et des normes en cybersécurité ? Identifier vos écarts et prioriser vos actions de mise en conformité ?",
-    href: "/nos-services/conseils-et-audits",
-  },
-  {
-    title: "Améliorer la maturité cyber de votre entreprise",
-    description: "Vous souhaitez structurer votre démarche cybersécurité, renforcer vos dispositifs existants et aligner vos pratiques avec les standards du marché ?",
-    href: "/nos-services",
-  },
-  {
-    title: "Tester la résistance de votre système",
-    description: "Vous souhaitez simuler des attaques réelles pour évaluer la résistance de votre système d'information ? Nos équipes réalisent des tests d'intrusion, audits techniques et exercices Red Team.",
-    href: "/nos-services/services-operationnels",
-  },
+const needsLinks = [
+  "/nos-services/gouvernance-risque-conformite",
+  "/nos-services/conseils-audits",
+  "/nos-services",
+  "/nos-services/services-operationnels",
 ];
 
 export default function VosBesoins() {
+  const t = useTranslations("vosBesoins");
+
   return (
     <>
       {/* Hero Section */}
@@ -40,8 +23,9 @@ export default function VosBesoins() {
         </div>
         <div className="relative z-10 text-center px-4 max-w-4xl mx-auto pt-20">
           <h1 className="text-4xl md:text-5xl lg:text-6xl font-bold text-white leading-tight" data-animation="fadeInDown">
-            Quels sont vos besoins en{" "}
-            <span className="text-[#7d53de]">sécurité informatique</span> ?
+            {t("hero.title")}{" "}
+            <span className="text-[#7d53de]">{t("hero.titleHighlight")}</span>{" "}
+            {t("hero.titleEnd")}
           </h1>
         </div>
       </section>
@@ -51,38 +35,36 @@ export default function VosBesoins() {
         <div className="max-w-7xl mx-auto px-6 lg:px-8">
           <div className="grid grid-cols-1 lg:grid-cols-2 gap-12 items-center">
             <div className="order-2 lg:order-1" data-animation="fadeInLeft">
-              <p className="text-[#3c3a47] text-lg leading-relaxed mb-6">
-                Vous n&apos;avez pas encore structuré votre <strong>stratégie de sécurité informatique</strong> ?
-                Vous ignorez si vous êtes conforme aux dernières réglementations qui s&apos;imposent à votre entreprise ?
-                Il est peut-être temps de faire appel à une entreprise de cybersécurité pour protéger votre activité,
-                vos données, celles de vos clients, et préserver votre chiffre d&apos;affaires :
-              </p>
+              <p
+                className="text-[#3c3a47] text-lg leading-relaxed mb-6"
+                dangerouslySetInnerHTML={{ __html: t.raw("intro.text") }}
+              />
               <ul className="space-y-3 text-[#3c3a47]">
                 <li className="flex items-start gap-3">
                   <span className="text-[#7d53de] mt-1">✓</span>
-                  <span><strong>Protéger vos informations</strong> sensibles face aux menaces</span>
+                  <span dangerouslySetInnerHTML={{ __html: t.raw("intro.benefits.protect") }} />
                 </li>
                 <li className="flex items-start gap-3">
                   <span className="text-[#7d53de] mt-1">✓</span>
-                  <span><strong>Renforcer la confiance</strong> de vos clients et partenaires</span>
+                  <span dangerouslySetInnerHTML={{ __html: t.raw("intro.benefits.trust") }} />
                 </li>
                 <li className="flex items-start gap-3">
                   <span className="text-[#7d53de] mt-1">✓</span>
-                  <span><strong>Assurer la continuité</strong> de vos activités</span>
+                  <span dangerouslySetInnerHTML={{ __html: t.raw("intro.benefits.continuity") }} />
                 </li>
                 <li className="flex items-start gap-3">
                   <span className="text-[#7d53de] mt-1">✓</span>
-                  <span><strong>Anticiper les exigences</strong> des régulateurs</span>
+                  <span dangerouslySetInnerHTML={{ __html: t.raw("intro.benefits.anticipate") }} />
                 </li>
               </ul>
               <p className="text-[#0e0c19] font-semibold mt-6">
-                Protégez aujourd&apos;hui ce qui comptera encore demain.
+                {t("intro.conclusion")}
               </p>
               <Link
                 href="#contact"
                 className="inline-block mt-6 rounded-full bg-[#7d53de] px-8 py-4 text-lg font-semibold text-white hover:bg-[#161131] transition-colors"
               >
-                Prendre rendez-vous
+                {t("intro.cta")}
               </Link>
             </div>
             <div className="order-1 lg:order-2" data-animation="fadeInRight" data-delay="0.2">
@@ -90,7 +72,7 @@ export default function VosBesoins() {
                 <div className="absolute inset-0 bg-[#7d53de]/10 rounded-2xl transform rotate-3"></div>
                 <img
                   src="/images/2025/05/Laptop-1024x675.jpg"
-                  alt="Sécurité informatique"
+                  alt={t("intro.imageAlt")}
                   className="relative rounded-2xl shadow-xl"
                 />
               </div>
@@ -104,25 +86,25 @@ export default function VosBesoins() {
         <div className="max-w-7xl mx-auto px-6 lg:px-8">
           <div className="text-center mb-16">
             <h2 className="text-3xl md:text-4xl font-bold text-white mb-4" data-animation="fadeInDown">
-              Quels sont vos besoins ?
+              {t("needs.title")}
             </h2>
             <div className="w-24 h-1 bg-[#7d53de] mx-auto rounded-full" data-animation="scaleIn" data-delay="0.2"></div>
           </div>
 
           <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
-            {besoins.map((besoin, index) => (
+            {[1, 2, 3, 4].map((num, index) => (
               <Link
                 key={index}
-                href={besoin.href}
+                href={needsLinks[index]}
                 className="group bg-white/5 border-2 border-[#7d53de]/20 p-8 rounded-xl hover:bg-[#7d53de]/20 hover:border-[#7d53de]/50 transition-all duration-300 hover:scale-[1.02]"
                 data-animation="fadeInUp"
                 data-delay={String(index * 0.1)}
               >
                 <h3 className="text-xl md:text-2xl font-bold text-white mb-3 group-hover:text-[#7d53de] transition-colors">
-                  {besoin.title}
+                  {t(`needs.need${num}.title`)}
                 </h3>
                 <p className="text-gray-300 leading-relaxed">
-                  {besoin.description}
+                  {t(`needs.need${num}.description`)}
                 </p>
               </Link>
             ))}
@@ -136,21 +118,17 @@ export default function VosBesoins() {
           <div className="grid grid-cols-1 lg:grid-cols-2 gap-12 items-center">
             <div data-animation="fadeInLeft">
               <h2 className="text-3xl md:text-4xl font-bold text-[#0e0c19] mb-6">
-                Ma sécurité informatique est-elle une priorité ?
+                {t("priority.title")}
               </h2>
             </div>
             <div data-animation="fadeInRight" data-delay="0.2">
               <div className="w-full h-1 bg-[#7d53de] mb-6 rounded-full"></div>
-              <p className="text-[#3c3a47] text-lg leading-relaxed mb-4">
-                En tant que PME ou institution, négliger votre <strong>sécurité informatique</strong> met
-                directement en danger <strong>votre rentabilité</strong>. Une cyberattaque peut paralyser
-                vos opérations pendant des jours, exposer les données sensibles de vos clients et fournisseurs,
-                et entraîner des <strong>pertes financières majeures</strong>.
-              </p>
+              <p
+                className="text-[#3c3a47] text-lg leading-relaxed mb-4"
+                dangerouslySetInnerHTML={{ __html: t.raw("priority.text1") }}
+              />
               <p className="text-[#3c3a47] text-lg leading-relaxed">
-                Entre les interruptions d&apos;activité, la perte de confiance de vos partenaires et les
-                sanctions potentielles, investir dans votre cybersécurité n&apos;est plus une option,
-                c&apos;est une nécessité stratégique.
+                {t("priority.text2")}
               </p>
             </div>
           </div>
@@ -161,17 +139,17 @@ export default function VosBesoins() {
       <section className="py-16 bg-[#7d53de]">
         <div className="max-w-4xl mx-auto px-6 text-center">
           <h2 className="text-3xl md:text-4xl font-bold text-white mb-6" data-animation="fadeInDown">
-            Prêt à sécuriser votre entreprise ?
+            {t("cta.title")}
           </h2>
           <p className="text-white/90 text-lg mb-8" data-animation="fadeInUp" data-delay="0.1">
-            Contactez-nous pour un diagnostic personnalisé de vos besoins en cybersécurité.
+            {t("cta.description")}
           </p>
           <div data-animation="fadeInUp" data-delay="0.2">
             <Link
               href="#contact"
               className="inline-block rounded-full bg-white text-[#7d53de] px-8 py-4 text-lg font-semibold hover:bg-[#0e0c19] hover:text-white transition-colors"
             >
-              Contactez-nous
+              {t("cta.button")}
             </Link>
           </div>
         </div>
