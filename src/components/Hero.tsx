@@ -1,8 +1,9 @@
 "use client";
 
 import Image from "next/image";
-import Link from "next/link";
 import { useEffect, useState, useRef } from "react";
+import { useTranslations } from "next-intl";
+import { Link } from "@/i18n/navigation";
 
 // Animated counter component
 function AnimatedCounter({ target, suffix = "", duration = 2000 }: { target: number; suffix?: string; duration?: number }) {
@@ -55,16 +56,9 @@ function AnimatedCounter({ target, suffix = "", duration = 2000 }: { target: num
   );
 }
 
-// Client logos (placeholder - replace with real logos)
-const clientLogos = [
-  { name: "Client 1", opacity: "opacity-60" },
-  { name: "Client 2", opacity: "opacity-50" },
-  { name: "Client 3", opacity: "opacity-60" },
-  { name: "Client 4", opacity: "opacity-50" },
-  { name: "Client 5", opacity: "opacity-60" },
-];
-
 export default function Hero() {
+  const t = useTranslations("hero");
+  const tCommon = useTranslations("common");
   const [mousePosition, setMousePosition] = useState({ x: 0, y: 0 });
 
   useEffect(() => {
@@ -125,13 +119,13 @@ export default function Hero() {
 
         {/* Title */}
         <h1 className="text-4xl md:text-5xl lg:text-6xl font-bold text-white leading-tight mb-6" data-animation="fadeInUp" data-delay="0.2">
-          L&apos;entreprise de cybersécurité pour{" "}
-          <span className="text-transparent bg-clip-text bg-gradient-to-r from-[#7d53de] to-[#a78bfa]">PME</span>, administrations et institutions
+          {t("title")}{" "}
+          <span className="text-transparent bg-clip-text bg-gradient-to-r from-[#7d53de] to-[#a78bfa]">{t("titleHighlight")}</span>{t("titleEnd")}
         </h1>
 
         {/* Subtitle */}
         <p className="text-white/70 text-lg md:text-xl max-w-2xl mx-auto mb-8" data-animation="fadeInUp" data-delay="0.3">
-          Conformité NIS2, DORA, ISO 27001 - Protégez votre entreprise avec des experts certifiés
+          {t("subtitle")}
         </p>
 
         {/* CTA Buttons */}
@@ -140,7 +134,7 @@ export default function Hero() {
             href="#contact"
             className="inline-flex items-center justify-center gap-2 rounded-full bg-[#7d53de] px-8 py-4 text-lg font-semibold text-white shadow-lg shadow-[#7d53de]/30 hover:bg-white hover:text-[#0e0c19] transition-all duration-300 hover:scale-105"
           >
-            Contactez-nous
+            {tCommon("contactUs")}
             <svg className="w-5 h-5" fill="none" viewBox="0 0 24 24" stroke="currentColor">
               <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M17 8l4 4m0 0l-4 4m4-4H3" />
             </svg>
@@ -149,7 +143,7 @@ export default function Hero() {
             href="/nos-services"
             className="inline-flex items-center justify-center gap-2 rounded-full bg-white/10 backdrop-blur-sm border border-white/20 px-8 py-4 text-lg font-semibold text-white hover:bg-white/20 transition-all duration-300"
           >
-            Découvrir nos services
+            {tCommon("discoverServices")}
           </Link>
         </div>
       </div>
@@ -159,15 +153,15 @@ export default function Hero() {
         <div className="grid grid-cols-3 gap-6 bg-white/5 backdrop-blur-sm rounded-2xl p-6 border border-white/10">
           <div className="text-center">
             <AnimatedCounter target={50} suffix="+" />
-            <p className="text-white/60 text-sm mt-1">Clients protégés</p>
+            <p className="text-white/60 text-sm mt-1">{t("stat1")}</p>
           </div>
           <div className="text-center">
             <AnimatedCounter target={100} suffix="+" />
-            <p className="text-white/60 text-sm mt-1">Accompagnements certification</p>
+            <p className="text-white/60 text-sm mt-1">{t("stat2")}</p>
           </div>
           <div className="text-center">
             <AnimatedCounter target={15} suffix="+" />
-            <p className="text-white/60 text-sm mt-1">Certifications experts</p>
+            <p className="text-white/60 text-sm mt-1">{t("stat3")}</p>
           </div>
         </div>
       </div>
@@ -175,7 +169,7 @@ export default function Hero() {
       {/* Scroll indicator */}
       <div className="absolute bottom-8 left-1/2 transform -translate-x-1/2 animate-bounce">
         <div className="flex flex-col items-center gap-2">
-          <span className="text-white/40 text-xs uppercase tracking-widest">Scroll</span>
+          <span className="text-white/40 text-xs uppercase tracking-widest">{tCommon("scroll")}</span>
           <svg
             className="w-6 h-6 text-white/60"
             fill="none"

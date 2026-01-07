@@ -1,8 +1,11 @@
 "use client";
 
 import { useState, FormEvent } from "react";
+import { useTranslations } from "next-intl";
 
 export default function Contact() {
+  const t = useTranslations("contact");
+  const tCommon = useTranslations("common");
   const [status, setStatus] = useState<"idle" | "loading" | "success" | "error">("idle");
   const [activeTab, setActiveTab] = useState<"form" | "calendly">("form");
 
@@ -39,12 +42,11 @@ export default function Contact() {
         {/* Header */}
         <div className="text-center mb-12">
           <h2 className="text-3xl md:text-4xl lg:text-5xl font-bold text-[#0e0c19] mb-4" data-animation="fadeInDown">
-            Contactez-nous
+            {t("title")}
           </h2>
           <div className="w-24 h-1 bg-[#7d53de] mx-auto rounded-full mb-6" data-animation="scaleIn" data-delay="0.2"></div>
           <p className="text-[#3c3a47] text-lg max-w-2xl mx-auto" data-animation="fadeInUp" data-delay="0.3">
-            Vous avez un projet de cybersécurité ? Vous souhaitez évaluer votre posture de sécurité
-            ou vous mettre en conformité ? Parlons-en ensemble.
+            {t("description")}
           </p>
         </div>
 
@@ -59,7 +61,7 @@ export default function Contact() {
                   : "text-[#3c3a47] hover:text-[#7d53de]"
               }`}
             >
-              Envoyer un message
+              {t("tabs.sendMessage")}
             </button>
             <button
               onClick={() => setActiveTab("calendly")}
@@ -69,7 +71,7 @@ export default function Contact() {
                   : "text-[#3c3a47] hover:text-[#7d53de]"
               }`}
             >
-              Prendre rendez-vous
+              {t("tabs.bookMeeting")}
             </button>
           </div>
         </div>
@@ -86,7 +88,7 @@ export default function Contact() {
                     </svg>
                   </div>
                   <div>
-                    <h3 className="font-semibold text-[#0e0c19]">Email</h3>
+                    <h3 className="font-semibold text-[#0e0c19]">{t("info.email")}</h3>
                     <a href="mailto:contact@cyber-ssi.com" className="text-[#7d53de] hover:underline">
                       contact@cyber-ssi.com
                     </a>
@@ -101,8 +103,8 @@ export default function Contact() {
                     </svg>
                   </div>
                   <div>
-                    <h3 className="font-semibold text-[#0e0c19]">Zone d&apos;intervention</h3>
-                    <p className="text-[#3c3a47]">France & International</p>
+                    <h3 className="font-semibold text-[#0e0c19]">{t("info.location")}</h3>
+                    <p className="text-[#3c3a47]">{tCommon("franceInternational")}</p>
                   </div>
                 </div>
 
@@ -113,12 +115,12 @@ export default function Contact() {
                     </svg>
                   </div>
                   <div>
-                    <h3 className="font-semibold text-[#0e0c19]">Rendez-vous</h3>
+                    <h3 className="font-semibold text-[#0e0c19]">{t("info.meeting")}</h3>
                     <button
                       onClick={() => setActiveTab("calendly")}
                       className="text-[#7d53de] hover:underline"
                     >
-                      Planifier un appel de 30 min
+                      {t("info.meetingCta")}
                     </button>
                   </div>
                 </div>
@@ -131,7 +133,7 @@ export default function Contact() {
                 <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
                   <div>
                     <label htmlFor="name" className="block text-sm font-medium text-[#0e0c19] mb-2">
-                      Nom complet *
+                      {t("form.fullName")} *
                     </label>
                     <input
                       type="text"
@@ -139,12 +141,12 @@ export default function Contact() {
                       name="name"
                       required
                       className="w-full px-4 py-3 rounded-lg border border-gray-200 focus:border-[#7d53de] focus:ring-2 focus:ring-[#7d53de]/20 outline-none transition-all"
-                      placeholder="Jean Dupont"
+                      placeholder={t("form.fullNamePlaceholder")}
                     />
                   </div>
                   <div>
                     <label htmlFor="email" className="block text-sm font-medium text-[#0e0c19] mb-2">
-                      Email *
+                      {t("form.email")} *
                     </label>
                     <input
                       type="email"
@@ -152,7 +154,7 @@ export default function Contact() {
                       name="email"
                       required
                       className="w-full px-4 py-3 rounded-lg border border-gray-200 focus:border-[#7d53de] focus:ring-2 focus:ring-[#7d53de]/20 outline-none transition-all"
-                      placeholder="jean@entreprise.com"
+                      placeholder={t("form.emailPlaceholder")}
                     />
                   </div>
                 </div>
@@ -160,33 +162,33 @@ export default function Contact() {
                 <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
                   <div>
                     <label htmlFor="company" className="block text-sm font-medium text-[#0e0c19] mb-2">
-                      Entreprise
+                      {t("form.company")}
                     </label>
                     <input
                       type="text"
                       id="company"
                       name="company"
                       className="w-full px-4 py-3 rounded-lg border border-gray-200 focus:border-[#7d53de] focus:ring-2 focus:ring-[#7d53de]/20 outline-none transition-all"
-                      placeholder="Nom de votre entreprise"
+                      placeholder={t("form.companyPlaceholder")}
                     />
                   </div>
                   <div>
                     <label htmlFor="phone" className="block text-sm font-medium text-[#0e0c19] mb-2">
-                      Téléphone
+                      {t("form.phone")}
                     </label>
                     <input
                       type="tel"
                       id="phone"
                       name="phone"
                       className="w-full px-4 py-3 rounded-lg border border-gray-200 focus:border-[#7d53de] focus:ring-2 focus:ring-[#7d53de]/20 outline-none transition-all"
-                      placeholder="+33 6 00 00 00 00"
+                      placeholder={t("form.phonePlaceholder")}
                     />
                   </div>
                 </div>
 
                 <div>
                   <label htmlFor="message" className="block text-sm font-medium text-[#0e0c19] mb-2">
-                    Votre message *
+                    {t("form.message")} *
                   </label>
                   <textarea
                     id="message"
@@ -194,7 +196,7 @@ export default function Contact() {
                     required
                     rows={5}
                     className="w-full px-4 py-3 rounded-lg border border-gray-200 focus:border-[#7d53de] focus:ring-2 focus:ring-[#7d53de]/20 outline-none transition-all resize-none"
-                    placeholder="Décrivez votre besoin en cybersécurité..."
+                    placeholder={t("form.messagePlaceholder")}
                   />
                 </div>
 
@@ -203,14 +205,14 @@ export default function Contact() {
                   disabled={status === "loading"}
                   className="w-full py-4 px-6 rounded-full bg-[#7d53de] text-white font-semibold hover:bg-[#161131] transition-colors disabled:opacity-50 disabled:cursor-not-allowed"
                 >
-                  {status === "loading" ? "Envoi en cours..." : "Envoyer le message"}
+                  {status === "loading" ? t("form.submitting") : t("form.submit")}
                 </button>
 
                 {status === "success" && (
-                  <p className="text-green-600 text-center">Message envoyé avec succès ! Nous vous recontacterons rapidement.</p>
+                  <p className="text-green-600 text-center">{t("form.success")}</p>
                 )}
                 {status === "error" && (
-                  <p className="text-red-600 text-center">Erreur lors de l&apos;envoi. Veuillez nous contacter par email.</p>
+                  <p className="text-red-600 text-center">{t("form.error")}</p>
                 )}
               </form>
             </div>

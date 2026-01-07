@@ -1,9 +1,10 @@
 "use client";
 
 import Image from "next/image";
-import Link from "next/link";
 import { useState, useEffect } from "react";
-import { usePathname } from "next/navigation";
+import { useTranslations } from "next-intl";
+import { Link, usePathname } from "@/i18n/navigation";
+import LanguageSwitcher from "./LanguageSwitcher";
 
 interface SubItem {
   name: string;
@@ -84,76 +85,79 @@ const icons = {
   ),
 };
 
-const navigation: NavItem[] = [
-  { name: "Accueil", href: "/" },
-  {
-    name: "Vos Besoins",
-    href: "/vos-besoins",
-    submenu: [
-      { name: "Mise en conformité réglementaire", href: "/nos-services/gouvernance-risque-conformite", icon: icons.conformite },
-      { name: "Évaluer votre posture de sécurité", href: "/nos-services/conseils-audits", icon: icons.posture },
-      { name: "Améliorer la maturité cyber", href: "/nos-services", icon: icons.maturite },
-      { name: "Tester la résistance de votre système", href: "/nos-services/services-operationnels", icon: icons.test },
-    ],
-  },
-  {
-    name: "Nos Services",
-    href: "/nos-services",
-    submenu: [
-      {
-        name: "Gouvernance & Conformité",
-        href: "/nos-services/gouvernance-risque-conformite",
-        icon: icons.gouvernance,
-        items: [
-          { name: "NIS2", href: "/nos-services/gouvernance-risque-conformite/nis2" },
-          { name: "DORA", href: "/nos-services/gouvernance-risque-conformite/dora" },
-          { name: "ISO 27001", href: "/nos-services/gouvernance-risque-conformite/iso-27001" },
-          { name: "AI Act", href: "/nos-services/gouvernance-risque-conformite/ai-act" },
-          { name: "VARA", href: "/nos-services/gouvernance-risque-conformite/vara" },
-        ],
-      },
-      {
-        name: "Conseils & Audits",
-        href: "/nos-services/conseils-audits",
-        icon: icons.conseils,
-        items: [
-          { name: "Maturité Cyber", href: "/nos-services/conseils-audits/maturite-cyber" },
-          { name: "Évaluer votre posture", href: "/nos-services/conseils-audits/evaluer-posture" },
-          { name: "Due Diligence", href: "/nos-services/conseils-audits/due-diligence" },
-          { name: "RSSI externalisé", href: "/nos-services/conseils-audits/rssi-temps-partage" },
-        ],
-      },
-      {
-        name: "Services Opérationnels",
-        href: "/nos-services/services-operationnels",
-        icon: icons.operationnel,
-        items: [
-          { name: "Tests d'intrusion", href: "/nos-services/services-operationnels/test-intrusion" },
-          { name: "Red Team", href: "/nos-services/services-operationnels/red-team" },
-          { name: "Audit de code", href: "/nos-services/services-operationnels/audit-code" },
-          { name: "SOC 24/7", href: "/nos-services/services-operationnels/soc" },
-        ],
-      },
-    ],
-  },
-  {
-    name: "Entreprise",
-    href: "/entreprise",
-    submenu: [
-      { name: "Notre mission", href: "/entreprise#mission", icon: icons.mission },
-      { name: "Nos valeurs", href: "/entreprise#valeurs", icon: icons.valeurs },
-      { name: "Nos certifications", href: "/entreprise#certifications", icon: icons.certifications },
-      { name: "Cas clients", href: "/#cas-clients", icon: icons.casClients },
-    ],
-  },
-  { name: "Contact", href: "/#contact" },
-];
-
 export default function Header() {
+  const t = useTranslations("nav");
+  const tCommon = useTranslations("common");
   const [mobileMenuOpen, setMobileMenuOpen] = useState(false);
   const [activeDropdown, setActiveDropdown] = useState<string | null>(null);
   const [isScrolled, setIsScrolled] = useState(false);
   const pathname = usePathname();
+
+  // Navigation with translations
+  const navigation: NavItem[] = [
+    { name: t("home"), href: "/" },
+    {
+      name: t("yourNeeds"),
+      href: "/vos-besoins",
+      submenu: [
+        { name: t("regulatoryCompliance"), href: "/nos-services/gouvernance-risque-conformite", icon: icons.conformite },
+        { name: t("evaluatePosture"), href: "/nos-services/conseils-audits", icon: icons.posture },
+        { name: t("improveCyberMaturity"), href: "/nos-services", icon: icons.maturite },
+        { name: t("testSystemResistance"), href: "/nos-services/services-operationnels", icon: icons.test },
+      ],
+    },
+    {
+      name: t("ourServices"),
+      href: "/nos-services",
+      submenu: [
+        {
+          name: t("governanceCompliance"),
+          href: "/nos-services/gouvernance-risque-conformite",
+          icon: icons.gouvernance,
+          items: [
+            { name: "NIS2", href: "/nos-services/gouvernance-risque-conformite/nis2" },
+            { name: "DORA", href: "/nos-services/gouvernance-risque-conformite/dora" },
+            { name: "ISO 27001", href: "/nos-services/gouvernance-risque-conformite/iso-27001" },
+            { name: "AI Act", href: "/nos-services/gouvernance-risque-conformite/ai-act" },
+            { name: "VARA", href: "/nos-services/gouvernance-risque-conformite/vara" },
+          ],
+        },
+        {
+          name: t("adviceAudits"),
+          href: "/nos-services/conseils-audits",
+          icon: icons.conseils,
+          items: [
+            { name: t("cyberMaturity"), href: "/nos-services/conseils-audits/maturite-cyber" },
+            { name: t("evaluateYourPosture"), href: "/nos-services/conseils-audits/evaluer-posture" },
+            { name: t("dueDiligence"), href: "/nos-services/conseils-audits/due-diligence" },
+            { name: t("outsourcedCISO"), href: "/nos-services/conseils-audits/rssi-temps-partage" },
+          ],
+        },
+        {
+          name: t("operationalServices"),
+          href: "/nos-services/services-operationnels",
+          icon: icons.operationnel,
+          items: [
+            { name: t("penetrationTests"), href: "/nos-services/services-operationnels/test-intrusion" },
+            { name: t("redTeam"), href: "/nos-services/services-operationnels/red-team" },
+            { name: t("codeAudit"), href: "/nos-services/services-operationnels/audit-code" },
+            { name: t("soc247"), href: "/nos-services/services-operationnels/soc" },
+          ],
+        },
+      ],
+    },
+    {
+      name: t("company"),
+      href: "/entreprise",
+      submenu: [
+        { name: t("ourMission"), href: "/entreprise#mission", icon: icons.mission },
+        { name: t("ourValues"), href: "/entreprise#valeurs", icon: icons.valeurs },
+        { name: t("ourCertifications"), href: "/entreprise#certifications", icon: icons.certifications },
+        { name: t("caseStudies"), href: "/#cas-clients", icon: icons.casClients },
+      ],
+    },
+    { name: t("contact"), href: "/#contact" },
+  ];
 
   // Handle scroll effect
   useEffect(() => {
@@ -207,7 +211,7 @@ export default function Header() {
             className="-m-2.5 inline-flex items-center justify-center rounded-md p-2.5 text-white hover:text-[#7d53de] transition-colors"
             onClick={() => setMobileMenuOpen(!mobileMenuOpen)}
           >
-            <span className="sr-only">Ouvrir le menu</span>
+            <span className="sr-only">{tCommon("openMenu")}</span>
             <svg
               className="h-6 w-6 transition-transform duration-300"
               fill="none"
@@ -322,15 +326,16 @@ export default function Header() {
           ))}
         </div>
 
-        {/* CTA Button */}
-        <div className="hidden lg:flex lg:flex-1 lg:justify-end">
+        {/* Language Switcher + CTA Button */}
+        <div className="hidden lg:flex lg:flex-1 lg:justify-end lg:items-center lg:gap-4">
+          <LanguageSwitcher />
           <Link
             href="/#contact"
             className={`rounded-full bg-[#7d53de] text-sm font-semibold text-white shadow-sm hover:bg-white hover:text-[#0e0c19] transition-all duration-300 hover:scale-105 ${
               isScrolled ? "px-5 py-2" : "px-6 py-2.5"
             }`}
           >
-            Contactez-nous
+            {tCommon("contactUs")}
           </Link>
         </div>
       </nav>
@@ -342,6 +347,11 @@ export default function Header() {
         }`}
       >
         <div className="bg-[#0e0c19] border-t border-white/10 space-y-1 px-4 pb-4 pt-2">
+          {/* Language Switcher for mobile */}
+          <div className="flex justify-center py-3 border-b border-white/10 mb-2">
+            <LanguageSwitcher />
+          </div>
+
           {navigation.map((item) => (
             <div key={item.name}>
               <Link
@@ -409,7 +419,7 @@ export default function Header() {
             className="block rounded-full bg-[#7d53de] px-6 py-2.5 text-center text-sm font-semibold text-white mt-4 hover:bg-white hover:text-[#0e0c19] transition-colors"
             onClick={() => setMobileMenuOpen(false)}
           >
-            Contactez-nous
+            {tCommon("contactUs")}
           </Link>
         </div>
       </div>
