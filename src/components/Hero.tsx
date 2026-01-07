@@ -123,12 +123,6 @@ export default function Hero() {
           />
         </div>
 
-        {/* Badge */}
-        <div className="inline-flex items-center gap-2 bg-white/10 backdrop-blur-sm rounded-full px-4 py-2 mb-6" data-animation="fadeInUp" data-delay="0.1">
-          <span className="w-2 h-2 bg-green-400 rounded-full animate-pulse" />
-          <span className="text-white/80 text-sm font-medium">Expert en cybersécurité depuis 2020</span>
-        </div>
-
         {/* Title */}
         <h1 className="text-4xl md:text-5xl lg:text-6xl font-bold text-white leading-tight mb-6" data-animation="fadeInUp" data-delay="0.2">
           L&apos;entreprise de cybersécurité pour{" "}
@@ -175,22 +169,6 @@ export default function Hero() {
             <AnimatedCounter target={15} suffix="+" />
             <p className="text-white/60 text-sm mt-1">Certifications experts</p>
           </div>
-        </div>
-      </div>
-
-      {/* Trust badges - Clients */}
-      <div className="relative z-10 w-full border-t border-white/10 pt-8 pb-4" data-animation="fadeIn" data-delay="0.6">
-        <p className="text-white/40 text-sm text-center mb-6 uppercase tracking-widest">Ils nous font confiance</p>
-        <div className="flex justify-center items-center gap-8 md:gap-12 flex-wrap px-4">
-          {/* Placeholder logos - replace with real client logos */}
-          {[1, 2, 3, 4, 5].map((i) => (
-            <div
-              key={i}
-              className="w-24 h-12 bg-white/10 rounded-lg flex items-center justify-center text-white/30 text-xs hover:bg-white/20 transition-colors"
-            >
-              Logo {i}
-            </div>
-          ))}
         </div>
       </div>
 
