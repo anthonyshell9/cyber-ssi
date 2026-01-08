@@ -34,25 +34,25 @@ export default function Services() {
       title: t("service1.title"),
       description: t("service1.description"),
       icon: serviceIcons[0],
-      href: "/services/conformite",
+      href: "/nos-services/gouvernance-risque-conformite",
     },
     {
       title: t("service2.title"),
       description: t("service2.description"),
       icon: serviceIcons[1],
-      href: "/services/certifications",
+      href: "/nos-services/gouvernance-risque-conformite/iso-27001",
     },
     {
       title: t("service3.title"),
       description: t("service3.description"),
       icon: serviceIcons[2],
-      href: "/services/rssi",
+      href: "/nos-services/conseils-audits/rssi-temps-partage",
     },
     {
       title: t("service4.title"),
       description: t("service4.description"),
       icon: serviceIcons[3],
-      href: "/services/formation",
+      href: "/nos-services/conseils-audits/maturite-cyber",
     },
   ];
 
